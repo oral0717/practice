@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var oralData=new Date();
+	var oralData_year=oralData.getFullYear();
+	var oralData_monthday=oralData.getDate();
+	var oralData_day=oralData.getDay();
+	var oralData_month=oralData.getMonth();
+	var oralData_hours=oralData.getHours();
+	var oralData_min=oralData.getMinutes();
+	var oralData_sec=oralData.getSeconds();
+	var oralData_millisec=oralData.getMilliseconds();
+	document.write(oralData);
+	document.write(oralData_year);
+	document.write(oralData_monthday);
+	document.write(oralData_day);
+	document.write(oralData_month);
+	document.write(oralData_hours);
+	document.write(oralData_min);
+	document.write(oralData_sec);
+	document.write(oralData_millisec);
+	document.write(oralData.getTime());
+});
+</script>
+
+<script>
+	$(function(){
+		var oralData2=new Date('2014','8','15','05','03','02').getTime();
+		var oralData3=new Date('2014','8','16','05','03','02').getTime();
+		alert(oralData2);
+		alert(oralData3);
+	});
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

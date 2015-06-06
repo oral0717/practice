@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+div{border:1px solid green;}
+
+.clearfix{*zoom:1}
+.clearfix:after{display:table;content:"";clear:both;}
+/* 必须是display:table;吗？*/
+
+hr.clearfix {font-size: 1px; line-height: 1px; height: 1px; overflow: hidden; clear: both; border: 0px; padding: 0px; margin: -1px 0px 0px 0px; list-style: none; border-style: none; background: none; visibility: hidden;}
+</style>
+</head>
+
+<body>
+<p>1、用伪类，:after  </p>
+<div class="">
+	<div style="float:right;height:50px;">right</div>
+	<div style="float:left;">left</div>
+	<hr class="clearfix" />
+</div>
+<div class="clearfix">
+	<div style="float:right;height:50px;">right</div>
+	<div style="float:left;">left</div>
+</div>
+
+<br/>
+<br/>
+<p>2、父层也浮动</p>
+<div style="float:left;border:1px solid red;">
+	<div style="float:right;height:50px;">right</div>
+	<div style="float:left;">left</div>
+</div>
+
+</body>
+</html>

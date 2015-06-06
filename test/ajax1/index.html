@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div id="dictionary">
+</div>
+
+<div class="letters">
+	<div class="letter" id="letter-a">
+	<h3><a href="entries-a.html">A</a></h3>
+	</div>
+	<div class="letter" id="letter-b">
+	<h3><a href="entries-a.html">B</a></h3>
+	</div>
+	<div class="letter" id="letter-c">
+	<h3><a href="entries-a.html">C</a></h3>
+	</div>
+	<div class="letter" id="letter-d">
+	<h3><a href="entries-a.html">D</a></h3>
+	</div>
+	<!-- and so on -->
+</div>
+
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#letter-a a').click(function(event) {
+		event.preventDefault();
+		$('#dictionary').load('a.html');
+	});
+});
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.red{color:#f00;}
+.green{color:#0f0;}
+.size{font-size:20px;}
+.bold{font-weight:bold;}
+</style>
+</head>
+<body>
+<div>这是第一个div</div>
+<div>这是第二个div</div>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/*$('div').click(function(){
+			$(this).addClass('red size bold');
+		}).trigger('click');*/
+
+		/*$('div').click(function(e,data1,data2,data3){
+			$(this).addClass(data1+' '+data2);
+			$(this).append(data3._name+'is'+data3.sex)
+		}).trigger('click',['red','bold',{'_name':'oral','sex':'female'}]);*/
+
+		/*$('div').bind('myEvent',function(){//自定义事件myEvent
+			$(this).addClass('red size bold');
+		}).trigger('myEvent');*/
+
+		/*$('div').load(function(){   //.trigger()方法提供了简写方案，只要想让某个事件执行模拟用户行为，直接再调用一个空的同名事件即可。
+			$(this).addClass('red size bold');
+		}).load();*/
+
+		$('div').click(function(){
+			$(this).addClass('red size bold');
+		}).triggerHandler('click');
+		//triggerHandler()方法可以阻止默认行为，trigger()不可以
+		//triggerHandler()只会影响第一个匹配项,trigger()影响所有
+		//trigger()返回对象，可以连缀调用；
+		//trigger()会冒泡，triggerHandler()不会冒泡
+	});
+</script>
+</html>
