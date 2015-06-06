@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+
+<input type="button" value="异步获取数据" />
+<div id="box"></div>
+
+</body>
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+	$(function(){
+		$('input[type="button"]').on('click',function(){
+			
+            $.get('test.php',{
+                url:'ycku'
+            },function(response,status,xhr){
+                console.log('从服务器端返回的内容是：'+response+'，响应的HTTP状态是：'+status);
+                console.log('从服务器端返回的内容是：'+xhr.responseText+'，响应的HTTP状态码是：'+xhr.status+'，响应的HTTP状态的说明是：'+xhr.statusText);
+                if (status=='success') {
+                    $('#box').text('请求成功了：'+response);
+                };
+            });
+		});
+	});
+</script>
+</html>

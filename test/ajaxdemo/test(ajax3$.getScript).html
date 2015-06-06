@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+
+<input type="button" value="异步获取数据" />
+<div id="box"></div>
+
+</body>
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+	$(function(){
+		$('input[type="button"]').on('click',function(){
+			/*$.getScript('test.js',function(r,s,xhr){
+                console.log('有没有'+r+s+xhr.responseText+xhr.status+xhr.statusText);
+            });*/
+            $.getJSON('test.json',function(r,s,xhr){
+                console.log('有没有,'+r[0].url+','+s+','+xhr.responseText+';'+xhr.status+';'+xhr.statusText);
+            });
+            
+		});
+	});
+</script>
+</html>

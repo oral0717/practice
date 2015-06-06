@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+<form action="">
+用户名：<input type="text" name="user" value="zj">
+邮件：<input type="text" name="email" value="123@163.com">
+<input type="radio" name="sex" value="男">男
+<input type="radio" name="sex2" value="女">女
+    <input type="button" value="提交">
+</form>
+<div class="" id="box"></div>
+</body>
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+	$(function(){
+		/*$('form input[type="button"]').on('click',function(){
+            //alert($('form').serialize());
+            $.ajax({
+                type:'POST',
+                url:'user.php',
+                //data:{
+                    //user:$('form input[name=user]').val(),
+                    //email:$('form input[name=email]').val()
+                //},
+                data:$('form').serialize(),//表单序列化
+                success:function(r,s,xhr){
+                    $('#box').html(r);
+                }
+            });
+            
+		});*/
+
+        /*$('form input[name=sex]').click(function(){
+            $('#box').html(decodeURIComponent($(this).serialize()));
+        });*/
+
+        //decodeURIComponent();解码
+        /*$('form input[name=sex]').click(function(){
+            
+            //console.log($(this).serializeArray());//.serializeArray()生成JSON数据
+            var Json=$(this).serializeArray();
+            $('#box').html(Json[0].name+':'+Json[0].value);
+        });*/
+
+        /*$('form input[type=button]').click(function(){
+            var Json=$('form input').not('input[type=button]').serializeArray();
+            console.log(Json);
+            //console.log(Json[1]);
+            //console.log(Json[2].value);
+            $('#box').html(Json);
+        });*/
+
+
+        $('form input[type="button"]').on('click',function(){
+            $.ajax({
+                type:'POST',
+                url:'user.php',
+                data:$.param({
+                    user:$('form input[name=user]').val(),
+                    email:$('form input[name=email]').val()
+                }),
+                //data:$('form').serialize(),//表单序列化
+                success:function(r,s,xhr){
+                    $('#box').html(r);
+                }
+            });
+            
+        });
+            alert($.param({
+                    user:$('form input[name=user]').val(),
+                    email:$('form input[name=email]').val()
+                }));
+	});
+</script>
+</html>
