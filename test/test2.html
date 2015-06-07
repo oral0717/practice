@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style> 
+div
+{border:1px solid red;
+width:500px;
+height:100px;
+background:url(img/1.png) no-repeat 0 0;
+animation:myfirst 5s linear 2s infinite alternate;
+/* animation-name:myfirst;动画名称:myfirst
+animation-duration:5s;动画周期:5s
+animation-timing-function:linear; 动画速度曲线:匀速(linear  ease  ease-in  ease-out  ease-in-out)
+animation-delay:2s;  延时动画时间：2s
+animation-iteration-count:infinite;动画重复次数：无数次(n  infinite)
+animation-direction:alternate;动画在下一周期逆向播放(normal  alternate)
+animation-play-state:running; 动画状态（running  paused）*/
+/* Firefox: */
+-moz-animation:myfirst 5s linear 2s infinite alternate;
+/* Safari and Chrome: */
+-webkit-animation:myfirst 5s linear 2s infinite alternate;
+/* Opera: */
+-o-animation:myfirst 5s linear 2s infinite alternate;
+}
+
+@keyframes myfirst
+{
+0%   {background:url(img/1.png) no-repeat 0 0;}
+100%  {background:url(img/1.png) no-repeat 300px 0;}
+
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:url(img/1.png) no-repeat 0 0;}
+100%  {background:url(img/1.png) no-repeat 300px 0;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:url(img/1.png) no-repeat 0 0;}
+100%  {background:url(img/1.png) no-repeat 300px 0;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {background:url(img/1.png) no-repeat 0 0;}
+100%  {background:url(img/1.png) no-repeat 300px 0;}
+}
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+<div></div>
+
+</body>
+</html>
