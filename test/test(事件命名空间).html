@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.red{color:#f00;}
+.green{color:#0f0;}
+.size{font-size:20px;}
+.bold{font-weight:bold;}
+</style>
+</head>
+<body>
+<div>这是第一个div</div>
+<div>这是第二个div</div>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//同名同元素绑定的事件，事件的命名空间
+		$('div').bind('click.abc',function(){//给事件添加后缀.abc
+			alert('abc');
+		});
+		$('div').bind('click.xyz',function(){//给事件添加后缀.xyz，以此区分上一个点击事件
+			alert('xyz');
+		});
+		
+		$('div').trigger('click.xyz');//只模拟操作click.xyz事件
+
+	});
+</script>
+</html>

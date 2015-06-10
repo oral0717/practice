@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+
+<script>
+function person(obj){
+	obj.name="Oral1";
+	obj=new Object();
+	obj.name="Oral2";//obj只是局部变量
+}
+var oral1=new Object();
+person(oral1);
+alert(oral1.name);
+
+
+function one(me){
+	me="z";
+	return me;
+}
+var zj="j";
+var zj2=one(zj);
+alert(zj);
+alert(zj2);
+
+</script>
+
+
+</body>
+</html>
