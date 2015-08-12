@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+	var rule = {
+                1: '1|5',
+                2: '2|6',
+                3: '3|7'
+            };
+	$('li.json').click(function(){
+		$.each(rule,function(i,n){
+			console.log(i+'+'+n);
+			console.log(typeof(i));
+		});
+	});
+
+	var rule2 = [
+	2,3,4
+	]
+	$('li.array').click(function(){
+		$.each(rule2,function(i,n){
+			console.log(i+'+'+n);
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<ul id="test">  
+<li class="json">这是第一条</li>
+</ul>
+<ul>  
+<li class="array">这是第一条</li>
+</ul> 
+</body>
+</html>
