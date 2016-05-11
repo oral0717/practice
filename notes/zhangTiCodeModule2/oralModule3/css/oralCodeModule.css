@@ -1,0 +1,149 @@
+/* CSS Document */
+body{background:#911360 url(../img/rsyj_banner.jpg) no-repeat center 0;font-family: "微软雅黑",arial;min-width:990px;*min-width:1090px;}
+.oralclear{clear:both;border:none;height:0;width:0;}
+.outoral_outcontainer{min-width:990px;overflow-x: hidden;}
+.oral_outcontainer{width:990px;margin:0 auto;padding-bottom:60px;position:relative;}
+.rsyj_banner{height:490px;position: relative;}
+
+
+
+
+
+/* 导航start  */
+.rsyj_nav{height:100px;position: relative;z-index:100;}
+.rsyj_nav ul{overflow: hidden;width:1087px;margin-left:-49px;}
+.rsyj_nav ul li{float:left;height: 100px;cursor:pointer;}
+.rsyj_nav .rsyj_sh{width:354px;background:url(../img/rsyj_floatnav.png) no-repeat 0 0;}
+.rsyj_nav li.rsyj_sh:hover{background:url(../img/rsyj_floatnav.png) no-repeat 0 -201px;}
+.rsyj_nav .rsyj_sl{width:394px;height:68px;background:url(../img/rsyj_floatnav.png) no-repeat -354px 0;}
+.rsyj_nav li.rsyj_sl:hover{width:394px;height:68px;background:url(../img/rsyj_floatnav.png) no-repeat -354px -201px;}
+.rsyj_nav .rsyj_jp{width:338px;background:url(../img/rsyj_floatnav.png) no-repeat -749px 0;}
+.rsyj_nav li.rsyj_jp:hover{width:338px;background:url(../img/rsyj_floatnav.png) no-repeat -749px -201px;}
+/* 导航end  */
+
+
+
+
+
+
+.rsyj_con1{width:1014px;margin-left:-12px;}
+.run_term{height:80px;}
+.rsyj_con_tit{overflow: hidden;}
+.rsyj_con_tit img{float:left;}
+.rsyj_sh_con{background:#ffc527;overflow: hidden;padding-left:7px;padding-bottom:40px;_padding-bottom:20px;}
+
+
+
+
+/* 大课start */
+.oral_big_lesson{float:left;background:#fff;width:480px; padding-top:25px;position: relative;z-index:0;margin:12px 0 0 13px;}
+.oral_big_lesson *{margin:0;}
+.oral_big_lesson li{width:431px;margin:0 auto;margin-bottom:6px;}
+.big_lesson_img{overflow: hidden;}
+.big_lesson_img img{float:left;border:8px solid #ff9600;}
+.big_lesson_tit{font-size:24px;color: #3a3a3c;line-height: 34px;height:30px;overflow: hidden;}
+.big_lesson_bottom{overflow: hidden;line-height:34px;}
+.big_lesson_price{float:left;}
+.big_lesson_price .new_price{color:#e73320;font-weight: bold;font-size:32px;}
+.big_lesson_price .old_price{color:#333;font-size: 18px;text-decoration: line-through;}
+.big_lesson_price .discount{font-size:14px;color:#fff;background: url(../img/discount.png) no-repeat 0 0;padding:3px 11px;margin-left: 20px;}
+.big_lesson_btn{float:right;width: 153px;height:53px;margin-top: 8px;cursor: pointer;}
+ /* 立即抢购 */
+.big_lesson_btn_start{background: url(../img/qianggou_btn.png) no-repeat 0 0;}
+div.big_lesson_btn_start:hover{background: url(../img/qianggou_btn.png) no-repeat 0 -98px;} 
+/* 10点整开抢*/
+.big_lesson_btn_before{background: url(../img/qianggou_btn.png) no-repeat 0 -199px;} 
+ /* 今日已抢完 */
+.big_lesson_btn_done{background: url(../img/qianggou_btn.png) no-repeat 0 -299px;}
+li.rsyj_number{width:104px;height:61px;line-height:100%;position: absolute;right:36px;top:11px;background: url(../img/rsyj_number.png) no-repeat 0 0;color:#333;font-size: 48px;font-weight:bold;padding-top: 42px;padding-left:25px;letter-spacing: 5px;z-index: 10;}
+/* 大课start */
+
+
+
+
+
+/* 带有蒙层的表格start  */
+.oral_table1{margin-bottom:0;width:100%;background: #6f1e53;border-collapse: separate;border-spacing: 12px;}
+.oral_table1 *{border:none;padding:0;margin: 0;}
+.oral_table1 td{padding:0;background: #7e3565;height:150px;width:155px;height:100%;position: relative;overflow: hidden;}
+.oral_table1 td img{float:left;}
+.oral_table1 .last_tr td{height:55px;}
+.blackLayer{width:100%;height:100%;background:#000;position:absolute;left:0;top:0;background-color:#000;opacity:0.6;-moz-opacity:0.6;filter:alpha(opacity=60);display: none;}
+.spc_width1{width:322px;}
+.spc_width2{width:490px;}
+.spc_height1{height:312px;}
+/* 带有蒙层的表格end  */
+
+
+
+
+
+.rsyj_jp_con{background:#10a981;overflow: hidden;padding:8px 0 8px 6px;}
+.rsyj_jp_l{float: left;width: 345px;height:616px;background: #169774;color:#fff;font-size:14px;font-family: "宋体";}
+.rsyj_jp_ltit{margin:5px;}
+.rsyj_jp_lcon{margin:10px 6px 0 6px;}
+.rsyj_jp_l h3{font-size: 16px;font-family: "微软雅黑";margin:0;margin-bottom: 5px;}
+.rsyj_jp_l p{padding-left:5px;}
+.rsyj_jp_r{float:left;width:650px;height:616px;overflow-y:auto;background: #fff;margin-left: 6px;}
+
+
+
+
+
+
+/* 奖品项目start  */
+.rsyj_jp_item{background: #2db58f;overflow: hidden;_height:80px;padding:5px;margin:3px 4px;}
+.rsyj_jp_item_con{float:left;width:170px;margin:5px 0 0 5px;}
+.rsyj_jp_item_con h4{font-size: 16px;font-family: "微软雅黑";font-weight: normal;}
+.rsyj_jp_item_con p{padding-left:0;line-height: 1.5em;margin:8px 0 0 0; }
+.rsyj_jp_item_img{float:right;width: 130px;}
+/* 奖品项目end  */
+
+
+
+
+
+
+
+/*微博碎碎start*/
+.share_location {
+	   
+    overflow: hidden;width:200px;position: absolute;right:0;bottom:140px;
+}
+a.sui_icon {
+    background: url("../img/sui.png") no-repeat scroll 0 -51px;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    margin: 23px 0px 0 55px;
+    width: 49px;
+    cursor: pointer;
+}
+a.sui_icon:hover {
+    background: url("../img/sui.png") no-repeat scroll 0 0;
+    height: 50px;
+    width: 49px;
+}
+a.wei_icon {
+    background: url("../img/wei.png") no-repeat scroll 0 -50px;
+    display: inline-block;
+    float: left;
+    height: 50px;
+    margin-top: 23px;
+    width: 50px;
+}
+a.wei_icon:hover {
+    background: url("../img/wei.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+.bdsharebuttonbox {
+    display: inline-block;
+    float: left;
+}
+/*微博碎碎start*/
+
+
+
+

@@ -1,0 +1,117 @@
+/* CSS Document */
+@charset "utf-8";
+/* 整体框架结构s */
+.oralclear {
+	clear: both;
+	border: none;
+	height: 0;
+	width: 0;
+}
+.outoral_outcontainer {
+	min-width: 1000px;
+	overflow-x: hidden;
+	background: url(../img/banner.jpg) no-repeat center 0;
+}
+
+.oral_outcontainer {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	padding-top:25px;
+}
+
+
+/* .modulemain_con {
+	width: 1100px;
+	margin-left: -50px;
+	border: 1px solid blue;
+}
+*/
+/* 父层宽度小于本层，本层利用负值边距 */
+
+/* 整体框架结构e */
+.oral_banner {
+	height: 680px;
+}
+.modulemain_con1{
+	border:1px solid red;
+	height: 682px;
+	background: url(../img/con1bg.jpg) no-repeat center 0;
+}
+.modulemain_con2_1{
+	height: 808px;
+	background: url(../img/con2_1bg.jpg) no-repeat center 0;
+}
+.modulemain_con2_2{
+	height: 576px;
+	background: url(../img/con2_2bg.jpg) no-repeat center 0;
+}
+.modulemain_con2_3{
+	height: 576px;
+	background: url(../img/con2_3bg.jpg) no-repeat center 0;
+}
+.modulemain_con2_4{
+	height: 576px;
+	background: url(../img/con2_4bg.jpg) no-repeat center 0;
+}
+.modulemain_con2_5{
+	height: 546px;
+	background: url(../img/con2_5bg.jpg) no-repeat center 0;
+}
+.modulemain_con3{
+	height: 738px;
+	background: url(../img/con3bg.jpg) no-repeat center 0;
+}
+
+
+.con_in{
+	width:1100px;
+	border:1px solid red;
+	margin-left:-50px;
+}
+.con1{
+	height: 607px;
+	background: url(../img/con1.png) no-repeat center 0;
+}
+.modulemain_con2_tit{
+	height: 215px;
+	background: url(../img/con2_tit.png) no-repeat center 0;
+}
+.modulemain_con3_tit{
+	height: 234px;
+	background: url(../img/con3_tit.png) no-repeat center 0;
+}
+.con2_1{
+	height: 482px;
+	background: url(../img/con2_1.png) no-repeat center 0;
+}
+.con2_2{
+	height: 459px;
+	background: url(../img/con2_2.png) no-repeat center 0;
+}
+.con2_3{
+	height: 460px;
+	background: url(../img/con2_3.png) no-repeat center 0;
+}
+.con2_4{
+	height: 460px;
+	background: url(../img/con2_4.png) no-repeat center 0;
+}
+.con2_5{
+	height: 465px;
+	background: url(../img/con2_5.png) no-repeat center 0;
+}
+.con3{
+	height: 482px;
+	border:1px solid yellow;
+}
+
+
+
+
+
+
+
+
+
+

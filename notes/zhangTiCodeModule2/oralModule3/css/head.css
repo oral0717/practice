@@ -1,0 +1,809 @@
+﻿/*第一部分来自网校：http://class.hujiang.com/css/head.css */
+#cls_headLogo
+{
+	float:left;
+	padding-left:121px;
+	background:url(http://class.hujiang.com/images/head/cls_ico_logo.png?s=1) 11px 8px no-repeat;
+	_background:url(http://class.hujiang.com/images/head/cls_ico_logo.gif?s=1) 11px 8px no-repeat;
+	height:36px;
+}
+
+.cls_pnlHeader_wrap
+{
+	width:100%;
+	height:36px;
+	position:fixed;
+	_position:absolute;
+	top:0px;
+	left:0px;
+    z-index:9999999;
+}
+
+#cls_pnlHeader
+{
+	padding:0;
+	margin:0 auto;
+	width:1000px;
+	height:36px;
+}
+
+#cls_pnlHeader .cls_listApp
+{
+	float:left;
+}
+
+#cls_pnlHeader .cls_pnlSearch:hover,#cls_pnlHeader .cls_pnlSearch.hover
+{
+	background:#f4f4f4;
+}
+
+#cls_pnlHeader .cls_pnlSearch
+{
+	float:left;
+	margin-left:20px;
+	margin-top:5px;
+	display:inline;
+	border:1px solid #CCC;
+	border-radius: 3px 3px 3px 3px;
+	padding:2px 5px;
+	width:173px;
+	background:#fff;
+	
+}
+
+#cls_btnSearch
+{
+	background:url(http://class.hujiang.com/images/head/cls_bg_hd_srh.gif) 3px 1px no-repeat;
+	height:20px;
+	width:20px;
+	display:block;
+	float:right;
+}
+
+#cls_txtHeadSearch
+{
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	border:none;
+	width:150px;
+	outline:none;
+	background:none;
+}
+
+#cls_pnlHeader  li
+{
+	float:left;
+	height:36px;
+	line-height:36px;
+	font-size:14px;
+	padding-right:5px;
+	position:relative;
+	padding-left:0px;
+	display:inline;
+}
+
+#cls_pnlHeader .course
+{
+	margin-left:5px;	
+}
+
+#cls_pnlHeader .menu:hover,.cls_headMenu_hover
+{
+	background:#EFEFEF;
+}
+
+#cls_pnlHeader b
+{
+	background:url(http://class.hujiang.com/images/head/cls_ico_toggle.gif) 2px 14px no-repeat;
+	width:21px;
+	height:30px;
+	float:left;
+	cursor:pointer;
+}
+#cls_pnlHeader b.arrow_s{
+	background-position: 2px -132px;
+    width:12px;
+}
+#cls_pnlHeader .cls_listUserInfo
+{
+	float:right;
+	margin-right:5px;
+}
+
+#cls_pnlHeader .menu a,#cls_pnlHeader  .slide
+{
+	font-size:14px !important;
+}
+
+#cls_pnlHeader .cls_listUserInfo .menu a
+{
+	font-size:12px !important;
+}
+
+#cls_pnlHeader .layer_slideTitle a.small,#cls_pnlHeader .menu a.small
+{
+	font-size:12px !important;
+    margin-left:0;
+}
+
+#cls_pnlHeader li.menu{
+	padding-right: 0;
+}
+#cls_pnlHeader .cls_listApp li a,#cls_pnlHeader .cls_listUserInfo li a
+{
+	text-decoration:none;
+	color:#494949;
+	float:left;
+	margin-left:5px;
+	display:inline;
+	position:relative;
+	padding:0px 2px;
+}
+#cls_pnlHeader .cls_listApp li.menu a,#cls_pnlHeader .cls_listUserInfo li.menu a{
+	margin-left:0;
+	padding:0px 7px;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList a
+{
+	padding-left:9px;
+	width:138px;
+	font-size: 12px;
+	color: #1071B5;
+}
+
+#cls_pnlHeader .list_msgList a
+{
+		width: 54px !important;
+}
+
+.list_msgList span
+{
+	padding-left:5px;	
+}
+
+#s_push_mid .close
+{
+	width:16px;
+}
+
+#cls_pnlHeader .cls_listUserInfo .layer_slideList .layer_cnt,#cls_pnlHeader .cls_listUserInfo .layer_slideList
+{
+	width:110px;
+}
+
+#cls_pnlHeader .cls_listApp li .slide,#cls_pnlHeader .cls_listUserInfo li .slide
+{
+	padding-left:8px;
+}
+
+#cls_pnlHeader .list_msgList li
+{
+	color:#494949;
+	font-size:12px;
+	overflow:hidden;
+	width:138px;
+	height: 20px !important;
+}
+#cls_pnlHeader .layer_slideList
+{
+	background:#fff;
+    border: 1px solid #797979;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    padding: 2px 1px 4px;
+    position: absolute;
+    left: 0px;
+    top: 36px;
+    z-index: 9998;
+	display:none;
+}
+
+#cls_pnlHeader li.current 
+{
+	padding-right:3px;
+}
+
+#cls_pnlHeader li.current  .layer_slideList
+{
+	display:block;
+}
+
+#cls_pnlHeader li.current .layer_slideTitle
+{
+	border:1px solid #797979;
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+	background:#fff;
+    border-color: #797979 #797979 -moz-use-text-color;
+    border-style: solid solid none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+	border-bottom:none;
+    color: #595959;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+	display:inline-block;
+	margin-top:5px;
+	padding-top:1px;
+	padding-right:1px;
+	height:30px;
+}
+
+#cls_pnlHeader li.current .layer_slideTitle a
+{
+	margin-top:-7px;
+	padding-left:7px;
+    /*margin-left:0px;*/
+}
+
+#cls_pnlHeader li.current .layer_slideTitle b
+{
+	background-position:2px 7px;
+}
+#cls_pnlHeader li.current .layer_slideTitle b.arrow_s{
+	background-position:1px -139px;
+    width:12px;
+}
+.layer_slideList .layer_cnt
+{
+	margin:5px auto;
+}
+
+.layer_slideList .layer_cnt li
+{
+	margin:0px !important;
+	padding:0px !important;
+	clear:both;
+	height:24px !important;
+	line-height:24px !important;
+}
+
+.layer_slideList .layer_cnt li a
+{
+	display:block;
+	padding-left:5px;
+	font-size:12px;
+}
+
+.layer_slideList .layer_cnt li a:hover
+{
+	background:#EBECED;
+}
+
+.lightgray {
+	color:#ccc;
+}
+
+/*my class*/
+.layer_classList
+{
+	min-width:230px;
+	left: initial !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+.layer_classList .layer_cnt
+{
+	min-width:250px;
+}
+
+.layer_classList .layer_cnt li 
+{
+	height:24px;
+	clear:both;
+	overflow: hidden;
+}
+
+.layer_classList .layer_cnt li a
+{
+	padding-left:9px !important;
+	clear:both;
+	min-width: 239px;
+	margin-left: 0 !important;
+}
+
+/*tab app_list*/
+#cls_headMenu_using .layer_AppList ul li {
+	margin:3px 5px 2px 0 !important;
+	padding-left: 9px !important;
+}
+.layer_AppList
+{
+	width:437px !important;
+}
+
+.layer_AppList .layer_cnt
+{
+	width:425px !important;
+	padding:5px;
+}
+.layer_AppList .layer_cnt li
+{
+	height:28px !important;
+	line-height:28px !important;
+	clear:none;
+	overflow:hidden;
+}
+
+.layer_AppList .layer_cnt li:hover
+{
+	background:#EBECED;
+	border-radius: 5px;
+}
+
+.layer_AppList .layer_cnt li a
+{
+	width: 60px;
+	background: url("/app/images/icons_all.png") no-repeat;
+	padding-left: 24px !important;
+	padding-right: 0px !important;
+	height: 18px;
+	line-height: 16px;
+	margin: 5px 4px !important;
+}
+
+.layer_AppList .layer_cnt li a:hover
+{
+	background:url("/app/images/icons_all.png") no-repeat #EBECED;
+}
+
+.link_headMyPage,.link_headCard,.link_headProfile,.link_headMobile,.link_headSkin,.link_headLogout,.link_headReturnOld,.link_headFeedBack
+{
+	background:url(http://class.hujiang.com/images/head/cls_head_ico.png)  4px 4px no-repeat;
+	_background:url(http://class.hujiang.com/images/head/cls_head_ico.gif)  4px 4px no-repeat;
+	padding-left:27px !important;
+	width:72px !important;
+	
+}
+
+.link_headMyPage:hover,.link_headCard:hover,.link_headProfile:hover,.link_headSkin:hover,.link_headReturnOld:hover,.link_headFeedBack:hover,.link_headMobile:hover
+{
+		background:url(http://class.hujiang.com/images/head/cls_head_ico.png)  4px 4px  no-repeat #EBECED  !important;
+		_background:url(http://class.hujiang.com/images/head/cls_head_ico.gif)  4px 4px  no-repeat #EBECED  !important;
+}
+
+.link_headCard,.link_headCard:hover
+{
+	background-position:4px -19px  !important;
+}
+
+.link_headProfile,.link_headProfile:hover
+{
+	background-position:4px -43px  !important;	
+}
+
+.link_headSkin,.link_headSkin:hover
+{
+	background-position:4px -67px  !important;
+}
+
+.link_headMobile,.link_headMobile:hover
+{
+		background-position:4px -134px  !important;
+}
+
+.link_headFeedBack,.link_headFeedBack:hover
+{
+		background-position:4px -110px  !important;
+}
+
+.link_headReturnOld,.link_headReturnOld:hover
+{
+	background-position:4px -90px  !important;
+}
+
+/*#header_currentClass
+{
+	margin-top:10px;
+	position:static !important;
+	margin-left:15px;	
+}*/
+#cls_header_AppSlide,#cls_headLogo
+{
+	position:relative;	
+}
+
+#cls_header_AppSlide
+{
+	float:left;
+	margin-right:30px;	
+}
+
+#cls_header_AppSlide .link_header_AppSlide
+{
+	background:url(http://class.hujiang.com/images/head/cls_ico_toggle.gif) 5px -97px no-repeat;
+	width: 23px;
+	height: 31px;
+	right: -1px;
+	top: 5px;
+	position: absolute;
+}
+
+#cls_header_AppSlide.current .link_header_AppSlide
+{
+	background:url(http://class.hujiang.com/images/head/cls_ico_toggle.gif) 5px -57px no-repeat !important;
+}
+
+#cls_header_AppSlide.current  #cls_headLogo
+{
+	margin-top:-7px;	
+	margin-left:-1px;
+}
+
+#cls_header_AppSlide ul
+{
+	display:none;	
+}
+
+#cls_header_AppSlide.current .cls_header_AppSlide_Title
+{
+	border:1px solid #797979;
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+	background:#fff;
+    border-color: #797979 #797979 -moz-use-text-color;
+    border-style: solid solid none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+	border-bottom:none;
+    color: #595959;
+    cursor: pointer;
+    z-index: 9999;
+	display:inline-block;
+	margin-top:5px;
+	padding-top:1px;
+	height:30px;
+	position:absolute;
+}
+
+#cls_header_AppSlide.current
+{
+	margin-right:28px;
+	width:123px;
+	height:34px;
+}
+
+#cls_header_AppSlide.current ul
+{
+	background:#fff;
+    border: 1px solid #797979;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    padding: 8px 1px 8px;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 118px;
+    z-index: 9998;
+	display:block;
+}
+
+#cls_header_AppSlide li
+{
+	clear: both;
+    height: 26px !important;
+    line-height: 25px !important;
+    margin:0px 8px;
+    padding: 0;
+}
+
+#cls_header_AppSlide li a
+{
+	color: #494949;
+	display: block;
+	float: left;
+	margin-left: 0px;
+	padding: 0 5px;
+	position: relative;
+	text-decoration: none;
+	width: 64px;
+	font-size: 12px !important;
+	background: url(/app/images/icons_all.png?V=90) no-repeat;
+	padding-left: 33px;
+}
+#cls_header_AppSlide .cls_header_app_bulo
+{
+	background-position: 5px -752px;
+}
+
+#cls_header_AppSlide .cls_header_app_hj
+{
+	background-position: 5px -808px;
+}
+
+#cls_header_AppSlide .cls_header_app_en
+{
+	background-position: 5px -836px;
+}
+
+#cls_header_AppSlide .cls_header_app_jp
+{
+	background-position: 5px -864px;
+}
+
+#cls_header_AppSlide .cls_header_app_fr
+{
+	background-position: 5px -892px;
+}
+
+#cls_header_AppSlide .cls_header_app_kr
+{
+	background-position: 5px -921px;
+}
+
+#cls_header_AppSlide .cls_header_app_shop
+{
+	background-position: 5px -948px;
+}
+
+#cls_header_AppSlide .cls_header_app_dict
+{
+	background-position: 5px -976px;
+}
+
+
+#cls_header_AppSlide li a:hover
+{
+	background-color:#EBECED;	
+}
+
+#cls_header_AppSlide .cls_line
+{
+	margin-top:4px;
+	padding-top:4px;	
+}
+
+#cls_header_AppSlide .cls_line
+{
+	border-top:1px dotted #ccc;
+}
+
+#cls_pnlHeader .list_msgList li a
+{
+	width:80px !important;
+	float:right;
+	padding-left:0px !important;
+	color:#1071B5 !important;
+}
+
+#cls_pnlHeader .list_msgList li a:hover
+{
+	background:none;
+	text-decoration:underline;
+	color: #f60 !important;
+}
+
+#cls_pnlHeader .list_msgList li  span
+{
+	display:block;
+	padding-left:13px;
+	width:160px;
+}
+
+
+#cls_pnlHeader .li_msgList .layer_slideList .layer_cnt,#cls_pnlHeader .li_msgList .layer_slideList
+{
+	width:168px;
+}
+
+
+
+#cls_pnlHeader .list_msgList {
+    border-bottom: 1px dotted #CCCCCC;
+    color: #606060;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 6px 0 5px 2px;
+    padding: 0 0 5px 5px;
+}
+
+/*Yello Tip*/
+#push_cnt,#push_cnt *
+{
+	font-size:12px !important;
+}
+#push_cnt{
+	padding-right: 0px;
+	display: block;
+	float: left;
+	width: 145px;
+}
+#push_cnt a
+{
+	float:right !important;
+	color:#1071B5 !important;
+}
+#push_cnt a:hover
+{
+	text-decoration: underline !important;
+	color:#f60 !important;
+}
+#cls_pnlHeader .current #ing_push
+{
+	display:none !important;
+}
+#header_currentClass
+{ position:absolute; bottom:0; left:20px;}
+
+
+#cls_header_AppSlide .cls_header_app_bbs
+{
+	background-position:5px -780px;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList{
+	right:3px !important;
+	*right: 2px;
+	left: auto;
+}
+#cls_pnlHeader .li_msgList .layer_slideList .list_msgList a:hover{
+	text-decoration: underline;
+	color: #f60;
+}
+#cls_headMenu_myclass{
+	position: initial !important;
+}
+
+
+.head_icon,.head_icon:hover{
+	background: url(http://class.hujiang.com/images/tools_icon_black.png) no-repeat;
+	_background: url(http://class.hujiang.com/images/tools_icon_black.gif) no-repeat;
+	height: 24px;
+	width: 23px;
+	display: inline-block;
+	margin:11px 0;
+}
+#cls_pnlHeader .head_xd_icon{
+	background-position: -42px 0 ;
+	margin-left: 5px;
+}
+#cls_pnlHeader a.head_xd_icon:hover{
+	background-position: -42px -29px;
+	margin-left: 5px;
+}
+#cls_pnlHeader li.current .layer_slideTitle a.head_xd_icon{
+	margin:4px 0 0 4px !important;
+	_margin-top:7px;
+	padding-left:0;
+	background-position: -44px -29px ;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList.layer_xdList{
+	width:79px;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList.layer_xdList .layer_cnt{
+	width:67px;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList.layer_xdList .layer_cnt li{
+	overflow:hidden;
+	width:69px;
+	height:24px;
+	clear:both;
+}
+#cls_pnlHeader .cls_listUserInfo .layer_slideList.layer_xdList .layer_cnt li a{
+	width: 57px;
+	clear: both;
+	padding-left: 10px;
+	margin: 0;
+}
+#tipset {
+	padding: 5px 0 0 8px;
+	border-top: 1px dotted #CCC;
+	margin: 6px 0px 0 2px;
+	line-height: 20px;
+	font-size: 12px;
+	height: 20px;
+}
+.li_xdbox .layer_slideTitle{
+	overflow: hidden;
+	padding-left: 2px;
+}
+#cls_pnlHeader .cls_listUserInfo .li_xdbox #tipset a,.li_xdbox #tipset a:hover{
+	width: auto;
+	color: #606060;
+	padding-left: 16px;
+	margin: 0;
+}
+.li_xdbox #tipset a:hover{
+	color: #f60;
+}
+#hjdict_slide,#hjdict_slide:hover{
+	background: url(http://class.hujiang.com/images/icons_xdhc.gif) 0 5px no-repeat transparent;
+	padding-left: 17px;
+}
+#hjdict_slide.on,#hjdict_slide.on:hover{
+	background-position: 0 -24px;
+}
+.layer_pofileList{
+	/*width:107px !important; by Baron Lee*/
+    width:119px!important;
+	padding-left: 5px;
+}
+.layer_pofileList .layer_cnt{
+	width:99px !important;
+}
+.layer_pofileList .layer_cnt li{
+	width:94px;
+	height:24px;
+}
+.layer_pofileList .layer_cnt li a{
+	width:60px !important;
+}
+.link_headLogout,.link_headLogout:hover {
+	background: white;
+	border-top: 1px dotted #ccc;
+	margin-top: 5px;
+}
+.icon_newOrder{
+	display: inline-block;
+	height: 10px;
+	width: 9px;
+	margin-left: 4px;
+	background: url(http://class.hujiang.com/images/icon_dot_yellow.png) no-repeat;
+	_background: url(http://class.hujiang.com/images/icon_dot_yellow.gif) no-repeat;
+	vertical-align: 2px;
+	_display: inline;
+	zoom: 1;
+	position: absolute;
+	right: 2px;
+	top: 10px;
+}
+
+/*第二部分：以下内容来自3year皮肤的CSS，图片地址改为绝对地址，只保留headbar部分css*/
+/* http://class.hujiang.com/skin2/3year/css.css */
+html{background:#FFF;}
+body{background:#FFF url("/skin2/3year/bg_body.jpg") no-repeat center top;}
+#tool{margin:0 ;background:url('/skin2/3year/bg_header.jpg') 0px top no-repeat;height:340px;}
+
+#header {
+    background:none !important;
+    height:340px;
+    position: relative;
+	}
+#header_logout {
+    margin-top:300px;
+	}
+#logo{
+	position:relative;
+	top:-15px;
+	}
+#headerNav {
+    top: -5px;
+}
+
+#cont_h1 {
+    position:absolute;
+    top:315px;
+}
+#skin {
+    float: right;
+    position: relative;
+    right: 55px;
+    top:-5px;
+}
+.passport_login, .passport_logout{ margin-top:140px;}
+#container{ overflow:hidden;}
+
+body .cls_pnlHeader_wrap{background:url(http://class.hujiang.com/images/head/clsHead_bg_black.png) repeat-x;}
+#cls_pnlHeader .cls_listApp li a,#cls_pnlHeader .cls_listUserInfo li a{color:#FFF;}
+#cls_pnlHeader .menu a:hover,#cls_pnlHeader .menu:hover ,.cls_headMenu_hover {background:#000; color:#FFF !important;}
+#cls_pnlHeader b{background:url(http://class.hujiang.com/images/head/cls_ico_toggle_w.gif) 2px 14px no-repeat;}
+#cls_pnlHeader li.current .layer_slideTitle b{background:url(http://class.hujiang.com/images/head/cls_ico_toggle.gif) 2px 7px no-repeat;}
+#cls_pnlHeader li.current .layer_slideTitle a{color:#494949 !important;}
+.layer_cnt li a,.layer_slideTitle a .slide{ color:#494949 !important;}

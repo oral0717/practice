@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>oral代码模块</title>
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/head.css" />
+<link rel="stylesheet" type="text/css" href="css/footer.css" />
+<link rel="stylesheet" type="text/css" href="css/oralCodeModule.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+
+ 
+</head>
+<body>
+<h2 class="oral_seperate">最外层框架</h2>
+
+<div class="outoral_outcontainer">	
+	<!-- oral_outcontainer start  -->
+	<div class="oral_outcontainer">	
+		<!--modulemain_con1 start  -->
+		<div class="modulemain_con">
+			<div class="modulemain_tit">
+				<img src="img/rsyj_sl_tit.png" />
+			</div>
+			<!--modulemain_con1 start  -->
+			<div class="modulemain_con1">
+
+			</div>
+			<!--modulemain_con1 end  -->
+		</div>	
+		<!--modulemain_con1 end  -->
+	</div>
+	<!-- oral_outcontainer end  -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="oral_seperate">课程1</h2>
+<div>
+<!-- 大课1start  -->
+		<ul class="oral_lesson1">			
+			  <li class="oral_lesson1_img"><a href="#"><img src="img/big_lesson.jpg" width="415" height="269"/></a></li>
+			  <li class="oral_lesson1_number">55</li>
+			  <li class="oral_lesson1_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+			  <li class="oral_lesson1_bottom">
+			  	<div class="oral_lesson1_price">
+			  		<p class="new_price">￥258.0</p>
+			  		<p><span class="old_price">￥2588.0</span><span class="discount">7.5折</span></p>
+			  	</div>
+			  	<div class="oral_lesson1_btn oral_lesson1_btn_start"></div>
+			  </li>
+		</ul>
+		<ul class="oral_lesson1">			
+			  <li class="oral_lesson1_img"><a href="#"><img src="img/big_lesson.jpg" width="415" height="269"/></a></li>
+			  <li class="oral_lesson1_number">55</li>
+			  <li class="oral_lesson1_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+			  <li class="oral_lesson1_bottom">
+			  	<div class="oral_lesson1_price">
+			  		<p class="new_price">￥258.0</p>
+			  		<p><span class="old_price">￥2588.0</span><span class="discount">7.5折</span></p>
+			  	</div>
+			  	<div class="oral_lesson1_btn oral_lesson1_btn_done"></div>
+			  </li>
+		</ul>
+<!-- 大课1end -->
+<div class="oralclear"></div>
+</div>
+
+
+
+
+
+
+<h2 class="oral_seperate">可以跳转的浮动导航1</h2>
+<!--rsyj_nav start  -->
+<div class="rsyj_nav run_item1">
+	<ul class="floatnav">
+		<li class="rsyj_sh run_to_1"></li> 
+		<li class="rsyj_sl run_to_2"></li> 
+		<li class="rsyj_jp run_to_3"></li> 
+	</ul>
+</div>
+<!--rsyj_nav end  -->
+<script type="text/javascript" src="js/floatNav.js"></script>
+<script type="text/javascript">
+//导航锚点跳转
+    var isScrolling = false;
+
+    function run_click(){
+        if(!isScrolling){
+            isScrolling = true;
+            var index = this.index;
+            var main_location = $(".run_item"+index).offset().top-36;
+            var oScrollTop = document.body.scrollTop||$("html,body").scrollTop();
+            if(main_location==oScrollTop){
+                $("html,body").stop();
+                isScrolling = false;
+            }
+            else{
+                $("html,body").animate({ scrollTop: main_location }, 1000,function(){
+                    isScrolling = false;
+                });
+            }
+        }
+    };
+    for (var i = 1; i <= 10; i++) {
+        var list = $('.run_to_' + i);
+        for (j = 0; j < list.length; j++) {
+            list[j].index = i;
+            list[j].onclick = run_click;
+        }
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="oral_seperate">课程2</h2>
+<div>
+            <!-- 课程2start  -->
+            <div class="oral_lesson2">
+			     <div class="oral_lesson2_img"><a href="#"><img src="img/jexam_item.jpg" width="100" height="100" /></a></div>
+				<div class="oral_lesson2_con">
+					<h4><a href="#">顶级幸运奖</a></h4>
+					<p><a href="#">文案文案文案文案文案文案文案文案文案文案文案文案文案文案</a></p>
+				</div>
+				<div class="oral_lesson2_number">180</div>
+			</div>
+			<div class="oral_lesson2">
+				<div class="oral_lesson2_img"><a href="#"><img src="img/jexam_item.jpg" width="100" height="100" /></a></div>
+				<div class="oral_lesson2_con">
+					<h4><a href="#">顶级幸运奖</a></h4>
+					<p><a href="#">文案文案文案文案文案文案文案文案文案文案文案文案文案文案</a></p>
+				</div>
+				<div class="oral_lesson2_number">180</div>
+			</div>
+			<div class="oral_lesson2">
+				<div class="oral_lesson2_img"><a href="#"><img src="img/jexam_item.jpg" width="100" height="100" /></a></div>
+				<div class="oral_lesson2_con">
+					<h4><a href="#">顶级幸运奖</a></h4>
+					<p><a href="#">文案文案文案文案文案文案文案文案文案文案文案文案文案文案</a></p>
+				</div>
+				<div class="oral_lesson2_number">180</div>
+			</div>
+			<div class="oral_lesson2">
+				<div class="oral_lesson2_img"><a href="#"><img src="img/jexam_item.jpg" width="100" height="100" /></a></div>
+				<div class="oral_lesson2_con">
+					<h4><a href="#">顶级幸运奖</a></h4>
+					<p><a href="#">文案文案文案文案文案文案文案文案文案文案文案文案文案文案</a></p>
+				</div>
+				<div class="oral_lesson2_number">180</div>
+			</div>
+            <!-- 课程2end -->
+            <div class="oralclear"></div>
+</div>
+
+
+
+
+
+
+
+<h2 class="oral_seperate">课程3</h2>
+<div>
+    <!-- 课程3start  -->
+	<div class="oral_lesson3">
+		<div class="oral_lesson3_img"><a href="#"><img src="img/jexam_item2.jpg" width="73" height="73" /></a></div>
+		<div class="oral_lesson3_con">
+			<p>用户名：再见珊瑚</p>
+			<p>成绩：180</p>
+			<p class="lesson3_class_p1"><a href="#" class="lesson3_class_a1">不要挑战N1，要挑战自己</a></p>
+		</div>
+		<div class="oral_lesson3_number">N1</div>				
+		<div class="oral_lesson3_art"><a href="#" class="lesson3_class_a2">备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时…</a></div>			
+	</div>
+	<div class="oral_lesson3">
+		<div class="oral_lesson3_img"><a href="#"><img src="img/jexam_item2.jpg" width="73" height="73" /></a></div>
+		<div class="oral_lesson3_con">
+			<p>用户名：再见珊瑚</p>
+			<p>成绩：180</p>
+			<p class="lesson3_class_p1"><a href="#" class="lesson3_class_a1">不要挑战N1，要挑战自己</a></p>
+		</div>
+		<div class="oral_lesson3_number">N1</div>				
+		<div class="oral_lesson3_art"><a href="#" class="lesson3_class_a2">备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时…</a></div>			
+	</div>	
+	<div class="oral_lesson3">
+		<div class="oral_lesson3_img"><a href="#"><img src="img/jexam_item2.jpg" width="73" height="73" /></a></div>
+		<div class="oral_lesson3_con">
+			<p>用户名：再见珊瑚</p>
+			<p>成绩：180</p>
+			<p class="lesson3_class_p1"><a href="#" class="lesson3_class_a1">不要挑战N1，要挑战自己</a></p>
+		</div>
+		<div class="oral_lesson3_number">N1</div>				
+		<div class="oral_lesson3_art"><a href="#" class="lesson3_class_a2">备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时备考过程其实没有想象中的那么辛苦，但是关键在于能不能把时间用好，课间的时候，电梯前排时…</a></div>			
+	</div>
+    <!-- 课程3end -->
+    <div class="oralclear"></div>
+</div>
+
+
+
+
+
+<h2 class="oral_seperate">课程4</h2>
+<div>
+    <!-- 课程4start  -->
+	<ul class="oral_lesson4">			
+		<li class="oral_lesson4_img"><a href="#"><img src="img/big_lesson.jpg" width="205" height="135"/></a></li>
+		<li class="oral_lesson4_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+		<li class="oral_lesson4_price">			  	
+			<p class="new_price">￥<span>39000</span>.0</p>
+			<p><span class="old_price">￥39000.0</span></p>			  
+		</li>
+		<li>			  	
+			<div class="oral_lesson4_btn oral_lesson4_btn_start"></div>
+		</li>
+	</ul>
+	<ul class="oral_lesson4">			
+		<li class="oral_lesson4_img"><a href="#"><img src="img/big_lesson.jpg" width="205" height="135"/></a></li>
+		<li class="oral_lesson4_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+		<li class="oral_lesson4_price">			  	
+			<p class="new_price">￥<span>39000</span>.0</p>
+			<p><span class="old_price">￥39000.0</span></p>			  
+		</li>
+		<li>			  	
+			<div class="oral_lesson4_btn oral_lesson4_btn_start"></div>
+		</li>
+	</ul>
+	<ul class="oral_lesson4">			
+		<li class="oral_lesson4_img"><a href="#"><img src="img/big_lesson.jpg" width="205" height="135"/></a></li>
+		<li class="oral_lesson4_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+		<li class="oral_lesson4_price">			  	
+			<p class="new_price">￥<span>39000</span>.0</p>
+			<p><span class="old_price">￥39000.0</span></p>			  
+		</li>
+		<li>			  	
+			<div class="oral_lesson4_btn oral_lesson4_btn_start"></div>
+		</li>
+	</ul>
+	<ul class="oral_lesson4">			
+		<li class="oral_lesson4_img"><a href="#"><img src="img/big_lesson.jpg" width="205" height="135"/></a></li>
+		<li class="oral_lesson4_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+		<li class="oral_lesson4_price">			  	
+			<p class="new_price">￥<span>39000</span>.0</p>
+			<p><span class="old_price">￥39000.0</span></p>			  
+		</li>
+		<li>			  	
+			<div class="oral_lesson4_btn oral_lesson4_btn_start"></div>
+		</li>
+	</ul>
+    <!-- 课程4end -->
+    <div class="oralclear"></div>
+</div>
+
+
+
+
+<h2 class="oral_seperate">课程5</h2>
+<div>
+	<!--  tyg_classitem s  -->
+            <div class="tyg_classitem">
+              <div class="juniorclass">
+                <ul>
+                  <li class="juniorclass_img"><a href="#"><img src="img/juniorclass.jpg" /></a></li>
+                  <li class="juniorclass_tit"><a href="#">零基础直达雅思6分零基础直达雅思6分零基础直达雅思6分</a></li>
+                  <li class="juniorprice"><span class="newprice">￥<b>2050.0</b></span><span class="oldprice">￥2000</span></li>
+                  <li class="tyg_t_btn"><a href="#">查看详情</a></li>
+                  <li class="addmoney">￥<b>5000.0</b></li>
+                </ul>
+              </div>
+              <div class="seniorclass">
+                <ul>
+                  <li class="seniorclass_img"><a href="#"><img src="img/seniorclass.jpg" /></a></li>
+                  <li class="seniorclass_tit"><a href="#">零基础直达雅思6.5分零基础直达雅思6分零基础直达雅思6分</a></li>
+                  <li class="tyg_t_btn"><a href="#">查看详情</a></li>
+                  <li class="seniorprice"><span class="newprice">￥<b>2599.0</b></span><br/><span class="oldprice">原价：<b>￥2000</b></span></li>
+                </ul>
+              </div>
+              <div class="oralclear"></div>
+            </div>
+    <!--  tyg_classitem e  -->
+    <!--  tyg_classitem s  -->
+            <div class="tyg_classitem">
+              <div class="juniorclass">
+                <ul>
+                  <li class="juniorclass_img"><a href="#"><img src="img/juniorclass.jpg" /></a></li>
+                  <li class="juniorclass_tit"><a href="#">零基础直达雅思6分零基础直达雅思6分零基础直达雅思6分</a></li>
+                  <li class="juniorprice"><span class="newprice">￥<b>2050.0</b></span><span class="oldprice">￥2000</span></li>
+                  <li class="tyg_t_btn"><a href="#">查看详情</a></li>
+                  <li class="addmoney">￥<b>5000.0</b></li>
+                </ul>
+              </div>
+              <div class="seniorclass">
+                <ul>
+                  <li class="seniorclass_img"><a href="#"><img src="img/seniorclass.jpg" /></a></li>
+                  <li class="seniorclass_tit"><a href="#">零基础直达雅思6.5分零基础直达雅思6分零基础直达雅思6分</a></li>
+                  <li class="tyg_t_btn"><a href="#">查看详情</a></li>
+                  <li class="seniorprice"><span class="newprice">￥<b>2599.0</b></span><br/><span class="oldprice">原价：<b>￥2000</b></span></li>
+                </ul>
+              </div>
+              <div class="oralclear"></div>
+            </div>
+    <!--  tyg_classitem e  -->
+	<div class="oralclear"></div>
+</div>
+
+
+
+
+
+
+<h2 class="oral_seperate">课程6</h2>
+<!-- bqbf_introc1 start  -->
+<div class="extend_class">
+   <!-- 小课 -->
+    <div class="small_lesson_all">
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季师傅</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">5555.5</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">5555.5</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">2900</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">2900</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">2900</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <a href="#" target="_blank"><img src="img/small_lesson_pic.png"></a>
+            </dt>
+            <dd class="small_lesson_title">
+                <a href="#/" target="_blank">英语零基础直达大学六级【春季</a>
+            </dd>
+            <dd class="small_lesson_money">
+                <label>原价：</label><del class="money">3900</del>学币
+            </dd>
+            <dd class="small_lesson_money">
+                <label>优惠价：</label><span class="money">2900</span>学币
+            </dd>
+            <dd class="small_lesson_buy">
+                <a href="#/" target="_blank" class="small_lesson_buy_button"></a>
+            </dd>
+        </dl>
+        <dl class="small_lesson_item">
+            <dt>
+                <span><img src="img/bqbf_enter.png"></span>
+            </dt>
+            <dd class="small_lesson_other">
+                <a href="http://class.hujiang.com/course?cate=121734" target="_blank">韩语课程</a>
+            </dd>
+            <dd class="small_lesson_other">
+                <a href="http://class.hujiang.com/course?cate=121934" target="_blank">法语课程</a>
+            </dd>
+        </dl>
+    </div><!-- 小课end  -->
+    <div class="oralclear"></div>
+</div>
+<!-- bqbf_introc1 end  -->
+
+
+
+
+
+
+
+<h2 class="oral_seperate">课程7</h2>
+<div>
+    <!-- oral_lesson7 start -->
+    <ul class="oral_lesson7">           
+        <li class="oral_lesson7_img"><a href="#"><img src="img/lxys_lesson.jpg" width="200" height="130"/></a></li>
+        <li class="oral_lesson7_tit"><a href="#">ICANMUSIC钢琴入门精品 钢琴入门精品钢琴入门精品 钢琴入门精品 钢琴入门精品</a></li>
+        <li class="oral_lesson7_price">             
+            <p class="new_price"><span>￥39000.0</span></p>
+            <p><span class="old_price">￥39000.0</span><br/><span class="lesson_discount">8折</span></p>            
+        </li>
+        <li>                
+            <div class="oral_lesson7_btn oral_lesson7_btn_start"></div>
+        </li>
+    </ul>
+    <!-- oral_lesson7 end -->
+    <ul class="oral_lesson7">           
+        <li class="oral_lesson7_img"><a href="#"><img src="img/lxys_lesson.jpg" width="200" height="130"/></a></li>
+        <li class="oral_lesson7_tit"><a href="#">ICANMUSIC钢琴入门精品 钢琴入门精品钢琴入门精品 钢琴入门精品 钢琴入门精品</a></li>
+        <li class="oral_lesson7_price">             
+            <p class="new_price"><span>￥39000.0</span></p>
+            <p><span class="old_price">￥39000.0</span><br/><span class="lesson_discount">8折</span></p>            
+        </li>
+        <li>                
+            <div class="oral_lesson7_btn oral_lesson7_btn_start"></div>
+        </li>
+    </ul>
+    <ul class="oral_lesson7">           
+        <li class="oral_lesson7_img"><a href="#"><img src="img/lxys_lesson.jpg" width="200" height="130"/></a></li>
+        <li class="oral_lesson7_tit"><a href="#">ICANMUSIC钢琴入门精品 钢琴入门精品钢琴入门精品 钢琴入门精品 钢琴入门精品</a></li>
+        <li class="oral_lesson7_price">             
+            <p class="new_price"><span>￥39000.0</span></p>
+            <p><span class="old_price">￥39000.0</span><br/><span class="lesson_discount">8折</span></p>            
+        </li>
+        <li>
+            <div class="oral_lesson7_btn oral_lesson7_btn_start"></div>
+        </li>
+    </ul>
+    <ul class="oral_lesson7">           
+        <li class="oral_lesson7_img"><a href="#"><img src="img/lxys_lesson.jpg" width="200" height="130"/></a></li>
+        <li class="oral_lesson7_tit"><a href="#">ICANMUSIC钢琴入门精品 钢琴入门精品钢琴入门精品 钢琴入门精品 钢琴入门精品</a></li>
+        <li class="oral_lesson7_price">             
+            <p class="new_price"><span>￥39000.0</span></p>
+            <p><span class="old_price">￥39000.0</span><br/><span class="lesson_discount">8折</span></p>            
+        </li>
+        <li>                
+            <div class="oral_lesson7_btn oral_lesson7_btn_start"></div>
+        </li>
+    </ul>
+    <!--  e  -->
+    <div class="oralclear"></div>                   
+</div>
+
+
+
+
+
+<h2 class="oral_seperate">课程8</h2>
+<div>
+    <!-- oral_lesson8 start -->
+    <ul class="oral_lesson8">           
+      <li class="oral_lesson8_img"><a href="#"><img src="img/big_lesson.jpg" width="240" height="160"/></a></li>
+      <li class="oral_lesson8_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+      <li class="oral_lesson8_bottom">
+        <div class="oral_lesson8_price">
+            <p class="new_price">￥29999.0</p>
+            <p><span class="old_price">￥2988.0</span><span class="discount">7.5折</span></p>
+        </div>
+        <div class="oral_lesson8_btn oral_lesson8_btn_start"></div>
+      </li>
+    </ul>
+    <!-- oral_lesson8 end -->
+    <ul class="oral_lesson8">           
+      <li class="oral_lesson8_img"><a href="#"><img src="img/big_lesson.jpg" width="240" height="160"/></a></li>
+      <li class="oral_lesson8_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+      <li class="oral_lesson8_bottom">
+        <div class="oral_lesson8_price">
+            <p class="new_price">￥29999.0</p>
+            <p><span class="old_price">￥2988.0</span><span class="discount">7.5折</span></p>
+        </div>
+        <div class="oral_lesson8_btn oral_lesson8_btn_start"></div>
+      </li>
+    </ul>
+    <ul class="oral_lesson8">           
+      <li class="oral_lesson8_img"><a href="#"><img src="img/big_lesson.jpg" width="240" height="160"/></a></li>
+      <li class="oral_lesson8_tit"><a href="#">ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品ICANMUSIC钢琴入门精品</a></li>
+      <li class="oral_lesson8_bottom">
+        <div class="oral_lesson8_price">
+            <p class="new_price">￥29999.0</p>
+            <p><span class="old_price">￥2988.0</span><span class="discount">7.5折</span></p>
+        </div>
+        <div class="oral_lesson8_btn oral_lesson8_btn_start"></div>
+      </li>
+    </ul>
+    <div class="oralclear"></div>                   
+</div>
+
+
+
+
+
+
+<h2 class="oral_seperate">课程9</h2>
+<div style="width:1100px;">
+    <!-- oral_lesson9 s-->
+    <div class="oral_lesson9">
+        <div class="oral_lesson9_img">
+            <a href="#" target="_blank"><img src="img/class/eng/eng1.jpg" /></a>
+        </div>
+        <ul>
+            <li class="oral_lesson9_tit"><a href="#" target="_blank"> 英语零基础直达大学六级【11月通关B班】</a></li>
+            <li class="oral_lesson9_price">原价：<del>￥1589</del></li>
+            <li><a href="#" target="_blank" class="oral_lesson9_btn oral_lesson9_btn1">￥<span>1303</span></a></li>
+            <li><a href="javascript:void(0);" class="oral_lesson9_btn oral_lesson9_btn2" onclick="showLay1('overlayer_searchmate');">￥<span>794.5</span></a></li>
+        </ul>
+        <div class="label label1"></div>
+    </div>
+    <!-- oral_lesson9 e-->
+    <div class="oral_lesson9">
+        <div class="oral_lesson9_img"><a href="#" target="_blank"><img src="img/class/eng/eng1.jpg" /></a></div>
+        <ul>
+            <li class="oral_lesson9_tit"><a href="#" target="_blank"> 英语零基础直达大学六级【11月通关B班】</a></li>
+            <li class="oral_lesson9_price">原价：<del>￥1589</del></li>
+            <li><a href="#" target="_blank" class="oral_lesson9_btn oral_lesson9_btn1">￥<span>1303</span></a></li>
+            <li><a href="javascript:void(0);" class="oral_lesson9_btn oral_lesson9_btn2" onclick="showLay1('overlayer_searchmate');">￥<span>794.5</span></a></li>
+        </ul>
+        <div class="label label2"></div>
+    </div>
+    <div class="oral_lesson9">
+        <div class="oral_lesson9_img"><a href="#" target="_blank"><img src="img/class/eng/eng1.jpg" /></a></div>
+        <ul>
+            <li class="oral_lesson9_tit"><a href="#" target="_blank"> 英语零基础直达大学六级【11月通关B班】</a></li>
+            <li class="oral_lesson9_price">原价：<del>￥1589</del></li>
+            <li><a href="#" target="_blank" class="oral_lesson9_btn oral_lesson9_btn1">￥<span>1303</span></a></li>
+            <li><a href="javascript:void(0);" class="oral_lesson9_btn oral_lesson9_btn2" onclick="showLay1('overlayer_searchmate');">￥<span>794.5</span></a></li>
+        </ul>
+        <div class="label label3"></div>
+    </div>
+    <div class="oral_lesson9">
+        <div class="oral_lesson9_img"><a href="#" target="_blank"><img src="img/class/eng/eng1.jpg" /></a></div>
+        <ul>
+            <li class="oral_lesson9_tit"><a href="#" target="_blank"> 英语零基础直达大学六级【11月通关B班】</a></li>
+            <li class="oral_lesson9_price">原价：<del>￥1589</del></li>
+            <li><a href="#" target="_blank" class="oral_lesson9_btn oral_lesson9_btn1">￥<span>1303</span></a></li>
+            <li><a href="javascript:void(0);" class="oral_lesson9_btn oral_lesson9_btn2" onclick="showLay1('overlayer_searchmate');">￥<span>794.5</span></a></li>
+        </ul>
+        <div class="label label4"></div>
+    </div>
+    <div class="oralclear"></div>
+</div>
+
+
+
+
+
+
+<h2 class="oral_seperate">模块1</h2>
+<div>
+    <!-- 模块1 start  -->
+	<div class="oral_module1">
+		<div class="oral_module1_con">
+			<h4>阳光普照奖</h4>
+			<p>只要晒出你收到的《入学通知单》即可获得1学币哦</p>
+		</div>
+		<div class="oral_module1_img"><img src="img/prizeup1.jpg" width="130" height="81" /></div>
+	</div>
+    <!-- 模块1 end -->
+    <div class="oralclear"></div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/blackLayer.js"></script>
+<h2 class="oral_seperate">模块2</h2>
+<div class="oral_module2out">
+    <!-- 模块2 start  -->
+    <!--khsy_con1 start  -->
+    <div class="oral_module2">
+                    <table class="oral_table1" cellspacing="0" cellpadding="0" >
+                        <tbody>
+                        <tr>
+                            <td colspan="1" rowspan="2">
+                                <div class="td_contain spc_height1">
+                                <a href="#" target="_blank"><img src="img/khsy_c1.jpg" width="143" height="286" /></a>
+                                <div class="blackLayer spc_width2 spc_height1"></div>
+                                </div>
+                            </td>
+                            <td colspan="2" rowspan="2">
+                                <div class="td_contain spc_width1 spc_height1">
+                                <a href="#" target="_blank"><img src="img/khsy_c2.jpg" width="295" height="286" /></a>
+                                <div class="blackLayer spc_width1 spc_height1"></div>
+                                </div>                      
+                            </td>
+                            <td colspan="2" rowspan="1">
+                                <div class="td_contain spc_width1 spc_height2">
+                                <a href="#" target="_blank"><img src="img/khsy_c3.jpg" width="295" height="137"/></a>
+                                <div class="blackLayer spc_width1 spc_height2"></div>
+                                </div>
+                            </td>
+                            <td colspan="1" rowspan="2">
+                                <div class="td_contain spc_height1">
+                                <a href="#" target="_blank"><img src="img/khsy_c5.jpg" width="143" height="286" /></a>
+                                <div class="blackLayer spc_width2 spc_height1"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1">
+                                <div class="td_contain spc_width1 spc_height2">
+                                <a href="#" target="_blank"><img src="img/khsy_c4.jpg" width="295" height="137"/></a>
+                                <div class="blackLayer spc_width1 spc_height2"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="1">
+                                <div class="td_contain spc_width1 spc_height2">
+                                <a href="#" target="_blank"><img src="img/khsy_c6.jpg" width="295" height="137" /></a>
+                                <div class="blackLayer spc_width1 spc_height2"></div>
+                                </div>
+                            </td>
+                            <td colspan="2" rowspan="1">
+                                <div class="td_contain spc_width1 spc_height2">
+                                <a href="#" target="_blank"><img src="img/khsy_c7.jpg" width="295" height="137" /></a>
+                                <div class="blackLayer spc_width1 spc_height2"></div>
+                                </div>
+                            </td>                           
+                            <td colspan="2" rowspan="1">
+                                <div class="td_contain spc_width1 spc_height2">
+                                <a href="#" target="_blank"><img src="img/khsy_c8.jpg" width="295" height="137"/></a>
+                                <div class="blackLayer spc_width1 spc_height2"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="last_tr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>                        
+                    </table>
+    </div>
+    <!--khsy_con1 end  -->
+    <!-- 模块2 end -->
+</div>
+
+
+
+
+
+
+<h2 class="oral_seperate">模块3</h2>
+<!--khsy_con1 start  -->
+<div class="oral_module3">
+                    <div class="pic_links">
+                        <a href="#" class="pic_link1"><img src="img/khsy_c3.jpg" width="243" height="137" /></a>
+                        <a href="#"><img src="img/khsy_c3.jpg" width="243" height="137" /></a>
+                        <a href="#"><img src="img/khsy_c3.jpg" width="243" height="137" /></a>
+                        <a href="#"><img src="img/khsy_c3.jpg" width="243" height="137" /></a>
+                        <a href="#" class="pic_link1"><img src="img/khsy_c3.jpg" width="1000" height="150" /></a>
+                        <div class="oralclear"></div>
+                    </div>
+</div>
+<!--khsy_con1 end  -->  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
