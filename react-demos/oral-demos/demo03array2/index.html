@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="oralDemo"></div>
+  </body>
+  <script type="text/babel">
+    var arr=[
+      <h1>title1</h1>,
+      <h1>title2</h1>
+    ];
+    React.render(
+      <div>{arr}</div>,
+      document.getElementById('oralDemo')
+    );
+  </script>
+</html>

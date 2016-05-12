@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="oralDemo"></div>
+  </body>
+  <script type="text/babel">    
+      var names=['oral1','oral2','oral3','oral4'];
+      React.render(
+        <div>
+          {
+            names.map(function(name){
+              return <div>Hello,{name}!</div>
+            })
+
+          }
+          {/*不能有分号;*/} 
+        </div>,
+        document.getElementById('oralDemo')
+      );
+  </script>
+</html>

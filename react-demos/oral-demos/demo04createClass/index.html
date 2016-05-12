@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="oralDemo"></div>
+  </body>
+  <script type="text/babel">
+    var HelloMessage=React.createClass({
+      render:function(){
+        return <h1>Hello {this.props.name}!</h1>
+      }
+    });
+    React.render(
+      <HelloMessage name="Oral"/>,
+      document.getElementById('oralDemo')
+    );
+  </script>
+</html>
