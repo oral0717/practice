@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+  <div id="oralDemo"></div>  
+  <!-- <script type="text/jsx">
+    var oralHtml=<div className="oral-html">hello oral!</div>;
+    React.render(oralHtml,document.getElementById('oralDemo'));
+  </script> -->
+  <script type="text/jsx">
+    var OralHtmlNode=React.createClass({
+      render:function(){
+        return <div>hello.oral</div>
+      }
+    });
+    var oralHtml=<OralHtmlNode className="oral-html" someProperty={true}/>;
+    React.render(oralHtml,document.getElementById('oralDemo'));
+  </script>
+  </body>
+</html>
