@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+
+</style>
+</head>
+
+<body>
+
+<ul id="test">  
+    <li>1这是第条</li>
+    <li>2这是第条</li>
+    <li>3这是第条</li> 
+    <li>4这是第条</li>
+    <li>5这是第条</li>
+    <li>6这是第条</li> 
+</ul> 
+<ul>  
+    <li>这是第一条</li>
+    <li>这是第二条</li>
+    <li>这是第三条</li> 
+    <li>这是第一条</li>
+    <li>这是第二条</li>
+    <li>这是第三条</li> 
+</ul> 
+
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+<script>
+$(function(){
+    $('#test').on('click',function(){
+        /*var array1=[1,2,   '3 ' ,   4,'5w']; 
+        console.log($.sum(array1));*/
+        var self=$(this);
+        var array=self.find('li').map(function(index,ele){
+            var item=parseFloat($(ele).text());            
+            return item;
+        });
+        console.log($.sum(array));
+    }); 
+
+});
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+  <div id="oralDemo"></div>
+  <script type="text/jsx">
+    var Avatar=React.createClass({
+      render:function(){
+        return (
+          <div className={'userInfo '+this.props.username} data-user-id="x">
+            <ProfilePic username={this.props.username} userId={this.props.userId}/>
+            <ProfileLink username={this.props.username} userId={this.props.userId}/>
+          </div>
+        );
+      }
+    });
+    var ProfilePic=React.createClass({
+      render:function(){
+        return (
+          <img src={'http://i2.hjfile.cn/f96/13/10/'+this.props.userId+'.jpg'}  alt={this.props.username}/>
+        );
+      }
+    });
+    var ProfileLink=React.createClass({
+      render:function(){
+        return (
+          <a href="xx" target="_blank">
+            {this.props.username}
+          </a>
+        );
+      }
+    });
+    React.render(
+      <Avatar username="Oral" userId="27441310" oo="xx"/>,
+      document.getElementById('oralDemo')
+    );
+  </script>
+
+  </body>
+</html>

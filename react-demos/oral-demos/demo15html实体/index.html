@@ -5,15 +5,11 @@
     <script src="../../react-0.13.0/build/JSXTransformer.js"></script>
   </head>
   <body>
-  <div id="oralDemo"></div>  
-  <!-- <script type="text/jsx">
-    var oralHtml=<div className="oral-html">hello oral!</div>;
-    React.render(oralHtml,document.getElementById('oralDemo'));
-  </script> -->
+  <div id="oralDemo"></div>
   <script type="text/jsx">
     var OralHtmlNode=React.createClass({
       render:function(){
-        return <div>hello.oral</div>
+        return <div className="oral-html" oral-attr="disappear" data-oral-attr="appear">{['First',<span>&middot;</span> ,'Second']}</div>//<div>{'First &middot; Second'}</div>输出First &middot; Second
       }
     });
     var oralHtml=<OralHtmlNode someProperty={true}/>;

@@ -13,13 +13,18 @@
           <div className="oral" id="Oral">
             Hello,<input type="text" placeholder="Your name here!" />!
             It is {this.props.date.toTimeString()}
+            {/*这里是注释*/ }
           </div>
         );
       }
     });
     setInterval(function(){
       React.render(
-        <HelloWorld date={new Date()} />,
+        <HelloWorld //这里是注释 
+        //这里是注释 
+        /* 这里是注释 */
+         date={new Date()} //这里是注释 
+        />,
         document.getElementById('oralDemo')
       );
     },500);

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+
+</style>
+</head>
+<body>
+<ul id="test">  
+    <li>1这是第条</li>
+    <li>2这是第条</li>
+    <li>3这是第条</li> 
+    <li>4这是第条</li>
+    <li>5这是第条</li>
+    <li>6这是第条</li> 
+</ul>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+<script>
+var Timer = {
+        h : 0,
+        m : 0,
+        s : 0,
+        H : "00",
+        M : "00",
+        S : "00",
+        t : null,
+        time: "",
+        start:function(){
+            var self = this;
+            this.t = setInterval(function(){
+                self.timeSet();
+            },1000);
+        },
+        timeSet:function(){
+            var self = this;
+            if (self.s < 59) {
+                self.s = self.s+1;
+            }else{
+                self.m ++;
+                self.s = 0;
+            }
+            if (self.m >= 59){
+                self.h ++;
+                self.m = 0;
+            } 
+            this.formatTime();
+        },
+        formatTime:function(){
+            if (this.s <= 9){
+                this.S = "0"+ this.s;
+            }else{
+                this.S = this.s;
+            }
+
+            if (this.m <= 9) {
+                this.M = "0" + this.m;
+            }else{
+                this.M = this.m;
+            }
+
+            if (this.h <= 9){
+                this.H = "0" + this.h;
+            }else{
+                this.H = this.h;
+            }
+            this.time = this.H + this.M + this.S;
+        },
+        stop:function(){   
+            var self  = this;         
+            clearInterval(self.t);            
+        },
+        timeReset:function(){
+            this.h = 0;
+            this.m = 0;
+            this.s = 0;
+            this.H = "00";
+            this.M = "00";
+            this.S = "00";
+        }
+    }
+    w.eTimer = Timer;
+</script>
+</html>
