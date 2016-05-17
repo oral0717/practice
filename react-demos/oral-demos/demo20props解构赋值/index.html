@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+
+  <script type="text/jsx">
+
+
+var FancyCheckbox = React.createClass({
+  render: function() {
+    var { checked, ...other } = this.props;
+    var fancyClass = checked ? 'FancyChecked' : 'FancyUnchecked';
+    return (
+      <div {...other} className={fancyClass} />
+    );
+  }
+});
+React.render(
+  <FancyCheckbox checked={true} onClick={console.log.bind(console)}>
+    Hello world!
+  </FancyCheckbox>,
+  document.body
+);
+  </script>
+  </body>
+</html>
