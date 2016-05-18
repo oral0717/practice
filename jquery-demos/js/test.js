@@ -11,3 +11,17 @@
 		return total;
 	};
 })(jQuery);
+
+/*var blocked=false;
+try{
+	var w=window.open('https://www.baidu.com','_blank');
+	console.log(w);
+	if(w==null){
+		blocked=true;
+	}
+}catch(ex){
+	blocked=true;
+}
+if(blocked){
+	alert('The popup was blocked!');
+} */

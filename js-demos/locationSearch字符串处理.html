@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+//转换location查询字符串（location.search）为对象
+(function(){
+	var locationSearchStr='?name=张捷&sex=famale&age=28',
+		string=locationSearchStr.length>0?locationSearchStr.substring(1):'',
+		args={},
+		items=string.length>0?string.split('&'):[],
+		item=null,
+		key=null,
+		value=null;
+	for(var i=0;i<items.length;i++){
+		item=items[i].split('='),
+		key=decodeURIComponent(item[0]),
+		value=decodeURIComponent(item[1]);
+		if(key.length){
+			args[key]=value;
+		}
+	}
+	console.log(args);
+})();
+</script>
+</html>
