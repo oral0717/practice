@@ -5,7 +5,45 @@
     <script src="../../react-0.13.0/build/browser.min.js"></script>
   </head>
   <body>
-    <script type="text/babel">
+<script type="text/babel">
+  var Hello=React.createClass({
+    getInitialState:function(){
+      return {
+        opacity:1.0,
+        color:'red',
+        fontWeight:'bold'
+      };
+    },
+
+    componentDidMount:function(){
+      var self=this;
+      self.timer=setInterval(function(){
+        var opacity=self.state.opacity;        
+        opacity-=0.05;
+        if(opacity < 0.1){
+          opacity=1.0;
+        }
+        self.setState({
+          opacity:opacity
+        });
+        },100);
+      
+    },
+
+    render:function(){
+      return (
+        <div style={{opacity:this.state.opacity,color:this.state.color,fontWeight:this.state.fontWeight}}>
+          Hello {this.props.name}
+        </div>
+      );
+    }
+  });
+  React.render(
+    <Hello name="Oral"/>,
+    document.body
+  );
+</script>
+<!--     <script type="text/babel">
       var Hello = React.createClass({
         getInitialState: function () {
           return {
@@ -39,6 +77,6 @@
         <Hello name="world"/>,
         document.body
       );
-    </script>
+    </script> -->
   </body>
 </html>
