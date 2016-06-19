@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../react-0.13.0/build/react.js"></script>
+    <script src="../../react-0.13.0/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+  <div id="container"></div>
+  <script type="text/jsx">
+  var ClickToggleCmp=React.createClass({
+  handleClick:function(e){
+    var textNode=ReactDOM.findDOMNode(this.refs.tip);
+    if(textNode.style.display==='none'){
+      textNode.style.display='inline';
+    }else{
+      textNode.style.display='none';
+    }
+    e.preventDefault();
+    e.stopPropagation();
+  },
+  render:function(){
+    return (
+      <div>
+        <button onClick={this.handleClick}>toggle</button>
+        <span ref='tip'>text test</span>
+      </div>
+    )
+  }
+});
+var InputCmp=React.createClass({
+  getInitialState:function(){
+    return {
+      inputText:''
+    }
+  },
+  changeHandler:function(e){
+    this.setState({
+      inputText:e.target.value
+    });
+    e.preventDefault();
+    e.stopPropagation();
+  },
+  render:function(){
+    return (
+      <div>
+        <input type="text" onChange={this.changeHandler}/>
+        <span>{this.state.inputText}</span>
+      </div>
+    )
+  }
+});
+ReactDOM.render(
+  <div>
+    <ClickToggleCmp/>
+    <br/><br/>
+    <InputCmp/>
+  </div>,
+  document.getElementById('container')
+);
+  </script>
+  </body>
+</html>
