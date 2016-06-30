@@ -10,6 +10,8 @@
   var ClickToggleCmp=React.createClass({
   handleClick:function(e){
     var textNode=ReactDOM.findDOMNode(this.refs.tip);
+    //也可以这样：var textNode=this.refs.tip;
+
     if(textNode.style.display==='none'){
       textNode.style.display='inline';
     }else{
