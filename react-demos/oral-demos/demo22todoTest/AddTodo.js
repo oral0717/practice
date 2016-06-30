@@ -67,7 +67,6 @@ const REMOVE_TODO='REMOVE_TODO'
 export const addTodo=makeActionCreator(ADD_TODO,'todo')
 export const editTodo=makeActionCreator(EDIT_TODO,'id','todo')
 export const removeTodo=makeActionCreator(REMOVE_TODO,'id')
-
 /**/
 
 
