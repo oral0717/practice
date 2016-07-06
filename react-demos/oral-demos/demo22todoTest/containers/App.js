@@ -48,5 +48,10 @@ function selectTodos(todos,filter){
 			return todos.filter(todo=>!todo.completed)
 	}
 }
-function select(state){}
+function select(state){
+	return {
+		visibleTodos:selectTodos(state.todos,state.visibilityFilter),
+		visibilityFilter:state.visibilityFilter
+	}
+}
 export default connect(select)(App)
