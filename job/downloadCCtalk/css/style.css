@@ -11,11 +11,11 @@ body {
     background:#4fb1fc;
 }
 .container{
-  background:url('../img/bg2.jpg') repeat-x center 566px;
-  height:840px;
+  background:#fff url('../img/bg2.jpg') repeat-x center 534px;
+  height:810px;
 }
 .content{
-  padding: 96px 0 142px;
+  padding: 96px 0 112px;
   text-align:center;
   background:#fff url('../img/bg1.png') no-repeat center 240px;
   background-size: 1020px auto;
