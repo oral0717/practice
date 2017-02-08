@@ -29,7 +29,7 @@ module.exports = {
 			},
 			{
 				test: /\.styl$/,
-			  loader: 'style-loader!css-loader?modules&localIdentName=[path][name]-[local]-[hash:base64:5]!stylus-loader'
+			  loader: 'style-loader!css-loader?modules&localIdentName=[local]-[hash:base64:5]!stylus-loader'
 			}
 		]
 	},
