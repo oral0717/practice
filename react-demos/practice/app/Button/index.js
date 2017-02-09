@@ -16,12 +16,16 @@ class Button extends Component {
 	// }
 	render() {
 		let { color='red', text='aa' } = this.props
-		console.log(this.props)
 		return (
 			<button className={cx(`btn-${color}`)}>
 				{text}
 			</button>
 		)
 	}
+}
+
+Button.defaultProps = {
+	color: 'blue',
+	text: 'Confirm'
 }
 export default Button

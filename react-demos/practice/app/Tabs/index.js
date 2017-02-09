@@ -8,8 +8,23 @@ class Tabs extends Component {
 
 	constructor(props) {
 		super(props)
-	}
+		const currProps = this.props
+		let activeIndex = 0
 
+		if ('activeIndex' in currProps) {
+			activeIndex = currProps.activeIndex
+		} else if ('defaultActiveIndex' in currProps) {
+			activeIndex = currProps.defaultActiveIndex
+		}
+
+		this.state = {
+			activeIndex,
+			prevIndex: activeIndex
+		}
+	}
+	// static defaultProps = {
+	// 	classPrefix: 'tabs'
+	// }
 	render() {
 		return (
 			<div className="ui-tabs">
@@ -17,5 +32,9 @@ class Tabs extends Component {
 			</div>
 		)
 	}
+}
+Tabs.defaultProps = {
+	classPrefix: 'tabs',
+	onChange: () => {}
 }
 export default Tabs
