@@ -4,6 +4,7 @@ import Greeter from './Greeter'
 import Button from './Button'
 import Tabs from './Tabs'
 import Counter from './Counter'
+import InputText from './InputText'
 
 render(
 	<div>
@@ -26,6 +27,7 @@ render(
 		>
 		</Tabs>
 		<Counter />
+		<InputText />
 	</div>,
 	document.getElementById('root')
 )
