@@ -1,16 +1,36 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes, cloneElement } from 'react'
 import styles from './styles.styl'
 import classNames from 'classnames/bind'
+import TabNav from './TabNav'
+import TabContent from './TabContent'
 
 let cx = classNames.bind(styles)
 
 class Tabs extends Component {
+	static propTypes = {
+		className: PropTypes.string,
+		classPrefix: PropTypes.string,
+		children: PropTypes.oneOfType([
+			PropTypes.arrayOf(PropTypes.node),
+			PropTypes.node,
+		]),
+		defaultActiveIndex: PropTypes.number,
+		activeIndex: PropTypes.number,
+		onChange: PropTypes.func
+	}
+	static defaultProps = {
+		classPrefix: 'tabs',
+		onChange: () => {}
+	}
 
 	constructor(props) {
 		super(props)
-		const currProps = this.props
-		let activeIndex = 0
 
+		this.handleTabClick = this.handleTabClick.bind(this)
+
+		const currProps = this.props
+
+		let activeIndex
 		if ('activeIndex' in currProps) {
 			activeIndex = currProps.activeIndex
 		} else if ('defaultActiveIndex' in currProps) {
@@ -22,19 +42,57 @@ class Tabs extends Component {
 			prevIndex: activeIndex
 		}
 	}
-	// static defaultProps = {
-	// 	classPrefix: 'tabs'
-	// }
-	render() {
+
+	componentWillReceiveProps(nextProps) {
+		if ('activeIndex' in nextProps) {
+			this.setState({
+				activeIndex: nextProps.activeIndex
+			})
+		}
+	}
+	handleTabClick(activeIndex) {
+		const prevIndex = this.state.activeIndex
+		if (this.state.activeIndex !== activeIndex && 'defaultActiveIndex' in this.props) {
+			this.state({
+				activeIndex,
+				prevIndex
+			})
+			this.props.onChange({ activeIndex, prevIndex })
+		}
+	}
+	renderTabNav() {
+		const { classPrefix, children } = this.props
 		return (
-			<div className="ui-tabs">
-			111
+			<TabNav
+				key="tabBar"
+				classPrefix={classPrefix}
+				onTabClick={this.handleTabClick}
+				panels={children}
+				activeIndex={this.state.activeIndex}
+			/>
+		)
+	}
+	renderTabContent() {
+		const { classPrefix, children } = this.props
+		return (
+			<TabContent
+				key="tabcontent"
+				classPrefix={classPrefix}
+				panels={children}
+				activeIndex={this.state.activeIndex}
+			/>
+		)
+	}
+	render() {
+		const { className } = this.props
+		const classes = classNames(className, 'ui-tabs')
+		return (
+			<div className={classes}>
+				{this.renderTabNav()}
+				{this.renderTabContent()}
 			</div>
 		)
 	}
 }
-Tabs.defaultProps = {
-	classPrefix: 'tabs',
-	onChange: () => {}
-}
+
 export default Tabs

@@ -9,11 +9,11 @@ class Button extends Component {
 	constructor(props) {
 		super(props)
 	}
-	// 编译不通过，why
-	// static defaultProps = {
-	// 	color: 'blue',
-	// 	text: 'Confirm'
-	// }
+	// 编译不通过，配置文件里要加presets: ['stage-0']
+	static defaultProps = {
+		color: 'blue',
+		text: 'Confirm'
+	}
 	render() {
 		let { color='red', text='aa' } = this.props
 		return (
@@ -24,8 +24,8 @@ class Button extends Component {
 	}
 }
 
-Button.defaultProps = {
-	color: 'blue',
-	text: 'Confirm'
-}
+// Button.defaultProps = {
+// 	color: 'blue',
+// 	text: 'Confirm'
+// }
 export default Button

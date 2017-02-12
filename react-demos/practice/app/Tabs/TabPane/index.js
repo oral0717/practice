@@ -5,36 +5,39 @@ import classNames from 'classnames/bind'
 let cx = classNames.bind(styles)
 
 class TabPane extends Component {
-
+	static propTypes = {
+		tab: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.node,
+		]).isRequired,
+		// order: PropTypes.string.isRequired,
+		disable: PropTypes.bool,
+		isActive: PropTypes.bool
+	}
 	constructor(props) {
 		super(props)
 	}
 
-	getTabPanes() {
-		const { classPrefix, activeIndex, panels, isActive } = this.props
-
-		return React.Children.map(panels, (child) => {
-			if (!child) { return }
-
-			const order = parseInt(child.props.order, 10)
-			const isActive = activeIndex === order
-
-			return React.cloneElement(child, {
-				classPrefix,
-				isActive,
-				children: child.props.children,
-				key: `tabpane-${order}`
-			})
-		})
-	}
-
 	render() {
+		const { classPrefix, className, isActive, children } = this.props
+		// const classes = classnames({
+		// 	[className]: className,
+		// 	[`${classPrefix}-panel`]: true,
+		// 	[`${classPrefix}-active`]: isActive
+		// })
 		return (
-			<div>{this.getTabPanes()}</div>
+			<div
+				role="tabpane"
+				className={cx({
+					[className]: className,
+					[`${classPrefix}-panel`]: true,
+					[`${classPrefix}-active`]: isActive
+				})}
+				aria-hidden={!isActive}>
+				{children}
+			</div>
 		)
 	}
 }
-Tabs.defaultProps = {
-	classPrefix: 'yyy'
-}
+
 export default TabPane
