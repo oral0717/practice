@@ -1,3 +1,7 @@
 # practice
 all my practice
-[链接](https://www.baidu.com)
+## notes
+## jquery-demos
+## js-demos
+## react-demos
+## webpack-demos
