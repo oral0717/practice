@@ -6,7 +6,6 @@ import classNames from 'classnames/bind'
 let cx = classNames.bind(styles)
 
 // require('./Greeter.styl')
-console.log(cx)
 export default class Greeter extends Component{
 	render() {
 		return (
