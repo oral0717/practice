@@ -8,16 +8,18 @@
 </head>
 
 <body>
-    <canvas id="drawing" width="400" height="400">A drawing something</canvas>
+    <canvas id="drawing1" width="200" height="200">A drawing something</canvas>
+    <canvas id="drawing2" width="240" height="240">A drawing something</canvas>
 </body>
 <script type="text/javascript">
 
     (function(){
-        var drawing = document.getElementById("drawing");
+        var drawing1 = document.getElementById("drawing1");
+        var drawing2 = document.getElementById("drawing2");
         //确定浏览器是否支持<canvas>元素
-        if (drawing.getContext){
+        if (drawing1.getContext){
             //获取2d上下文对象
-            var context = drawing.getContext("2d");
+            var context = drawing1.getContext("2d");
             console.log(context);
             // 绘制红色矩形
             context.fillStyle = "red";//填充
@@ -34,12 +36,38 @@
             context.strokeStyle = "rgba(0,0,255,0.5)";//描边
             context.strokeRect(120,30,50,50);
 
-            // 导出在canvas上绘制的图像
-            var imgURI = drawing.toDataURL("image/png");
+            // 导出在canvas上绘制的图像,为png图片
+            var imgURI = drawing1.toDataURL("image/png");
             var image = document.createElement("img");
             image.src = imgURI;
-            document.body.appendChild(image);
+            document.body.insertBefore(image, drawing2);
+        }
 
+        if (drawing2.getContext){
+            var drawing2Context = drawing2.getContext("2d");
+            // 要绘制新路径，需先调用beginPath()方法，表示要开始绘制新路径
+            drawing2Context.beginPath();
+            // 外圈
+            drawing2Context.arc(100,100,99,0,2 * Math.PI,false);
+            // 内圈
+            drawing2Context.moveTo(194,100);
+            drawing2Context.arc(100,100,94,0,2 * Math.PI,false);
+            // 对路径填充颜色
+            // drawing2Context.fillStyle = "#0ff";
+            // drawing2Context.fill();
+            // 分针
+            drawing2Context.moveTo(100,100);
+            drawing2Context.lineTo(100,15);
+            // 时针
+            drawing2Context.moveTo(100,100);
+            drawing2Context.lineTo(35,100);
+            // drawing2Context.closePath();//绘制一条连接到路径起点的线条
+            drawing2Context.strokeStyle = "#0f0";
+            // 对路径描边
+            drawing2Context.stroke();
+            
+            //点(200, 200)是否在路径上
+            // console.log(drawing2Context.isPointInPath(200, 200));
 
         }
     })()
