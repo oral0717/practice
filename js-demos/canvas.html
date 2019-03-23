@@ -62,13 +62,24 @@
             drawing2Context.moveTo(100,100);
             drawing2Context.lineTo(35,100);
             // drawing2Context.closePath();//绘制一条连接到路径起点的线条
+
+
+            // 路径绘制好了，对路径描边
             drawing2Context.strokeStyle = "#0f0";
+            // drawing2Context.lineWidth = 1;//线条宽度，整数
+            // drawing2Context.lineCap = "butt";// butt,round,square
+            // drawing2Context.lineJoin = "miter";// round,bevel,miter
             // 对路径描边
             drawing2Context.stroke();
-            
-            //点(200, 200)是否在路径上
+
+            //判断点(200, 200)是否在路径上
             // console.log(drawing2Context.isPointInPath(200, 200));
 
+            // 绘制文本fillText(),strokeText()
+            drawing2Context.font = "bold 14px Arial";
+            drawing2Context.textAlign = "center";
+            drawing2Context.textBaseline = "middle";
+            drawing2Context.fillText("12", 100, 20);
         }
     })()
 </script>
