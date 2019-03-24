@@ -14,8 +14,8 @@
 <script type="text/javascript">
 
     (function(){
-        var drawing1 = document.getElementById("drawing1");
-        var drawing2 = document.getElementById("drawing2");
+        var drawing1 = document.getElementById("drawing1");// 绘制矩形
+        var drawing2 = document.getElementById("drawing2");// 绘制时钟
         //确定浏览器是否支持<canvas>元素
         if (drawing1.getContext){
             //获取2d上下文对象
@@ -77,9 +77,24 @@
 
             // 绘制文本fillText(),strokeText()
             drawing2Context.font = "bold 14px Arial";
-            drawing2Context.textAlign = "center";
-            drawing2Context.textBaseline = "middle";
+            drawing2Context.textAlign = "center";// 文本对其方式start,end,left,right,center
+            drawing2Context.textBaseline = "middle";// 文本的基线top,hanging,bottom,middle,alphabetic,ideographic
             drawing2Context.fillText("12", 100, 20);
+            // drawing2Context.textAlign = "left";
+            // drawing2Context.fillText('11', 100, 40);
+            // drawing2Context.textAlign = "right";
+            // drawing2Context.fillText('10', 100, 60);
+
+            // 寻找合适的字体大小以满足固定宽度显示固定文字,字符串"oral"固定宽度50px内显示
+            // var fontSize = 100;
+            // drawing2Context.font = fontSize + "px Arial";
+            // while(drawing2Context.measureText("oral").width > 50){
+            //     fontSize--;
+            //     drawing2Context.font = fontSize + "px Arial";
+            // }
+            // drawing2Context.fillText("oral", 0, 50);
+            // drawing2Context.fillText("Font size is " + fontSize + "px", 0, 100);
+
         }
     })()
 </script>
