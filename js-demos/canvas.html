@@ -10,12 +10,14 @@
 <body>
     <canvas id="drawing1" width="200" height="200">A drawing something</canvas>
     <canvas id="drawing2" width="240" height="240">A drawing something</canvas>
+    <canvas id="drawing3" width="240" height="240">A drawing something</canvas>
 </body>
 <script type="text/javascript">
 
     (function(){
         var drawing1 = document.getElementById("drawing1");// 绘制矩形
         var drawing2 = document.getElementById("drawing2");// 绘制时钟
+        var drawing3 = document.getElementById("drawing3");// 绘制时钟，实践变换
         //确定浏览器是否支持<canvas>元素
         if (drawing1.getContext){
             //获取2d上下文对象
@@ -94,7 +96,31 @@
             // }
             // drawing2Context.fillText("oral", 0, 50);
             // drawing2Context.fillText("Font size is " + fontSize + "px", 0, 100);
+        }
 
+        if (drawing3.getContext){
+            var drawing3Context = drawing3.getContext("2d");
+            drawing3Context.beginPath();
+            // 绘制外圆
+            drawing3Context.arc(100,100,99,0,2*Math.PI,false);
+            // 绘制内圆
+            drawing3Context.moveTo(194,100)
+            drawing3Context.arc(100,100,94,0,2*Math.PI,false);
+            // 圆心由(0,0)变为(100,100)，此后新圆心基于新的地方(0,0)
+            drawing3Context.translate(100,100);
+            // drawing3Context.save();// 通过save()把当前状态存储起来
+            // 旋转表针，旋转是以圆心为中心
+            drawing3Context.rotate(1);
+            // drawing3Context.save();
+            // drawing3Context.restore();// 通过restore()一次次释放之前存储的状态
+            // drawing3Context.restore();
+            // 分针
+            drawing3Context.moveTo(0,0);
+            drawing3Context.lineTo(0,-85);
+            // 时针
+            drawing3Context.moveTo(0,0);
+            drawing3Context.lineTo(-65,0);
+            drawing3Context.stroke();
         }
     })()
 </script>
