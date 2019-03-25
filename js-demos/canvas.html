@@ -12,14 +12,16 @@
     <canvas id="drawing2" width="240" height="240">绘制时钟</canvas>
     <canvas id="drawing3" width="240" height="240">时钟，实现变换</canvas>
     <canvas id="drawing4" width="200" height="200">绘制已有图像</canvas>
+    <canvas id="drawing5" width="200" height="200">绘制图像,实现图像合成效果</canvas>
 </body>
 <script type="text/javascript">
 
     (function(){
-        var drawing1 = document.getElementById("drawing1");// 绘制矩形
+        var drawing1 = document.getElementById("drawing1");// 绘制矩形,阴影效果
         var drawing2 = document.getElementById("drawing2");// 绘制时钟
         var drawing3 = document.getElementById("drawing3");// 时钟，实现变换
         var drawing4 = document.getElementById("drawing4");// 绘制已有图像
+        var drawing5 = document.getElementById("drawing5");// 绘制图像，实现图像合成效果
         //确定浏览器是否支持<canvas>元素
         if (drawing1.getContext){
             //获取2d上下文对象
@@ -135,6 +137,19 @@
             var image = document.images[0];
             // drawImage有最多9个参数(要绘制的图像,原图像的x坐标,原图像的y坐标,原图宽度,原图高度,目标图x坐标,目标图y坐标,目标图宽,目标图高)
             drawing4Context.drawImage(image,0,10);
+        }
+
+        if (drawing5.getContext){
+            var drawing5Context = drawing5.getContext('2d');
+            drawing5Context.fillStyle = "purple";
+            drawing5Context.fillRect(10,10,50,50);
+            // 修改全局透明度
+            // drawing5Context.globalAlpha = 0.5;
+            // 设置合成操作，浏览器表现不一：source-over,source-in,source-out,source-atop,destination-over,destination-in,destination-out,destination-atop,lighter,copy,xor
+            drawing5Context.globalCompositeOperation = "source-atop";
+
+            drawing5Context.fillStyle = "pink";
+            drawing5Context.fillRect(30,30,50,50);
         }
     })()
 </script>
