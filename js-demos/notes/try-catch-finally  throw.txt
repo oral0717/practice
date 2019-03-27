@@ -1,0 +1,13 @@
+function testFinally(){
+	try {
+		return 2;
+	} catch (error){
+		return 1;
+	} finally {
+		return 0;
+	}
+}
+1.有finally子句，无论try或catch语句块中包含什么代码，甚至return语句，都不会阻止finally子句执行，上面函数返回0；
+2.IE7有bug ,除非catch子句，否则finally永不执行。IE8修复。故一律要提供catch子句，即使为空。
+3.throw操作符，模拟浏览器错误，一旦遇到throw操作符，代码会立即停止执行。
+throw new Error("error")
