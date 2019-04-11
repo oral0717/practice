@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拖放效果</title>
+<style>
+.draggable{
+	width: 50px;
+	height: 50px;
+	background: red;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+</style>
+</head>
+
+<body>
+<div class="draggable" id="myDiv"></div>
+</body>
+<script src="js/eventCrossBrowser.js"></script>
+<script type="text/javascript">
+// div元素跟着鼠标移动
+// EventUtil.addHandler(document, "mousemove", function(event){
+// 	var myDiv = document.getElementById("myDiv");
+// 	myDiv.style.left = event.clientX + "px";
+// 	myDiv.style.top = event.clientY + "px";
+// });
+var DragDrop = function() {
+	var dragging = null;
+	function handleEvent(event){
+		// 获取事件和目标
+		event = EventUtil.getEvent(event);
+		var target = EventUtil.getTarget(event);
+		// 确定时间类型
+		switch (event.type) {
+			case "mousedown":
+				if(target.className.indexOf("draggable") > -1){
+					dragging = target;
+				}
+				break;
+			case "mousemove":
+				if(dragging !== null){
+					dragging.style.left = event.clientX + "px";
+					dragging.style.top = event.clientY + "px";
+				}
+				break;
+			case "mouseup":
+				dragging = null;
+				break;
+		}
+	};
+	// 公共接口
+	return {
+		enable: function(){
+			EventUtil.addHandler(document, "mousedown", handleEvent);
+			EventUtil.addHandler(document, "mousemove", handleEvent);
+			EventUtil.addHandler(document, "mouseup", handleEvent);
+		},
+		disable: function(){
+			EventUtil.removeHandler(document, "mousedown", handleEvent);
+			EventUtil.removeHandler(document, "mousemove", handleEvent);
+			EventUtil.removeHandler(document, "mouseup", handleEvent);
+		}
+	}
+
+}();
+// 拖动小方块
+DragDrop.enable();
+</script>
+</html>
