@@ -18,6 +18,7 @@
 <div class="draggable" id="myDiv"></div>
 </body>
 <script src="js/eventCrossBrowser.js"></script>
+<script src="js/customEvent.js"></script>
 <script type="text/javascript">
 // div元素跟着鼠标移动
 // EventUtil.addHandler(document, "mousemove", function(event){
@@ -26,7 +27,8 @@
 // 	myDiv.style.top = event.clientY + "px";
 // });
 var DragDrop = function() {
-	var dragging = null,
+	var	dragdrop = new EventTarget();
+		dragging = null,
 		diffX = 0,
 		diffY = 0;
 	function handleEvent(event){
@@ -40,32 +42,35 @@ var DragDrop = function() {
 					dragging = target;
 					diffX = event.clientX - target.offsetLeft;
 					diffY = event.clientY - target.offsetTop;
+					dragdrop.fire({type:"dragstart", target:dragging,x:event.clientX,y:event.clientY});
 				}
 				break;
 			case "mousemove":
 				if(dragging !== null){
 					dragging.style.left = (event.clientX - diffX) + "px";
 					dragging.style.top = (event.clientY - diffY) + "px";
+					dragdrop.fire({type:"drag",target:dragging,x:event.clientX,y:event.clientY})
 				}
 				break;
 			case "mouseup":
+				dragdrop.fire({type:"dragend",target:dragging,x:event.clientX,y:event.clientY})
 				dragging = null;
 				break;
 		}
 	};
 	// 公共接口
-	return {
-		enable: function(){
-			EventUtil.addHandler(document, "mousedown", handleEvent);
-			EventUtil.addHandler(document, "mousemove", handleEvent);
-			EventUtil.addHandler(document, "mouseup", handleEvent);
-		},
-		disable: function(){
-			EventUtil.removeHandler(document, "mousedown", handleEvent);
-			EventUtil.removeHandler(document, "mousemove", handleEvent);
-			EventUtil.removeHandler(document, "mouseup", handleEvent);
-		}
+
+	dragdrop.enable = function(){
+		EventUtil.addHandler(document, "mousedown", handleEvent);
+		EventUtil.addHandler(document, "mousemove", handleEvent);
+		EventUtil.addHandler(document, "mouseup", handleEvent);
+	};
+	dragdrop.disable = function(){
+		EventUtil.removeHandler(document, "mousedown", handleEvent);
+		EventUtil.removeHandler(document, "mousemove", handleEvent);
+		EventUtil.removeHandler(document, "mouseup", handleEvent);
 	}
+	return dragdrop;
 
 }();
 // 拖动小方块
