@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>轮播图</title>
+<style>
+body{margin:0;}
+ul{list-style: none;}
+.banner{
+	position: relative;
+	width:1226px;
+	height:460px;
+	margin:0 auto;
+}
+.img img{
+	position: absolute;
+	left:0;
+	top:0;
+}
+.lr-btn{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right:0;
+	height: 69px;
+	margin-top:-35px;
+}
+.lr-btn .btn{
+	width: 41px;
+	height:69px;
+	background: url("../source/img/icon-slides.png");
+	cursor: pointer;
+}
+.lr-btn .left{
+	float: left;
+	background-position-x:-84px;
+}
+.lr-btn .right{
+	float: right;
+	background-position-x:-124px;
+}
+.lr-btn .left:hover{
+	background-position-x:0;
+}
+.lr-btn .right:hover{
+	float: right;
+	background-position-x:-42px;
+}
+.btn-list {
+	position: absolute;
+	right:30px;
+	bottom:30px;
+}
+.btn-list li{
+	float: right;
+	width: 6px;
+	height:6px;
+	margin: 0 5px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	border-color: rgba(255,255,255,0.3);
+	background-color: rgba(0,0,0,0.4);
+}
+.btn-list li:hover,
+.btn-list li.on{
+	background: rgba(255,255,255,0.4);
+	border-color: rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+	<div class="banner">
+		<div class="img">
+			<img src="../source/img/1.jpg" alt="" class="on" width="1226" height="460">
+			<img src="../source/img/2.jpg" alt="" width="1226" height="460">
+			<img src="../source/img/3.jpg" alt="" width="1226" height="460">
+			<img src="../source/img/4.jpg" alt="" width="1226" height="460">
+			<img src="../source/img/5.jpg" alt="" width="1226" height="460">
+		</div>
+		<div class="lr-btn">
+			<div class="btn left"></div>
+			<div class="btn right"></div>
+		</div>
+		<div class="btn-list">
+			<ul>
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>
