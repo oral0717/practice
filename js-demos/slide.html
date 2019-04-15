@@ -15,6 +15,11 @@ ul{list-style: none;}
 	position: absolute;
 	left:0;
 	top:0;
+	opacity: 0;
+	transition: 1s;
+}
+.img img.on{
+	opacity: 1;
 }
 .lr-btn{
 	position: absolute;
@@ -51,7 +56,7 @@ ul{list-style: none;}
 	bottom:30px;
 }
 .btn-list li{
-	float: right;
+	float: left;
 	width: 6px;
 	height:6px;
 	margin: 0 5px;
@@ -84,16 +89,65 @@ ul{list-style: none;}
 		</div>
 		<div class="btn-list">
 			<ul>
-				<li class="on"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+				<li data-index=0 class="on"></li>
+				<li data-index=1 ></li>
+				<li data-index=2></li>
+				<li data-index=3></li>
+				<li data-index=4></li>
 			</ul>
 		</div>
 	</div>
 </body>
 <script type="text/javascript">
+var rightBtn = document.querySelector(".lr-btn .right");
+var leftBtn = document.querySelector(".lr-btn .left");
+var images = document.querySelectorAll(".img img");
+var tabsParent = document.querySelector(".btn-list");
+var tabs = document.querySelectorAll(".btn-list li")
+var index = 0;
 
+rightBtn.onclick = function(){
+	clearInterval(timer);
+	change(true);
+}
+
+leftBtn.onclick = function(){
+	clearInterval(timer);
+	change(false);
+}
+
+tabsParent.onclick = function(event){
+	var curTab = event.target;
+	clearInterval(timer);
+	index = curTab.getAttribute('data-index');
+	if(index >= 0){
+		for(var i=0;i<images.length;i++){
+			images[i].className = "";
+			tabs[i].className = "";
+		}
+		images[index].className = "on";
+		tabs[index].className = "on";
+	}
+}
+
+// 定时器
+var timer = setInterval(function(){
+	change(true);
+}, 3000);
+
+// 切换图片
+function change(isToRight){
+	images[index].className = "";
+	tabs[index].className = "";
+	if (isToRight) {
+		index ++;
+		if (index > images.length - 1) index = 0;
+	} else {
+		index --;
+		if (index < 0) index = images.length - 1;
+	}
+	images[index].className = "on";
+	tabs[index].className = "on";
+}
 </script>
 </html>
