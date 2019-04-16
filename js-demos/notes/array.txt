@@ -1,6 +1,16 @@
 var oralarray=new Array();
 oralarray.constructor==Array;    //true
 
+// 检测数组
+value instanceof Array // 不适用与网页中有多个框架
+Array.isArray(value) // IE9+,ff,safari,opera,chrome
+
+// 转换方法
+toString()
+toLocaleString()
+valueOf()
+join() // 参数（分隔符）
+
 // 栈方法
 pop()     删除数组的最后一个元素，返回删除的项
 push()   向数组的末尾添加一个或多个元素，并返回新的长度     
