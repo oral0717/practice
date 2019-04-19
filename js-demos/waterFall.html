@@ -2,9 +2,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>瀑布流</title>
+<style>
+body{
+	margin:0;padding:0;
+	background: #cecece;
+}
+.wrap {
+	width: 80%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+}
+.row{
+	flex: 1;
+	padding:10px;
+}
+.row img{
+	width:100%;
+	margin: 8px 0;
+	box-sizing:border-box;
+	border:10px solid white;
+	transition: all 0.3s ease-in-out;
+}
+.row img:hover{
+	cursor:pointer;
+	box-shadow: 0 1px 4px 1px rgba(0,0,0,0.5);
+	transform:scale(1.07) ;
+}
+</style>
 </head>
 <body>
-
+	<div class="wrap">
+		<div class="row"><img src="../source/img/6.jpg" alt=""><img src="../source/img/7.jpg" alt=""></div>
+		<div class="row"><img src="../source/img/8.jpg" alt=""></div>
+		<div class="row"><img src="../source/img/9.jpg" alt=""><img src="../source/img/10.jpg" alt=""></div>
+		<div class="row"><img src="../source/img/11.jpg" alt=""><img src="../source/img/12.jpg" alt=""><img src="../source/img/13.jpg" alt=""></div>
+	</div>
 </body>
 <script type="text/javascript">
 
