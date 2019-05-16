@@ -33,15 +33,85 @@ body{
 </head>
 <body>
 	<div class="wrap">
-		<div class="row"><img src="../source/img/6.jpg" alt=""><img src="../source/img/7.jpg" alt=""></div>
-		<div class="row"><img src="../source/img/8.jpg" alt=""></div>
-		<div class="row"><img src="../source/img/9.jpg" alt=""><img src="../source/img/10.jpg" alt=""></div>
-		<div class="row"><img src="../source/img/11.jpg" alt=""><img src="../source/img/12.jpg" alt=""><img src="../source/img/13.jpg" alt=""></div>
+		<div class="row" id="waterFall01"></div>
+		<div class="row" id="waterFall02"></div>
+		<div class="row" id="waterFall03"></div>
+		<div class="row" id="waterFall04"></div>
 	</div>
 </body>
 <script type="text/javascript">
-var waterFall = function(){
+var minHeightDiv = function() {
+	var wf1 = document.getElementById("waterFall01");
+	var wf2 = document.getElementById("waterFall02");
+	var wf3 = document.getElementById("waterFall03");
+	var wf4 = document.getElementById("waterFall04");
 
+	var wfImgs1 = wf1.children;
+	var wfImgs2 = wf2.children;
+	var wfImgs3 = wf3.children;
+	var wfImgs4 = wf4.children;
+
+	var wf1Height = getHeight(wfImgs1);
+	var wf2Height = getHeight(wfImgs2);
+	var wf3Height = getHeight(wfImgs3);
+	var wf4Height = getHeight(wfImgs4);
+
+	var minHeight = Math.min(wf1Height,wf2Height,wf3Height,wf4Height);
+	switch (minHeight) {
+		case wf1Height:
+			return wf1;
+		case wf2Height:
+			return wf2;
+		case wf3Height:
+			return wf3;
+		case wf4Height:
+			return wf4;
+	}
+
+}
+var getHeight = function(wfImgs) {
+	if (wfImgs == null || wfImgs.length == 0) {
+		return 0;
+	} else {
+		var height = 0;
+		for (var i=0; i<wfImgs.length; i++){
+			height += wfImgs[i].height;
+		}
+		return height;
+	}
+}
+
+
+// 屏幕高度，初始化图片占用位置
+var windowHeight = window.screen.height + 500;
+var imgId = 6;
+window.onload = function(){
+	insertImg();
+	document.addEventListener("scroll", function(){
+		if (document.documentElement.scrollTop + window.screen.height > document.documentElement.scrollHeight){
+			windowHeight += 500;
+			insertImg();
+		}
+	});
+
+};
+
+var insertImg = function() {
+	var inter = setInterval(function(){
+		if (document.documentElement.scrollHeight > windowHeight){
+			clearInterval(inter);
+		}
+
+		imgId++;
+		if (imgId > 15) {
+			imgId = 6;
+		}
+		// 插入图片
+		var minDiv = minHeightDiv();
+		var img = document.createElement("img");
+		img.setAttribute("src", "../source/img/" + imgId + ".jpg");
+		minDiv.appendChild(img);
+	}, 100);
 }
 </script>
 </html>
