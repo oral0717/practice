@@ -13,8 +13,8 @@ ul{list-style: none;}
 	margin:0 auto;
 }
 .img img{
-	width: 1226px;
-	height:100%;
+	width: 1226;
+	height:460px;
 	position: absolute;
 	left:0;
 	top:0;
@@ -74,12 +74,22 @@ ul{list-style: none;}
 	border-color: rgba(0,0,0,0.4);
 	cursor: pointer;
 }
-
+@media screen and (max-width:768px) {
+	.banner{
+		width: 100%;
+		height:140px;
+		overflow: hidden;
+	}
+	.img img{
+		width: 100%;
+		height: 100%;
+	}
+}
 </style>
 </head>
 
 <body>
-	<div class="banner">
+	<div class="banner" id="banner">
 		<div class="img">
 			<img src="../source/img/1.jpg" alt="" class="on">
 			<img src="../source/img/2.jpg" alt="">
@@ -102,8 +112,9 @@ ul{list-style: none;}
 		</div>
 	</div>
 </body>
+<script src="js/jquery.min.js"></script>
+<script src="js/touchMoveDirection.js"></script>
 <script type="text/javascript">
-var banner = document.querySelector(".banner");
 var rightBtn = document.querySelector(".lr-btn .right");
 var leftBtn = document.querySelector(".lr-btn .left");
 var images = document.querySelectorAll(".img img");
@@ -116,6 +127,28 @@ var timer = null;
 
 window.onload = function(){
 	timer = setInterval("change(true)", 3000);
+	$("#banner").touchMoveDirection({
+　　 onLeft: function () {
+			// console.log("left");
+			clearInterval(timer);
+			change(true);
+			timer = setInterval("change(true)", 3000);
+　	},
+	　onUp: function () {
+　　　　console.log("up");
+	　},
+	　onRight: function () {
+			// console.log("right");
+			clearInterval(timer);
+			change(false);
+			timer = setInterval("change(true)", 3000);
+	　},
+	　onDown: function () {
+　　　　console.log("down");
+		},
+	});
+
+
 };
 
 rightBtn.onclick = function(){
@@ -168,5 +201,6 @@ function change(isToRight){
 	images[index].className = "on";
 	tabs[index].className = "on";
 }
+
 </script>
 </html>
