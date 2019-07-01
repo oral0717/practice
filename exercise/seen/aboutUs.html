@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Keywords" content="关键词1,关键词2,">
+  <meta name="Description" content="网页的简述">
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <title>seen官网</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/slide.css">
+  <!--引用百度地图API-->
+<style type="text/css">
+  .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+  .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header clearfix">
+    <div class="logo fl"></div>
+    <div class="nav fl">
+      <a href="#" class="cur" target="_blank">HOME</a>
+      <a href="#" target="_blank">PRODUCTS</a>
+      <a href="#" target="_blank">ABOUT US</a>
+    </div>
+    <div class="contact fr">
+      <a href="#" target="_blank"></a>
+      <a href="#" target="_blank"></a>
+      <a href="#" target="_blank"></a>
+      <a href="#" target="_blank">contact</a>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="img">
+      <img src="img/slide1.jpg" alt="" class="on">
+      <img src="img/slide2.jpg" alt="">
+      <img src="img/slide3.jpg" alt="">
+      <img src="img/slide4.jpg" alt="">
+      <img src="img/slide5.jpg" alt="">
+    </div>
+    <div class="lr-btn">
+      <div class="btn left"></div>
+      <div class="btn right"></div>
+    </div>
+    <div class="btn-list">
+      <ul>
+        <li data-index=0 class="on"></li>
+        <li data-index=1 ></li>
+        <li data-index=2></li>
+        <li data-index=3></li>
+        <li data-index=4></li>
+      </ul>
+    </div>
+  </div>
+  <div class="product1 con-width clearfix margin-b">
+    <div class="cover fl">
+      <img src="" alt="">
+    </div>
+    <div class="disc fr">成立</div>
+  </div>
+  <div class="map-container margin-b">
+    <div class="product1 con-width clearfix">
+      <div class="disc fl">地图</div>
+      <div class="map fr">
+        <!--百度地图容器-->
+        <div style="width:414px;height:226px;border:#ccc solid 1px;" id="dituContent"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer clearfix">
+    <div class="item fl item1">
+      <div class="title fl">CONTACT</div>
+      <ul class="fl">
+        <li>2770863142</li>
+        <li>seenvision@qq.com</li>
+      </ul>
+    </div>
+    <div class="item fl item2">
+      <div class="title fl">SOCIAL</div>
+      <ul class="fl">
+        <li>2770863142</li>
+        <li>seenvision@qq.com</li>
+        <li>2770863142</li>
+        <li>seenvision@qq.com</li>
+        <li>2770863142</li>
+        <li>seenvision@qq.com</li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2013-2019 SeenVision</p>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/slide.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.596555,39.932077);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+                        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的标记",content:"我的备注",point:"116.598352|39.940441",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"SEEN VISI0N",content:"地址：北京市朝阳区常营东方华瑞&nbsp;8&nbsp;号楼&nbsp;4&nbsp;层&nbsp;405&nbsp;室",point:"116.594812|39.932979",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("img/pin.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+
+</html>

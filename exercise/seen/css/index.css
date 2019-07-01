@@ -1,6 +1,6 @@
 .container{
   background:#fff;
-  font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+  font-family: Montserrat-Regular,"微软雅黑", Arial, Helvetica, sans-serif;
   color:#000;
 }
 
@@ -51,7 +51,6 @@
 .product1{
   height:200px;
   border:1px solid red;
-  margin-bottom:50px;
 }
 .product1 .disc{
   font-size:14px;
@@ -76,7 +75,15 @@
 .shadow2{
   box-shadow: rgba(0,0,0,0.05) 51px -3px 0px 24px;
 }
-
+.map-container{
+  padding:30px 0;
+  background-color:#f0f0f0;
+}
+.map{
+  width: 50%;
+  height:200px;
+  background-color:#ccc;
+}
 
 
 

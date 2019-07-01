@@ -7,6 +7,7 @@
   <title>seen官网</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/slide.css">
 </head>
 <body>
 <div class="container">
@@ -24,7 +25,28 @@
       <a href="#" target="_blank">contact</a>
     </div>
   </div>
-  <div class="banner"></div>
+  <div class="banner">
+    <div class="img">
+      <img src="img/slide1.jpg" alt="" class="on">
+      <img src="img/slide2.jpg" alt="">
+      <img src="img/slide3.jpg" alt="">
+      <img src="img/slide4.jpg" alt="">
+      <img src="img/slide5.jpg" alt="">
+    </div>
+    <div class="lr-btn">
+      <div class="btn left"></div>
+      <div class="btn right"></div>
+    </div>
+    <div class="btn-list">
+      <ul>
+        <li data-index=0 class="on"></li>
+        <li data-index=1 ></li>
+        <li data-index=2></li>
+        <li data-index=3></li>
+        <li data-index=4></li>
+      </ul>
+    </div>
+  </div>
   <div class="product1 con-width clearfix">
     <div class="disc fl">就是这个样</div>
     <div class="cover fr">
@@ -89,4 +111,6 @@
   <p class="copyright">&copy; 2013-2019 SeenVision</p>
 </div>
 </body>
+<script src="js/jquery.min.js"></script>
+<script src="js/slide.js"></script>
 </html>
