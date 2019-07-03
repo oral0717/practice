@@ -1,53 +1,26 @@
 .banner{
 	position: relative;
-	width:100%;
-	height:460px;
+  width:100%;
+  min-width:1280px;
+	height:613px;
 }
 .img img{
 	width: 100%;
-	height:100%;
+	/* height:100%; */
 	position: absolute;
 	left:0;
 	top:0;
 	opacity: 0;
 	transition: 1s;
 }
-.img img.on{
+.img img.img-on{
 	opacity: 1;
 }
-.lr-btn{
-	position: absolute;
-	top: 50%;
-	left: 0;
-	right:0;
-	height: 69px;
-	margin-top:-35px;
-}
-.lr-btn .btn{
-	width: 41px;
-	height:69px;
-	background: url("../img/icon-slides.png");
-	cursor: pointer;
-}
-.lr-btn .left{
-	float: left;
-	background-position-x:-84px;
-}
-.lr-btn .right{
-	float: right;
-	background-position-x:-124px;
-}
-.lr-btn .left:hover{
-	background-position-x:0;
-}
-.lr-btn .right:hover{
-	float: right;
-	background-position-x:-42px;
-}
+
 .btn-list {
 	position: absolute;
-	right:30px;
-	bottom:30px;
+	right:20%;
+	bottom:37px;
 }
 .btn-list li{
 	float: left;
