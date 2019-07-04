@@ -155,12 +155,36 @@
 }
 
 
-
+.aboutus{
+  padding-top:10px;
+  margin-bottom:60px;
+}
+.aboutus img{
+  width:545px;
+  height:314px;
+  background-color:#eee;
+}
+.aboutus .disc{
+  padding-top:20px;
+  width:600px;
+  margin-left:135px;
+}
+.aboutus h2{
+  font-size: 24px;
+  color: #121317;
+  margin-bottom:15px;
+}
+.aboutus p{
+  font-size: 18px;
+  color: #121317;
+  line-height: 44px;
+}
 .map-container{
-  padding:30px 0;
+  padding:114px 0;
   background-color:#fafafa;
   color:#121317;
   font-size:14px;
+  margin-bottom:146px;
 }
 .map-container .disc{
   margin-left:100px;
@@ -289,54 +313,54 @@
   margin-bottom:14px;
   line-height:24px;
 }
-.item1 li:before, .item2 a:before{
+.footer .item1 li:before, .footer .item2 a:before{
   content:"";
   display:inline-block;
   margin-right:11px;
 }
-.item1 li:nth-child(1):before{
+.footer .item1 li:nth-child(1):before{
   width:17px;
   height:18px;
   background-position: 0 0;
   vertical-align: -4px;
 }
-.item1 li:nth-child(2):before{
+.footer .item1 li:nth-child(2):before{
   width:18px;
   height:14px;
   background-position: -17px 0;
   vertical-align: -3px;
 }
-.item2 li:nth-child(1) a:before{
+.footer .item2 li:nth-child(1) a:before{
   width: 20px;
   height: 18px;
   background-position: -44px -17px;
   vertical-align: -3px;
 }
-.item2 li:nth-child(2) a:before{
+.footer .item2 li:nth-child(2) a:before{
   width: 20px;
   height: 18px;
   background-position: -65px -16px;
   vertical-align: -5px;
 }
-.item2 li:nth-child(3) a:before{
+.footer .item2 li:nth-child(3) a:before{
   width:19px;
   height:20px;
   background-position: 0 -17px;
   vertical-align: -4px;
 }
-.item2 li:nth-child(4) a:before{
+.footer .item2 li:nth-child(4) a:before{
   width:24px;
   height:16px;
   background-position: -20px -17px;
   vertical-align: -3px;
 }
-.item2 li:nth-child(5) a:before{
+.footer .item2 li:nth-child(5) a:before{
   width: 41px;
   height: 16px;
   background-position: 0px -40px;
   vertical-align: -3px;
 }
-.item2 li:nth-child(6) a:before{
+.footer .item2 li:nth-child(6) a:before{
   width: 18px;
   height: 16px;
   background-position: -85px -17px;
