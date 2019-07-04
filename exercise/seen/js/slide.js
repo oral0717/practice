@@ -1,5 +1,5 @@
 var banner = document.querySelector(".banner");
-var images = document.querySelectorAll(".img img");
+var images = document.querySelectorAll(".img li");
 var tabsParent = document.querySelector(".btn-list");
 var tabs = document.querySelectorAll(".btn-list li")
 var index = 0;
@@ -8,14 +8,9 @@ var index = 0;
 var timer = null;
 
 window.onload = function(){
-  var bannerHeight = getBannerHeight();
-  banner.setAttribute("style", "height:" + bannerHeight + "px");
 	timer = setInterval("change(true)", 3000);
 };
-window.onresize = function(){
-  var bannerHeight = getBannerHeight();
-  banner.setAttribute("style", "height:" + bannerHeight + "px");
-};
+
 
 tabsParent.onmouseover = function(event){
 	var curTab = event.target;
@@ -28,7 +23,7 @@ tabsParent.onmouseover = function(event){
 			images[i].className = "";
 			tabs[i].className = "";
 		}
-		images[index].className = "img-on";
+		images[index].className = "on";
 		tabs[index].className = "on";
 	}
 
@@ -39,11 +34,6 @@ tabsParent.onmouseout = function(event) {
 	var curTabTag = curTab.tagName.toLowerCase();
 	if (curTabTag !== "li") {return false;}
 	timer = setInterval("change(true)", 3000);
-}
-
-function getBannerHeight(){
-  var bannerImg = document.querySelector(".img-on");
-  return bannerImg.offsetHeight || 613;
 }
 
 // 切换图片
@@ -57,6 +47,6 @@ function change(isToRight){
 		index --;
 		if (index < 0) index = images.length - 1;
 	}
-	images[index].className = "img-on";
-	tabs[index].className = "on";
+	images[index].className = "on";
+  tabs[index].className = "on";
 }
