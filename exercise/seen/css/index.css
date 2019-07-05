@@ -157,17 +157,13 @@
 
 .aboutus{
   padding-top:10px;
-  margin-bottom:60px;
-}
-.aboutus img{
-  width:545px;
-  height:314px;
-  background-color:#eee;
+  width:1062px;
+  margin:0 auto 60px;
 }
 .aboutus .disc{
   padding-top:20px;
-  width:600px;
-  margin-left:135px;
+  width:614px;
+  margin-left:133px;
 }
 .aboutus h2{
   font-size: 24px;
@@ -186,8 +182,9 @@
   font-size:14px;
   margin-bottom:146px;
 }
-.map-container .disc{
-  margin-left:100px;
+.contactus{
+  width:1068px;
+  margin:0 auto;
 }
 .map{
   height:453px;
@@ -242,12 +239,12 @@
 }
 .list{
   width:1280px;
-  margin:0 auto 160px;
+  margin:0 auto 78px;
 }
 .list li{
   width:328px;
   float:left;
-  margin:0 49px;
+  margin:0 49px 82px;
 }
 .list a{
   display: block;
@@ -271,8 +268,54 @@
   padding:0 10px;
 }
 
-
-
+.p-banner{
+  margin-bottom:80px;
+  height:545px;
+}
+.p-list{
+  margin-bottom:0;
+}
+.btn-more{
+  cursor: pointer;
+  border: 2px solid #333333;
+  border-radius: 20px;
+  border-radius: 20px;
+  width:173px;
+  margin: 0 auto 141px;
+  box-sizing: border-box;
+  text-align:center;
+  font-size: 14px;
+  color: #121317;
+  padding:8px 0;
+}
+.pd-banner {
+  margin-bottom:75px;
+}
+.article{
+  margin-bottom:140px;
+  font-size: 14px;
+  color: #121317;
+  line-height: 24px;
+  text-align:center;
+}
+.article h1{
+  font-size: 28px;
+  color: #121317;
+  text-align: center;
+  margin-bottom:46px;
+}
+.article p{
+  margin-bottom:40px;
+}
+.article .p1{
+  width:845px;
+  margin:0 auto 40px;
+  text-align:left;
+}
+.article img{
+  display: block;
+  margin:0 auto 40px;
+}
 .footer{
   margin:0 auto 120px;
   font-size:14px;
