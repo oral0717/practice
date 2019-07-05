@@ -80,7 +80,11 @@
   border-radius:20px;
   font-size:13px;
 }
-
+.contact a:nth-child(4):hover,
+.btn-more:hover{
+  background-color:#333;
+  color:#fff;
+}
 .product h2{
   font-size:36px;
   color:#000;
@@ -272,6 +276,26 @@
   margin-bottom:80px;
   height:545px;
 }
+.p-nav{
+  padding-top:45px;
+  margin-bottom:40px;
+}
+.p-nav li{
+  border: 2px solid #333333;
+  font-size:13px;
+  border-radius: 18px;
+  padding:7px 36px;
+  margin-right:25px;
+  display:inline-block;
+}
+.p-nav li.on, .p-nav li:hover{
+  cursor: pointer;
+  color:#fff;
+  background-color:#333;
+}
+.list-wrap{
+  display:none;
+}
 .p-list{
   margin-bottom:0;
 }
@@ -288,6 +312,7 @@
   color: #121317;
   padding:8px 0;
 }
+
 .pd-banner {
   margin-bottom:75px;
 }
