@@ -1,8 +1,8 @@
 .banner{
 	position: relative;
   width:100%;
-  height:613px;
-  margin: 0 auto 181px;
+  height:23rem;
+  margin: 0 auto 5rem;
 }
 .img li{
   width:100%;
@@ -26,15 +26,15 @@
 
 .btn-list {
 	position: absolute;
-	right:18%;
-	bottom:37px;
+	right:2rem;
+	bottom:1rem;
 }
 .btn-list li{
   box-sizing: border-box;
 	float: left;
-	width: 10px;
-	height:10px;
-	margin: 0 10px;
+	width: 5px;
+	height:5px;
+	margin: 0 4px;
 	border-radius: 50%;
 	border: 1px solid #fff;
 	border-color: #fff;
