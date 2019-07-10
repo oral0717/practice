@@ -188,79 +188,67 @@
 
 
 .aboutus{
-  padding-top:10px;
-  margin:0 auto 60px;
+  padding-left:22%;
+  margin-bottom:3rem;
 }
 .aboutus img{
-  margin-left:8%;
-}
-.aboutus .disc{
-  padding-top:10px;
-  width:614px;
-  margin-right:8%;
+  margin-left:-25%;
+  margin-top:20%;
 }
 .aboutus h2{
-  font-size: 24px;
+  font-size: 1.6rem;
   color: #121317;
-  margin-bottom:15px;
+  margin-bottom:1rem;
 }
 .aboutus p{
-  font-size: 18px;
+  font-size: 1.4rem;
   color: #121317;
-  line-height: 44px;
+  line-height: 1.8rem;
 }
 .map-container{
-  padding:114px 0;
+  padding:3rem 0;
   background-color:#fafafa;
   color:#121317;
-  font-size:14px;
-  margin-bottom:146px;
+  font-size:1.4rem;
+  margin-bottom:5rem;
 }
-.contactus{
-  /* width:1068px; */
-  margin:0 auto;
-}
+
 .contactus .disc{
-  margin-left:8%;
-  width:28.7%;
-  min-width:367px;
+  margin-bottom:2rem;
 }
 .map{
-  margin-right:8%;
-  width:49%;
-  min-width:560px;
-  height:453px;
+  height:353px;
   background-color:#ccc;
 }
 .map-container h2{
-  font-size:24px;
-  padding:50px 0;
+  font-size:1.6rem;
+  margin-bottom:1.5rem;
 }
 .map-container li{
-  margin-bottom:40px;
+  margin-bottom:1rem;
 }
 .map-container li:before{
   content:"";
   display:inline-block;
-  margin-right:15px;
+  margin-right:0.5rem;
 }
 .map-container li:nth-child(1):before{
   width: 17px;
   height: 17px;
-  background-position: 0px -59px;
-  vertical-align: -2px;
+  background-position: 0px -56px;
+  vertical-align: -3px;
 }
 .map-container li:nth-child(2):before{
   width: 17px;
   height: 14px;
-  background-position: -37px -59px;
-  vertical-align: -2px;
+  background-position: -36px -56px;
+  vertical-align: -3px;
 }
 .map-container li:nth-child(3):before{
   width: 16px;
   height: 20px;
-  background-position: -18px -59px;
-  vertical-align: -4px;
+  background-position: -18px -55px;
+  vertical-align: -5px;
 }
 
 .intro{
