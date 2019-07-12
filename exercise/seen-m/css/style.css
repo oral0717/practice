@@ -303,23 +303,21 @@
 }
 
 .p-banner{
-  margin:0 auto 80px;
-  height:545px;
+  margin:0 auto 2rem;
 }
 .p-nav{
-  padding-top:45px;
-  margin:0 auto 40px;
+  /* padding-top:2rem; */
+  margin:0 auto 2rem;
 }
 .p-nav li{
-  border: 2px solid #333333;
-  font-size:13px;
-  border-radius: 18px;
-  padding:7px 36px;
-  margin-right:25px;
+  border: 1px solid #333333;
+  font-size:1.2rem;
+  border-radius: 2rem;
+  padding:4px 1.3rem;
+  margin-right:10px;
   display:inline-block;
 }
 .p-nav li.on, .p-nav li:hover{
-  cursor: pointer;
   color:#fff;
   background-color:#333;
 }
@@ -331,46 +329,42 @@
   margin-bottom:0;
 }
 .btn-more{
-  cursor: pointer;
-  border: 2px solid #333333;
-  border-radius: 20px;
-  border-radius: 20px;
-  width:173px;
-  margin: 0 auto 141px;
+  border: 1px solid #333333;
+  border-radius: 2rem;
+  width:17rem;
+  margin: 0 auto 6rem;
   box-sizing: border-box;
   text-align:center;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #121317;
   padding:8px 0;
 }
 
 .pd-banner {
-  margin-bottom:75px;
+  margin-bottom:3rem;
 }
 .article{
-  margin-bottom:140px;
-  font-size: 14px;
+  margin-bottom:6rem;
+  font-size: 1.4rem;
   color: #121317;
-  line-height: 24px;
+  line-height: 2rem;
   text-align:center;
 }
 .article h1{
-  font-size: 28px;
+  font-size: 1.7rem;
   color: #121317;
   text-align: center;
-  margin-bottom:46px;
+  margin-bottom:2rem;
 }
 .article p{
-  margin-bottom:40px;
+  margin: 0 4% 2rem;
 }
 .article .p1{
-  width:845px;
-  margin:0 auto 40px;
   text-align:left;
 }
 .article img{
   display: block;
-  margin:0 auto 40px;
+  margin:0 auto 2rem;
 }
 
 
