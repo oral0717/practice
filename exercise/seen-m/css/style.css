@@ -210,11 +210,11 @@
   line-height: 2.8rem;
 }
 .map-container{
-  padding:3rem 0;
+  padding:2rem 0 1px;
   background-color:#fafafa;
   color:#121317;
   font-size:1.4rem;
-  margin-bottom:2rem;
+  margin-bottom:4.8rem;
 }
 
 .contactus .disc{
@@ -505,7 +505,7 @@
 }*/
 .copyright,
 .copyright a{
-  padding-bottom:0.7rem;
+  padding-bottom:1rem;
   font-size:1.4rem;
   color:rgba(51,51,51,0.9);
 }
