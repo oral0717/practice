@@ -47,7 +47,9 @@
   height:2.3rem;
   border-bottom:6px solid #00AF8E;
 }
-
+.banner{
+  height:23rem;
+}
 .contact-wrap{
   position: relative;
   width:1.6rem;
@@ -483,23 +485,13 @@
   color:rgba(0,0,0,0.9);
 }
 
-/* @media screen and (max-width:1300px){
-  .con-width{
-    width:980px;
+@media screen and (min-width:768px){
+  .container{
+    max-width:768px;
+    margin:0 auto;
   }
   .banner{
-    min-width:980px;
+    height:30rem;
   }
-  .intro h2{
-    font-size:68px;
-  }
-  .product h4{
-    margin-top:10px;
-  }
-  .aboutus img,
-  .aboutus .disc,
-  .contactus .disc,
-  .contactus .map{
-    margin:0;
-  }
-} */
+
+}
