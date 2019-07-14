@@ -235,12 +235,16 @@
 }
 .seen-imp-map-container li{
   line-height:3.2em;
-  padding-left:7.4rem;
+  margin-left:7.4rem;
   width:55%;
   box-sizing: border-box;
 }
 .seen-imp-map-container li span{
+  float:left;
   margin-left:-7.4rem;
+}
+.seen-imp-map-container li .seen-imp-email{
+  float:left;
 }
 .seen-imp-map-container li span:before{
   content:"";
@@ -251,7 +255,7 @@
   position: absolute;
   right:0;
   top:0;
-  width:44%;
+  width:30%;
 }
 .seen-imp-map-container li:nth-child(1) span:before{
   width: 1.7rem;
