@@ -131,7 +131,7 @@
   width:27px;
   height:0;
   border-top:2px solid #000;
-  position: absolute;
+  position:absolute;
   top:11px;
   left:0;
 }
@@ -265,7 +265,7 @@
   color:#fff;
   margin-bottom:160px;
 }
-.seen-imp-intro .inner{
+.seen-imp-intro .seen-imp-inner{
   margin: 0 auto;
 }
 .seen-imp-intro h2{
@@ -545,9 +545,9 @@
     margin-top:10px;
   }
   .seen-imp-aboutus img,
-  .seen-imp-aboutus .disc,
-  .seen-imp-contactus .disc,
-  .seen-imp-contactus .map{
+  .seen-imp-aboutus .seen-imp-disc,
+  .seen-imp-contactus .seen-imp-disc,
+  .seen-imp-contactus .seen-imp-map{
     margin:0;
   }
 }

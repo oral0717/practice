@@ -40,7 +40,7 @@
 	border-color: #fff;
 }
 .seen-imp-btn-list li:hover,
-.seen-imp-btn-list li.on{
+.seen-imp-btn-list li.seen-imp-on{
 	background: #fff;
 	cursor: pointer;
 }
