@@ -14,8 +14,8 @@
 <div class="seen-imp-container">
   <div class="seen-imp-header seen-imp-con-width seen-imp-clearfix">
     <a href="javascript:void(0);" class="seen-imp-logo seen-imp-fl seen-imp-icon"></a>
-    <div class="seen-imp-contact-wrap seen-imp-fr" id="menuBtn">
-        <ul class="seen-imp-contact seen-imp-fr" id="menu">
+    <div class="seen-imp-contact-wrap seen-imp-fr" id="seenImpMenuBtn">
+        <ul class="seen-imp-contact seen-imp-fr" id="seenImpMenu">
           <li><a href="javascript:void(0);" class="seen-imp-on"><p>HOME</p></a></li>
           <li><a href="projects.html"><p>PROJECTS</p></a></li>
           <li><a href="aboutus.html"><p>ABOUT US</p></a></li>
@@ -28,7 +28,7 @@
         </ul>
     </div>
   </div>
-  <div class="seen-imp-banner" id="banner">
+  <div class="seen-imp-banner" id="seenImpBanner">
     <ul class="seen-imp-img">
       <li class="seen-imp-on"><a href="#" style="background-image:url('img/slide1.png')"></a></li>
       <li><a href="#" style="background-image:url('img/slide2.jpg')"></a></li>
@@ -116,12 +116,12 @@
 <script src="js/slide.js"></script>
 <script type="text/javascript">
 (function(){
-  $('#menuBtn').on('click', function(){
+  $('#seenImpMenuBtn').on('click', function(){
     $(this).toggleClass('seen-imp-close');
     if($(this).hasClass('seen-imp-close')){
-      $('#menu').slideDown(300);
+      $('#seenImpMenu').slideDown(300);
     }else{
-      $('#menu').slideUp(300);
+      $('#seenImpMenu').slideUp(300);
     }
   });
 })();

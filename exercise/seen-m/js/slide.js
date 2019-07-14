@@ -27,7 +27,7 @@ window.onload = function(){
       }, 3000);
     }
   }
-  $("#banner").touchMoveDirection({
+  $("#seenImpBanner").touchMoveDirection({
     　　 onLeft: function () {
           // console.log("left");
           clearInterval(timer);

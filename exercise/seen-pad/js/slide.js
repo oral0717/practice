@@ -27,7 +27,24 @@ window.onload = function(){
       }, 3000);
     }
   }
-
+  $("#seenImpBanner").touchMoveDirection({
+    　　 onLeft: function () {
+          // console.log("left");
+          clearInterval(timer);
+          change(true);
+          timer = setInterval(function(){
+            change(true);
+          }, 3000);
+    　	},
+      　onRight: function () {
+          // console.log("right");
+          clearInterval(timer);
+          change(false);
+          timer = setInterval(function(){
+            change(true);
+          }, 3000);
+      　}
+      });
   // 切换图片
   var change = function(isToRight){
     images[index].className = "";
