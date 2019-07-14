@@ -1,6 +1,6 @@
 window.onload = function(){
-  var images = document.querySelectorAll(".img li");
-  var tabs = document.querySelectorAll(".btn-list li")
+  var images = document.querySelectorAll(".seen-imp-img li");
+  var tabs = document.querySelectorAll(".seen-imp-btn-list li")
   var index = 0;
   var timer = null;
   timer = setInterval(function(){
@@ -17,8 +17,8 @@ window.onload = function(){
           images[i].className = "";
           tabs[i].className = "";
         }
-        images[index].className = "on";
-        tabs[index].className = "on";
+        images[index].className = "seen-imp-on";
+        tabs[index].className = "seen-imp-on";
       }
     }
     tabs[i].onmouseout = function(){
@@ -39,8 +39,8 @@ window.onload = function(){
       index --;
       if (index < 0) index = images.length - 1;
     }
-    images[index].className = "on";
-    tabs[index].className = "on";
+    images[index].className = "seen-imp-on";
+    tabs[index].className = "seen-imp-on";
   }
 
 };

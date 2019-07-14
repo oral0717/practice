@@ -26,20 +26,20 @@ a{
   text-decoration: none;
   outline: none;
 }
-.fl{
+.seen-imp-fl{
   float:left;
 }
-.fr{
+.seen-imp-fr{
   float:right;
 }
-.clearfix:after{
+.seen-imp-clearfix:after{
   content:"";
   clear: both;
 	display:block;
 	height: 0;
 }
 
-.nowrap{
+.seen-imp-nowrap{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
