@@ -56,7 +56,12 @@
 <script type="text/javascript">
   (function(){
     $('#menuBtn').on('click', function(){
-      $('#menu').toggle();
+      $(this).toggleClass('close');
+      if($(this).hasClass('close')){
+        $('#menu').slideDown(300);
+      }else{
+        $('#menu').slideUp(300);
+      }
     });
   })();
   </script>

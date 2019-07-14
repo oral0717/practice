@@ -2,6 +2,7 @@
 .nav-contact a:before,
 .item1 li:before,
 .item2 a:before,
+.contact-wrap,
 .map-container li span:before{
   background:url("../img/icon@2x.png") no-repeat;
   background-size:100px auto;
@@ -49,14 +50,16 @@
   border-bottom:6px solid #00AF8E;
 }
 .banner{
-  height:16rem;
+  height:20rem;
 }
 .contact-wrap{
-  width:18px;
-  height:14px;
+  width:22px;
+  height:16px;
   margin-top:13px;
-  border-top:2px solid #000;
-  border-bottom:2px solid #000;
+  background-position: -66px -37px;
+}
+.contact-wrap.close{
+  background-position: -43px -37px;
 }
 .contact{
   display:none;
@@ -66,9 +69,6 @@
   top:7rem;
   background-color: #fff;
   z-index:999;
-}
-.contact.on{
-  display:block;
 }
 .contact li{
   border-top:1px solid #eee;

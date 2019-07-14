@@ -117,7 +117,12 @@
 <script type="text/javascript">
 (function(){
   $('#menuBtn').on('click', function(){
-    $('#menu').toggleClass('on');
+    $(this).toggleClass('close');
+    if($(this).hasClass('close')){
+      $('#menu').slideDown(300);
+    }else{
+      $('#menu').slideUp(300);
+    }
   });
 })();
 </script>
