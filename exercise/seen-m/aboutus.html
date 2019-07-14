@@ -100,7 +100,6 @@
     function initMap(){
         createMap();//创建地图
         setMapEvent();//设置地图事件
-        addMapControl();//向地图添加控件
         addMarker();//向地图中添加marker
     }
     
@@ -119,13 +118,8 @@
         map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
         map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
     }
-    
-    //地图控件添加函数：
-    function addMapControl(){
-                        //向地图中添加比例尺控件
-	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-	map.addControl(ctrl_sca);
-    }
+
+
     
     //标注点数组
     var markerArr = [{title:"我的标记",content:"我的备注",point:"116.598352|39.940441",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}

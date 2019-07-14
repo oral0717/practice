@@ -112,14 +112,14 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/touchMoveDirection.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 
 <script type="text/javascript">
     //创建和初始化地图函数：
     function initMap(){
         createMap();//创建地图
         setMapEvent();//设置地图事件
-        addMapControl();//向地图添加控件
+        // addMapControl();//向地图添加控件
         addMarker();//向地图中添加marker
     }
     
@@ -138,17 +138,10 @@
         map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
         map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
     }
-    
-    //地图控件添加函数：
-    function addMapControl(){
-                        //向地图中添加比例尺控件
-	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-	map.addControl(ctrl_sca);
-    }
-    
+
     //标注点数组
     var markerArr = [{title:"我的标记",content:"我的备注",point:"116.598352|39.940441",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-		 ,{title:"SEEN VISI0N",content:"地址：北京市朝阳区常营东方华瑞&nbsp;8&nbsp;号楼&nbsp;4&nbsp;层&nbsp;405&nbsp;室",point:"116.594812|39.932979",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ,{title:"SEEN VISION",content:"地址：北京市朝阳区常营东方华瑞&nbsp;8&nbsp;号楼&nbsp;4&nbsp;层&nbsp;405&nbsp;室",point:"116.594812|39.932979",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
 		 ];
     //创建marker
     function addMarker(){

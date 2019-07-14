@@ -230,8 +230,18 @@
   margin-bottom:24px;
   padding-left:74px;
 }
+.seen-imp-map-container li:after{
+  content:"";
+  clear: both;
+	display:block;
+	height: 0;
+}
 .seen-imp-map-container li span{
+  float:left;
   margin-left:-74px;
+}
+.seen-imp-map-container li .seen-imp-email{
+  float:left;
 }
 .seen-imp-map-container li span:before{
   content:"";
