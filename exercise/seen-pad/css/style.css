@@ -87,10 +87,10 @@
   font-size:13px;
 }
 .seen-imp-contact a:nth-child(4):active,
-.seen-imp-btn-more:active{
+/* .seen-imp-btn-more:active{
   background-color:#333;
   color:#fff;
-}
+} */
 
 
 .seen-imp-banner{
@@ -366,11 +366,11 @@
 }
 .seen-imp-btn-more{
   cursor: pointer;
-  border: 2px solid #333333;
+  /* border: 2px solid #333333;
   border-radius: 20px;
-  border-radius: 20px;
-  width:173px;
-  margin: 0 auto 141px;
+  border-radius: 20px; */
+  width:100px;
+  margin: 0 auto 64px;
   box-sizing: border-box;
   text-align:center;
   font-size: 14px;
