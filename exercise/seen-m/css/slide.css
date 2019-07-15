@@ -1,9 +1,9 @@
-.seen-imp-banner{
+.seenm-imp-banner{
 	position: relative;
   width:100%;
   margin: 0 auto 5rem;
 }
-.seen-imp-img li{
+.seenm-imp-img li{
   width:100%;
   height:100%;
   position: absolute;
@@ -12,23 +12,23 @@
   opacity: 0;
   transition:1s;
 }
-.seen-imp-img a{
+.seenm-imp-img a{
   display: block;
   width:100%;
   height:100%;
   background-size:cover;
   background-position: center;
 }
-.seen-imp-img li.seen-imp-on{
+.seenm-imp-img li.seenm-imp-on{
 	opacity: 1;
 }
 
-.seen-imp-btn-list {
+.seenm-imp-btn-list {
 	position: absolute;
 	right:2rem;
 	bottom:1rem;
 }
-.seen-imp-btn-list li{
+.seenm-imp-btn-list li{
   box-sizing: border-box;
 	float: left;
 	width: 5px;
@@ -38,8 +38,8 @@
 	border: 1px solid #fff;
 	border-color: #fff;
 }
-.seen-imp-btn-list li:hover,
-.seen-imp-btn-list li.seen-imp-on{
+.seenm-imp-btn-list li:hover,
+.seenm-imp-btn-list li.seenm-imp-on{
 	background: #fff;
 	cursor: pointer;
 }

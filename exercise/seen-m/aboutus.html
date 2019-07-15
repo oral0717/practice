@@ -17,16 +17,16 @@
 </style>
 </head>
 <body>
-<div class="seen-imp-container">
-  <div class="seen-imp-header seen-imp-con-width seen-imp-clearfix">
-    <a href="javascript:void(0);" class="seen-imp-logo seen-imp-fl seen-imp-icon"></a>
-    <div class="seen-imp-contact-wrap seen-imp-fr" id="seenImpMenuBtn">
-        <ul class="seen-imp-contact seen-imp-fr" id="seenImpMenu">
+<div class="seenm-imp-container">
+  <div class="seenm-imp-header seenm-imp-con-width seenm-imp-clearfix">
+    <a href="javascript:void(0);" class="seenm-imp-logo seenm-imp-fl seenm-imp-icon"></a>
+    <div class="seenm-imp-contact-wrap seenm-imp-fr" id="seenMImpMenuBtn">
+        <ul class="seenm-imp-contact seenm-imp-fr" id="seenMImpMenu">
           <li><a href="home.html"><p>HOME</p></a></li>
           <li><a href="projects.html"><p>PROJECTS</p></a></li>
-          <li><a href="javascript:void(0);" class="seen-imp-on"><p>ABOUT US</p></a></li>
+          <li><a href="javascript:void(0);" class="seenm-imp-on"><p>ABOUT US</p></a></li>
           <li><a href="mailto:seenvision@qq.com"><p>CONTACT</p></a></li>
-          <li class="seen-imp-nav-contact">
+          <li class="seenm-imp-nav-contact">
             <a href="https://weibo.com/seenvision"></a>
             <a href="https://www.behance.net/seenvision"></a>
             <a href="https://seenvision.zcool.com.cn"></a>
@@ -34,17 +34,17 @@
         </ul>
     </div>
   </div>
-    <div class="seen-imp-banner" id="seenImpBanner">
-      <ul class="seen-imp-img">
-        <li class="seen-imp-on"><a href="#" style="background-image:url('img/slide1.png')"></a></li>
+    <div class="seenm-imp-banner" id="seenMImpBanner">
+      <ul class="seenm-imp-img">
+        <li class="seenm-imp-on"><a href="#" style="background-image:url('img/slide1.png')"></a></li>
         <li><a href="#" style="background-image:url('img/slide2.jpg')"></a></li>
         <li><a href="#" style="background-image:url('img/slide3.jpg')"></a></li>
         <li><a href="#" style="background-image:url('img/slide4.jpg')"></a></li>
         <li><a href="#" style="background-image:url('img/slide5.jpg')"></a></li>
       </ul>
-      <div class="seen-imp-btn-list">
+      <div class="seenm-imp-btn-list">
         <ul>
-          <li data-index=0 class="seen-imp-on"></li>
+          <li data-index=0 class="seenm-imp-on"></li>
           <li data-index=1 ></li>
           <li data-index=2></li>
           <li data-index=3></li>
@@ -53,19 +53,19 @@
       </div>
     </div>
 
-  <div class="seen-imp-aboutus seen-imp-con-width seen-imp-clearfix">
-    <div class="seen-imp-disc">
+  <div class="seenm-imp-aboutus seenm-imp-con-width seenm-imp-clearfix">
+    <div class="seenm-imp-disc">
       <h2>关于我们</h2>
       <p>Seen vision 工作室成立于2014年，是一个精英创意工作室。主要致力于品牌视觉服务和创意动画广告。以绝对新鲜的创意设计和顶尖的制作实力，为客户提供最优的视觉创意解决方案，提升品牌形象。希望在视觉影像繁杂的今天，为观者提供内容清晰，印象深刻，引起内心共鸣的作品，提升观者感官体验。</p>
     </div>
   </div>
 
 
-  <div class="seen-imp-map-container">
-    <div class="seen-imp-contactus seen-imp-con-width seen-imp-clearfix">
-      <div class="seen-imp-disc">
+  <div class="seenm-imp-map-container">
+    <div class="seenm-imp-contactus seenm-imp-con-width seenm-imp-clearfix">
+      <div class="seenm-imp-disc">
         <h2>联系我们</h2>
-        <div class="seen-imp-map">
+        <div class="seenm-imp-map">
           <!--百度地图容器-->
           <div style="width:100%;height:100%;border:#ccc solid 1px;" id="dituContent"></div>
         </div>
@@ -74,7 +74,7 @@
           <li><span></span>seenvision</li>
           <li><span></span>2770863142</li>
           <li><span>邮箱：</span>
-            <div class="seen-imp-email">
+            <div class="seenm-imp-email">
               <p>xxxx xxxx@xxx.com</p>
               <p>xxx xxxx xxxx@xxx.com</p>
             </div>
@@ -85,9 +85,9 @@
     </div>
   </div>
 
-  <p class="seen-imp-copyright seen-imp-con-width seen-imp-clearfix">
-    <span class="seen-imp-fl">&copy; 2013-2019 SeenVision</span>
-    <a class="seen-imp-fr" href="aboutus.html">关于我们</a>
+  <p class="seenm-imp-copyright seenm-imp-con-width seenm-imp-clearfix">
+    <span class="seenm-imp-fl">&copy; 2013-2019 SeenVision</span>
+    <a class="seenm-imp-fr" href="aboutus.html">关于我们</a>
   </p>
 </div>
 </body>
@@ -184,12 +184,12 @@
 
 <script type="text/javascript">
   (function(){
-    $('#seenImpMenuBtn').on('click', function(){
+    $('#seenMImpMenuBtn').on('click', function(){
       $(this).toggleClass('close');
       if($(this).hasClass('close')){
-        $('#seenImpMenu').slideDown(300);
+        $('#seenMImpMenu').slideDown(300);
       }else{
-        $('#seenImpMenu').slideUp(300);
+        $('#seenMImpMenu').slideUp(300);
       }
     });
   })();

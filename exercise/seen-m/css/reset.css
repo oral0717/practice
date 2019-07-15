@@ -28,20 +28,20 @@ a{
   text-decoration: none;
   outline: none;
 }
-.seen-imp-fl{
+.seenm-imp-fl{
   float:left;
 }
-.seen-imp-fr{
+.seenm-imp-fr{
   float:right;
 }
-.seen-imp-clearfix:after{
+.seenm-imp-clearfix:after{
   content:"";
   clear: both;
 	display:block;
 	height: 0;
 }
 
-.seen-imp-nowrap{
+.seenm-imp-nowrap{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
