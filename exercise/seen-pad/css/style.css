@@ -1,34 +1,34 @@
-.seen-imp-icon,
-.seen-imp-item1 a:before,
-.seen-imp-item2 a:before,
-.seen-imp-map-container li span:before{
+.seenpad-imp-icon,
+.seenpad-imp-item1 a:before,
+.seenpad-imp-item2 a:before,
+.seenpad-imp-map-container li span:before{
   background:url("../img/icon@2x.png") no-repeat;
   background-size:10rem auto;
 }
-.seen-imp-container{
+.seenpad-imp-container{
   background:#fff;
   font-family: -apple-system,"PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
   color:#000;
 }
 
-.seen-imp-con-width{
+.seenpad-imp-con-width{
   width:100%;
   box-sizing: border-box;
   padding: 0 3.125%;
   max-width: 1024px;
 }
-.seen-imp-header{
+.seenpad-imp-header{
   margin:0 auto 1.2rem;
   padding-top:1.8rem;
 }
-.seen-imp-logo{
+.seenpad-imp-logo{
   display: inline-block;
   width:5.8rem;
   height:5.8rem;
   background-size:8rem auto;
   background-position: 0 -5.9rem;
 }
-.seen-imp-nav a{
+.seenpad-imp-nav a{
   position: relative;
   margin-left:2.4rem;
   display: inline-block;
@@ -38,43 +38,43 @@
   color:#121317;
   font-weight: bold;
 }
-.seen-imp-nav p{
+.seenpad-imp-nav p{
   padding:0 0.2rem;
 }
-.seen-imp-nav .seen-imp-on p,
-.seen-imp-nav a:active p{
+.seenpad-imp-nav .seenpad-imp-on p,
+.seenpad-imp-nav a:active p{
   box-sizing:border-box;
   height:3rem;
   border-bottom:6px solid #00AF8E;
 }
 
-.seen-imp-contact{
+.seenpad-imp-contact{
   padding-top:0.6rem;
 }
-.seen-imp-contact a{
+.seenpad-imp-contact a{
   font-weight: bold;
   float:left;
   margin-left:2rem;
 }
-.seen-imp-contact a:nth-child(1){
+.seenpad-imp-contact a:nth-child(1){
   width:2rem;
   height:1.8rem;
   margin-top:0.9rem;
   background-position: -4.4rem -1.7rem;
 }
-.seen-imp-contact a:nth-child(2){
+.seenpad-imp-contact a:nth-child(2){
   width:2.4rem;
   height:1.6rem;
   margin-top: 1.1rem;
   background-position: -2rem -1.7rem;
 }
-.seen-imp-contact a:nth-child(3){
+.seenpad-imp-contact a:nth-child(3){
   width:1.9rem;
   height:2rem;
   margin-top: 0.8rem;
   background-position: 0 -1.7rem;
 }
-.seen-imp-contact a:nth-child(4){
+.seenpad-imp-contact a:nth-child(4){
   box-sizing:border-box;
   border:1px solid #333;
   color:#121317;
@@ -87,55 +87,55 @@
 
 
 
-.seen-imp-banner{
+.seenpad-imp-banner{
   max-width: 1024px;
   height:30rem;
   margin: 0 auto 6rem;
 }
-.seen-imp-product{
+.seenpad-imp-product{
   width: 98%;
 }
-.seen-imp-product h2{
+.seenpad-imp-product h2{
   font-size:1.6rem;
   color:#000;
   font-weight: bold;
 }
-.seen-imp-product h3{
+.seenpad-imp-product h3{
   font-size:1.6rem;
   color:#000;
   font-weight: bold;
 }
-.seen-imp-product .text{
+.seenpad-imp-product .text{
   width:45%;
 }
-.seen-imp-product h4{
+.seenpad-imp-product h4{
   font-size:1.4rem;
   color:#121317;
   margin-bottom:1.2rem;
   font-weight: bold;
 }
-.seen-imp-product h1{
+.seenpad-imp-product h1{
   font-size:2.4rem;
   color:#121317;
   margin-bottom:1rem;
   font-weight: bold;
 }
-.seen-imp-product h5{
+.seenpad-imp-product h5{
   font-size:1.4rem;
   color:#121317;
   line-height:2rem;
   margin-bottom:1.3rem;
 }
-.seen-imp-product .seen-imp-more{
+.seenpad-imp-product .seenpad-imp-more{
   position: relative;
 }
-.seen-imp-product .seen-imp-more a{
+.seenpad-imp-product .seenpad-imp-more a{
   font-size:1.4rem;
   color:#1C0E1F;
   margin-left:4.8rem;
   font-weight: bold;
 }
-.seen-imp-product .seen-imp-more:before{
+.seenpad-imp-product .seenpad-imp-more:before{
   content:'';
   width:2.7rem;
   height:0;
@@ -144,7 +144,7 @@
   top:0.9rem;
   left:0;
 }
-.seen-imp-product .seen-imp-more:after{
+.seenpad-imp-product .seenpad-imp-more:after{
   content:'';
   width:0.5rem;
   height:0.5rem;
@@ -155,192 +155,192 @@
   top:0.65rem;
   left:2.1rem;
 }
-.seen-imp-product .seen-imp-cover{
+.seenpad-imp-product .seenpad-imp-cover{
   width:49.1%;
 }
-.seen-imp-product .seen-imp-cover img{
+.seenpad-imp-product .seenpad-imp-cover img{
   display: inline-block;
 }
-.seen-imp-product.seen-imp-product1 h3{
+.seenpad-imp-product.seenpad-imp-product1 h3{
   margin-bottom:3rem;
 }
-.seen-imp-product.seen-imp-product1{
+.seenpad-imp-product.seenpad-imp-product1{
   margin:0 auto 7.2rem;
 }
-.seen-imp-product.seen-imp-product2 h2{
+.seenpad-imp-product.seenpad-imp-product2 h2{
   margin-bottom:3rem;
 }
-.seen-imp-product.seen-imp-product2{
+.seenpad-imp-product.seenpad-imp-product2{
   margin: 0 auto 7rem;
 }
-.seen-imp-shadow1{
+.seenpad-imp-shadow1{
   box-shadow: rgba(204,204,204,0.1) -6.9rem -5.1rem 0 2.2rem;
 }
-.seen-imp-shadow2{
+.seenpad-imp-shadow2{
   box-shadow: rgba(204,204,204,0.1) 4.8rem -5.2rem 0 2.6rem;
 }
 
 
-.seen-imp-aboutus{
+.seenpad-imp-aboutus{
   margin:0 auto 6rem;
 }
-.seen-imp-aboutus-box{
+.seenpad-imp-aboutus-box{
   width:93.8%;
   margin:0 auto;
   padding-left:20rem;
   box-sizing: border-box;
 }
-.seen-imp-aboutus img{
+.seenpad-imp-aboutus img{
   margin-left:-20rem;
 }
-.seen-imp-aboutus .seen-imp-disc{
+.seenpad-imp-aboutus .seenpad-imp-disc{
   width:100%;
 }
-.seen-imp-aboutus h2{
+.seenpad-imp-aboutus h2{
   font-size: 2rem;
   color: #121317;
   margin-bottom:0.5rem;
   font-weight: bold;
 }
-.seen-imp-aboutus p{
+.seenpad-imp-aboutus p{
   font-size: 1.4rem;
   color: #121317;
   line-height: 2.4rem;
 }
-.seen-imp-map-container{
+.seenpad-imp-map-container{
   padding:4rem 0 3rem;
   background-color:#fafafa;
   color:#121317;
   font-size:1.4rem;
   margin-bottom:6.8rem;
 }
-.seen-imp-contactus{
+.seenpad-imp-contactus{
   margin:0 auto;
 }
-.seen-imp-contactus .seen-imp-disc{
+.seenpad-imp-contactus .seenpad-imp-disc{
   width:100%;
 }
-.seen-imp-map{
+.seenpad-imp-map{
   height:315px;
   background-color:#ccc;
   margin-bottom:1.3rem;
 }
-.seen-imp-map-container h2{
+.seenpad-imp-map-container h2{
   font-size:2rem;
   margin-bottom:2.3rem;
   font-weight: bold;
 }
-.seen-imp-map-container ul{
+.seenpad-imp-map-container ul{
   position: relative;
 }
-.seen-imp-map-container li{
+.seenpad-imp-map-container li{
   line-height:3.2em;
   margin-left:7.4rem;
   width:55%;
   box-sizing: border-box;
 }
-.seen-imp-map-container li span{
+.seenpad-imp-map-container li span{
   float:left;
   margin-left:-7.4rem;
 }
-.seen-imp-map-container li .seen-imp-email{
+.seenpad-imp-map-container li .seenpad-imp-email{
   float:left;
 }
-.seen-imp-map-container li span:before{
+.seenpad-imp-map-container li span:before{
   content:"";
   display:inline-block;
   margin-right:1.5rem;
 }
-.seen-imp-map-container li:nth-child(2){
+.seenpad-imp-map-container li:nth-child(2){
   position: absolute;
   right:0;
   top:0;
   width:30%;
 }
-.seen-imp-map-container li:nth-child(1) span:before{
+.seenpad-imp-map-container li:nth-child(1) span:before{
   width: 1.7rem;
   height: 1.7rem;
   background-position: 0 -5.5rem;
   vertical-align: -0.2rem;
 }
-.seen-imp-map-container li:nth-child(2) span:before{
+.seenpad-imp-map-container li:nth-child(2) span:before{
   width: 1.7rem;
   height: 1.4rem;
   background-position: -3.7rem -5.5rem;
   vertical-align: -0.2rem;
 }
-.seen-imp-map-container li:nth-child(3) span:before{
+.seenpad-imp-map-container li:nth-child(3) span:before{
   width: 1.6rem;
   height: 2rem;
   background-position: -1.8rem -5.5rem;
   vertical-align: -0.4rem;
 }
 
-.seen-imp-intro{
+.seenpad-imp-intro{
   height:32.7rem;
   background:url('../img/img3.png') no-repeat center;
   background-size: cover;
   color:#fff;
   margin:0 auto 7rem;
 }
-.seen-imp-intro .seen-imp-inner{
+.seenpad-imp-intro .seenpad-imp-inner{
   margin: 0 auto;
   padding-top:14.3rem;
 }
-.seen-imp-intro h2{
+.seenpad-imp-intro h2{
   font-weight: bold;
   font-size:3.8rem;
   margin-bottom:0.8rem;
   text-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.20);
 }
-.seen-imp-intro p{
+.seenpad-imp-intro p{
   font-size:1.4rem;
   line-height: 2.4rem;
   text-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.20);
   letter-spacing: 0.156rem;
 }
-.seen-imp-list-box{
+.seenpad-imp-list-box{
   margin:0 auto;
 }
-.seen-imp-list{
+.seenpad-imp-list{
   margin:0 -2.1% 2.1rem;
 }
-.seen-imp-list li{
+.seenpad-imp-list li{
   width:29.03%;
   max-width:32.8rem;
   float:left;
   margin:0px 2.15% 5.2rem;
 }
-.seen-imp-list a{
+.seenpad-imp-list a{
   display: block;
 }
-.seen-imp-list img{
+.seenpad-imp-list img{
   width:100%;
   max-height:24.6rem;
   display: inline-block;
   background-color:#eee;
   margin-bottom:1rem;
 }
-.seen-imp-list h3{
+.seenpad-imp-list h3{
   font-size:1.8rem;
   color:#000;
   margin-bottom:0.8rem;
   padding:0 1rem;
 }
-.seen-imp-list p{
+.seenpad-imp-list p{
   font-size:1.4rem;
   color:#999;
   padding:0 1rem;
 }
 
-.seen-imp-p-banner{
+.seenpad-imp-p-banner{
   margin:0 auto 8rem;
 }
-.seen-imp-p-nav{
+.seenpad-imp-p-nav{
   padding-top:4.5rem;
   margin:0 auto 4rem;
 }
-.seen-imp-p-nav li{
+.seenpad-imp-p-nav li{
   border: 2px solid #333333;
   font-size:1.3rem;
   border-radius: 1.8rem;
@@ -348,19 +348,19 @@
   margin-right:2.5rem;
   display:inline-block;
 }
-.seen-imp-p-nav li.seen-imp-on, .seen-imp-p-nav li:active{
+.seenpad-imp-p-nav li.seenpad-imp-on, .seenpad-imp-p-nav li:active{
   cursor: pointer;
   color:#fff;
   background-color:#333;
 }
-.seen-imp-list-wrap{
+.seenpad-imp-list-wrap{
   display:none;
   margin:0 auto;
 }
-.seen-imp-p-list{
+.seenpad-imp-p-list{
   margin-bottom:0;
 }
-.seen-imp-btn-more{
+.seenpad-imp-btn-more{
   cursor: pointer;
   /* border: 2px solid #333333;
   border-radius: 20px;
@@ -374,10 +374,10 @@
   padding:0.8rem 0;
 }
 
-.seen-imp-pd-banner {
+.seenpad-imp-pd-banner {
   margin:0 auto 2.5rem;
 }
-.seen-imp-article{
+.seenpad-imp-article{
   font-size: 1.4rem;
   color: #121317;
   line-height: 2.4rem;
@@ -385,40 +385,40 @@
   margin:0 auto 7rem;
   box-sizing:border-box;
 }
-.seen-imp-article h1{
+.seenpad-imp-article h1{
   font-size: 2.2rem;
   color: #121317;
   text-align: center;
   margin-bottom:1.4rem;
   font-weight: bold;
 }
-.seen-imp-article p{
+.seenpad-imp-article p{
   margin:0 auto 2.4rem;
 }
-.seen-imp-article .seen-imp-p1{
+.seenpad-imp-article .seenpad-imp-p1{
   margin:0 auto 2.4rem;
 }
-.seen-imp-article img{
+.seenpad-imp-article img{
   display: block;
   margin:0 auto 2.4rem;
   max-width:1024px;
 }
-.seen-imp-footer{
+.seenpad-imp-footer{
   margin:0 auto 4rem;
   font-size:1.4rem;
 }
-.seen-imp-footer .seen-imp-block1{
+.seenpad-imp-footer .seenpad-imp-block1{
   margin-bottom:4.5rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(2) a:active,
-.seen-imp-footer a{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(2) a:active,
+.seenpad-imp-footer a{
   color:rgba(0,0,0,0.9);
 }
-.seen-imp-footer a:active{
+.seenpad-imp-footer a:active{
   color:#00AF8E;
 }
 
-.seen-imp-footer .seen-imp-title{
+.seenpad-imp-footer .seenpad-imp-title{
   font-size:1.4rem;
   width:12%;
   text-align: left;
@@ -426,7 +426,7 @@
   color:rgba(0,0,0,0.9);
   font-weight: bold;
 }
-.seen-imp-footer .seen-imp-title:after{
+.seenpad-imp-footer .seenpad-imp-title:after{
   content:'';
   position: absolute;
   left:0;
@@ -435,81 +435,81 @@
   height:2px;
   background-color:#191919;
 }
-.seen-imp-footer .seen-imp-title:nth-child(1):after{
+.seenpad-imp-footer .seenpad-imp-title:nth-child(1):after{
   right:6rem;
 }
 
-.seen-imp-footer .seen-imp-item1,
-.seen-imp-footer .seen-imp-item2{
+.seenpad-imp-footer .seenpad-imp-item1,
+.seenpad-imp-footer .seenpad-imp-item2{
   width:77.1%;
 }
 
-.seen-imp-footer .seen-imp-item1 li,
-.seen-imp-footer .seen-imp-item2 li{
+.seenpad-imp-footer .seenpad-imp-item1 li,
+.seenpad-imp-footer .seenpad-imp-item2 li{
   float:left;
 }
-.seen-imp-footer .seen-imp-item1 li,
-.seen-imp-footer .seen-imp-item2 li{
+.seenpad-imp-footer .seenpad-imp-item1 li,
+.seenpad-imp-footer .seenpad-imp-item2 li{
   width:33.33%;
   margin-bottom:1.8rem;
 }
-.seen-imp-footer .seen-imp-item1 a:before,
-.seen-imp-footer .seen-imp-item2 a:before{
+.seenpad-imp-footer .seenpad-imp-item1 a:before,
+.seenpad-imp-footer .seenpad-imp-item2 a:before{
   content:"";
   display:inline-block;
   margin-right:1.1rem;
 }
 
-.seen-imp-footer .seen-imp-item1 li:nth-child(1) a:before{
+.seenpad-imp-footer .seenpad-imp-item1 li:nth-child(1) a:before{
   width:1.7rem;
   height:1.8rem;
   background-position: 0 0;
   vertical-align: -0.4rem;
 }
-.seen-imp-footer .seen-imp-item1 li:nth-child(2) a:before{
+.seenpad-imp-footer .seenpad-imp-item1 li:nth-child(2) a:before{
   width:1.8rem;
   height:1.4rem;
   background-position: -1.7rem 0;
   vertical-align: -0.3rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(1) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(1) a:before{
   width: 2rem;
   height: 1.8rem;
   background-position: -4.4rem -1.7rem;
   vertical-align: -0.3rem;
 }
 
-.seen-imp-footer .seen-imp-item2 li:nth-child(2) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(2) a:before{
   width: 2rem;
   height: 1.8rem;
   background-position: -6.4rem -1.6rem;
   vertical-align: -0.5rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(3) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(3) a:before{
   width:1.9rem;
   height:2rem;
   background-position: 0 -1.7rem;
   vertical-align: -0.4rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(4) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(4) a:before{
   width:2.4rem;
   height:1.6rem;
   background-position: -2rem -1.7rem;
   vertical-align: -0.3rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(5) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(5) a:before{
   width: 4.1rem;
   height: 1.6rem;
   background-position: 0px -3.8rem;
   vertical-align: -0.3rem;
 }
-.seen-imp-footer .seen-imp-item2 li:nth-child(6) a:before{
+.seenpad-imp-footer .seenpad-imp-item2 li:nth-child(6) a:before{
   width: 1.8rem;
   height: 1.6rem;
   background-position: -8.5rem -1.7rem;
   vertical-align: -0.3rem;
 }
-.seen-imp-copyright{
+.seenpad-imp-copyright{
   margin: 0 auto 2.3rem;
   font-size:1.4rem;
   color:rgba(0,0,0,0.9);

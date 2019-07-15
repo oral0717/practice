@@ -1,6 +1,6 @@
 window.onload = function(){
-  var images = document.querySelectorAll(".seen-imp-img li");
-  var tabs = document.querySelectorAll(".seen-imp-btn-list li")
+  var images = document.querySelectorAll(".seenpad-imp-img li");
+  var tabs = document.querySelectorAll(".seenpad-imp-btn-list li")
   var index = 0;
   var timer = null;
   timer = setInterval(function(){
@@ -17,8 +17,8 @@ window.onload = function(){
           images[i].className = "";
           tabs[i].className = "";
         }
-        images[index].className = "seen-imp-on";
-        tabs[index].className = "seen-imp-on";
+        images[index].className = "seenpad-imp-on";
+        tabs[index].className = "seenpad-imp-on";
       }
     }
     tabs[i].onmouseout = function(){
@@ -27,7 +27,7 @@ window.onload = function(){
       }, 3000);
     }
   }
-  $("#seenImpBanner").touchMoveDirection({
+  $("#seenPadImpBanner").touchMoveDirection({
     　　 onLeft: function () {
           // console.log("left");
           clearInterval(timer);
@@ -56,8 +56,8 @@ window.onload = function(){
       index --;
       if (index < 0) index = images.length - 1;
     }
-    images[index].className = "seen-imp-on";
-    tabs[index].className = "seen-imp-on";
+    images[index].className = "seenpad-imp-on";
+    tabs[index].className = "seenpad-imp-on";
   }
 
 };
