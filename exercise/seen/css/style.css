@@ -579,13 +579,13 @@
   .seen-imp-footer .seen-imp-item2 li:nth-child(5) a:before{
     background-position: 0px -38px;
   }
-  .map-container li:nth-child(1):before{
+  .seen-imp-map-container li:nth-child(1) span:before{
     background-position: 0px -55px;
   }
-  .map-container li:nth-child(2):before{
+  .seen-imp-map-container li:nth-child(2) span:before{
     background-position: -37px -55px;
   }
-  .map-container li:nth-child(3):before{
+  .seen-imp-map-container li:nth-child(3) span:before{
     background-position: -18px -55px;
   }
 }
