@@ -62,7 +62,7 @@
   background-position: -4.3rem -3.7rem;
 }
 .seenm-imp-contact{
-  display:none;
+  /* display:none; */
   position: absolute;
   left:0;
   right:0;
@@ -70,7 +70,9 @@
   background-color: #fff;
   z-index:999;
 }
-.seenm-imp-contact li{
+.seenm-imp-contact .pc_menu li,
+.seenm-imp-contact .seenm-imp-nav-contact-btn,
+.seenm-imp-contact .seenm-imp-nav-contact{
   border-top:1px solid #eee;
   height:5.5rem;
   line-height: 5.5rem;
@@ -93,12 +95,12 @@
 }
 .seenm-imp-contact p{
   display:inline-block;
-  height:3.2rem;
+  height:100%;
   padding:0 2px;
 }
-.seenm-imp-contact .seenm-imp-on p,
+.seenm-imp-contact .current-menu-item p,
 .seenm-imp-contact a:active p{
-  border-bottom:6px solid #00AF8E;
+  background: url("../img/seen-navbg.png") repeat-x 0 2.7rem;
 }
 .seenm-imp-nav-contact a:nth-child(1):before{
   width:2rem;

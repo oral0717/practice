@@ -26,22 +26,24 @@
 .seen-imp-nav{
   margin-left:38px;
 }
-.seen-imp-nav a{
+.seen-imp-nav li{
   position: relative;
   margin-left:44px;
   display: inline-block;
   height:50px;
-  line-height:50px;
+}
+.seen-imp-nav li a{
+  padding:0 2px;
   font-size:18px;
   color:#121317;
+  display: inline-block;
+  height:100%;
+  line-height:50px;
 }
-.seen-imp-nav p{
-  padding:0 2px;
-}
-.seen-imp-nav .seen-imp-on p,
-.seen-imp-nav a:hover p{
-  height:25px;
-  border-bottom:6px solid #00AF8E;
+.seen-imp-nav .current-menu-item a,
+.seen-imp-nav li a:hover{
+  background:url("../img/seen-navbg.png") repeat-x 0 25px;
+
 }
 
 
