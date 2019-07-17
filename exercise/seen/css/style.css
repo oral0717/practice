@@ -6,7 +6,7 @@
 }
 .seen-imp-container{
   background:#fff;
-  font-family: -apple-system,"PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  font-family: "PingFangSC-Regular","Microsoft Yahei",sans-serif;
   color:#000;
 }
 
@@ -195,6 +195,7 @@
   font-size: 24px;
   color: #121317;
   margin-bottom:15px;
+  font-weight: bold;
 }
 .seen-imp-aboutus p{
   font-size: 18px;
@@ -226,6 +227,7 @@
 .seen-imp-map-container h2{
   font-size:24px;
   padding:50px 0;
+  font-weight: bold;
 }
 .seen-imp-map-container li{
   line-height:2.5em;
