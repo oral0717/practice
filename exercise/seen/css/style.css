@@ -76,6 +76,7 @@
 .seen-imp-contact a:nth-child(4){
   border:2px solid #333;
   color:#121317;
+  font-weight: bold;
   width:100px;
   text-align: center;
   padding:8px 0;
@@ -94,22 +95,27 @@
 .seen-imp-product h2{
   font-size:36px;
   color:#000;
+  font-weight:bold;
 }
 .seen-imp-product h3{
   font-size:18px;
   color:#000;
+  font-weight: 550;
 }
 .seen-imp-product h4{
   font-size:18px;
   color:#121317;
   margin-top:109px;
   margin-bottom:15px;
+  font-weight:bold;
 }
 .seen-imp-product h1{
   font-size:48px;
   color:#121317;
   line-height:58px;
+  letter-spacing: 2px;
   margin-bottom:24px;
+  font-weight:bold;
 }
 .seen-imp-product h5{
   font-size:16px;
@@ -124,6 +130,7 @@
   font-size:14px;
   color:#1C0E1F;
   margin-left:48px;
+  font-weight: bold;
 }
 .seen-imp-product .seen-imp-more a:hover{
   color:#00AF8E;
@@ -285,6 +292,7 @@
 .seen-imp-intro h2{
   font-size:72px;
   padding:194px 0 20px;
+  font-weight: bold;
 }
 .seen-imp-intro p{
   font-size:18px;
@@ -319,6 +327,7 @@
   color:#000;
   margin-bottom:8px;
   padding:0 10px;
+  font-weight: bold;
 }
 .seen-imp-list p{
   font-size:14px;
@@ -382,6 +391,7 @@
   color: #121317;
   text-align: center;
   margin-bottom:46px;
+  font-weight: bold;
 }
 .seen-imp-article p{
   margin-bottom:40px;
@@ -410,6 +420,7 @@
   width:17.2%;
   text-align: right;
   position: relative;
+  font-weight: bold;
 }
 .seen-imp-footer .seen-imp-title:after{
   content:'';
