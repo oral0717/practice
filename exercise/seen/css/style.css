@@ -1,6 +1,7 @@
 .seen-imp-icon,
 .seen-imp-item1 a:before,
 .seen-imp-item2 a:before,
+.seen-imp-product .seen-imp-more:before,
 .seen-imp-map-container li span:before{
   background:url("../img/icon@1x.png?v=0.1") no-repeat;
 }
@@ -129,7 +130,7 @@
 .seen-imp-product .seen-imp-more a{
   font-size:14px;
   color:#1C0E1F;
-  margin-left:48px;
+  margin-left:15px;
   font-weight: bold;
 }
 .seen-imp-product .seen-imp-more a:hover{
@@ -137,14 +138,13 @@
 }
 .seen-imp-product .seen-imp-more:before{
   content:'';
-  width:27px;
-  height:0;
-  border-top:2px solid #000;
-  position:absolute;
-  top:11px;
-  left:0;
+  vertical-align:-1px;
+  width:32px;
+  height:12px;
+  display: inline-block;
+  background-position:-59px -60px;
 }
-.seen-imp-product .seen-imp-more:after{
+/* .seen-imp-product .seen-imp-more:after{
   content:'';
   width:5px;
   height:5px;
@@ -154,7 +154,7 @@
   position: absolute;
   top:8px;
   left:22px;
-}
+} */
 .seen-imp-product .seen-imp-text{
   width: 36%;
 }
@@ -580,6 +580,7 @@
   .seen-imp-icon,
   .seen-imp-item1 a:before,
   .seen-imp-item2 a:before,
+  .seen-imp-product .seen-imp-more:before,
   .seen-imp-map-container li span:before{
     background-image:url("../img/icon@2x.png?v=0.1");
     background-repeat: no-repeat;
@@ -587,6 +588,9 @@
   }
   .seen-imp-logo{
     background-position:0 -76px;
+  }
+  .seen-imp-product .seen-imp-more:before{
+    background-position: -57px -56px;
   }
   .seen-imp-footer .seen-imp-item2 li:nth-child(2) a:before{
     background-position: -63px -16px;

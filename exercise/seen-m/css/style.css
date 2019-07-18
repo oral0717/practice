@@ -1,5 +1,6 @@
 .seenm-imp-icon,
 .seenm-imp-nav-contact a:before,
+.seenm-imp-product .seenm-imp-more:before,
 .seenm-imp-item1 li:before,
 .seenm-imp-item2 a:before,
 .seenm-imp-contact-wrap,
@@ -153,7 +154,7 @@
 .seenm-imp-product .seenm-imp-more a{
   font-size:1.4rem;
   color:#1C0E1F;
-  margin-left:3.8rem;
+  margin-left:1.5rem;
   font-weight: bold;
 }
 .seenm-imp-product .seenm-imp-more a:active{
@@ -161,26 +162,13 @@
 }
 .seenm-imp-product .seenm-imp-more:before{
   content:'';
-  width:2.7rem;
-  height:0;
-  border-top:0.2rem solid #000;
-  position: absolute;
-  top:0.9rem;
-  left:0;
+  vertical-align:-0.1rem;
+  width:3.2rem;
+  height:1.2rem;
+  display: inline-block;
+  background-position: -5.7rem -5.6rem;
 }
-.seenm-imp-product .seenm-imp-more:after{
-  content:'';
-  width:0.5rem;
-  height:0.5rem;
-  border-top:0.2rem solid #000;
-  border-right:0.2rem solid #000;
-  transform: rotate(45deg);
-  position: absolute;
-  /* top:0.5rem;
-  left: 1.6rem; */
-  top:0.65rem;
-  left:2.1rem;
-}
+
 .seenm-imp-product.seenm-imp-product1 h3,
 .seenm-imp-product.seenm-imp-product2 h2{
   margin-bottom:2rem;
