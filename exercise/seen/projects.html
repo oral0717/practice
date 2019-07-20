@@ -183,7 +183,7 @@
       </li>
     </ul>
   </div>
-  <div class="seen-imp-btn-more">MORE</div>
+  <div class="seen-imp-btn-more" id="seenBtnMore">MORE</div>
   <div class="seen-imp-footer seen-imp-con-width seen-imp-clearfix">
       <div class="seen-imp-title seen-imp-fl">CONTACT</div>
       <ul class="seen-imp-item1 seen-imp-fl">
@@ -207,6 +207,7 @@
   <p class="seen-imp-copyright seen-imp-con-width">&copy; 2013-2019 SeenVision</p>
 </div>
 </body>
+<script src="js/jquery.min.js"></script>
 <script type="text/javascript">
 window.onload = function(){
   var pNav = document.querySelector('.seen-imp-p-nav');
@@ -225,5 +226,28 @@ window.onload = function(){
     }
   }
 }
+</script>
+<script type="text/javascript">
+$(function(){
+  $(document).on('click','#seenBtnMore',function(){
+    $.ajax({
+        type: "GET",
+        url: '/index.php?type=pc&type_id=0',
+        dataType: "json",
+        beforeSend: function(){
+          console.log('beforeSend');
+        },
+        success: function (data) {
+          console.log('suc');
+        },
+        complete: function(){ // 回调
+          console.log('complete');
+        },
+        error: function() { // 错误时的处理
+          console.log('complete');
+        }
+      });
+  });
+});
 </script>
 </html>
