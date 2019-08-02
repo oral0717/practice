@@ -73,4 +73,24 @@
   <p class="seenpad-imp-copyright seenpad-imp-con-width">&copy; 2013-2019 SeenVision</p>
 </div>
 </body>
+<script>
+$(function(){
+function changeWidth(){
+  var articleWidth = $('.seen-imp-article').width();
+  var imgList = $('.seen-imp-article').find('img');
+
+  for(var i=0;i<imgList.length;i++){
+    var imgWidth = $(imgList[i]).width();
+    if(imgWidth > articleWidth){
+      var marginLeft = -(imgWidth - articleWidth)/2;
+      $(imgList[i]).css({'margin-left': marginLeft});
+    }
+  }
+}
+  changeWidth();
+  $(window).resize(function(){
+    changeWidth();
+  });
+});
+</script>
 </html>

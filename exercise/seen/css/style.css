@@ -380,11 +380,13 @@
   margin-bottom:75px;
 }
 .seen-imp-article{
-  margin-bottom:140px;
   font-size: 14px;
   color: #121317;
   line-height: 24px;
   text-align:center;
+  width:845px;
+  margin:0 auto 140px;
+  position: relative;
 }
 .seen-imp-article h1{
   font-size: 28px;
@@ -393,18 +395,20 @@
   margin-bottom:46px;
   font-weight: bold;
 }
-.seen-imp-article p{
+.seen-imp-article p,
+.seen-imp-article div{
   margin-bottom:40px;
 }
+
+
 .seen-imp-article .seen-imp-p1{
   width:845px;
   margin:0 auto 40px;
   text-align:left;
 }
-.seen-imp-article img{
-  display: block;
+/* .seen-imp-article img{
   margin:0 auto 40px;
-}
+} */
 .seen-imp-footer{
   margin:0 auto 120px;
   font-size:14px;

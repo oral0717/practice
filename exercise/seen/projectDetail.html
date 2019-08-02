@@ -37,16 +37,16 @@
   <div class="seen-imp-article">
     <h1>养猪记：小蜡猪·小蜡烛，点亮躺赢的一整年</h1>
     <p class="seen-imp-p1">对于2019的新年开工礼，SEEN君和小伙伴早有预谋：我们要设计一只猪，喜迎猪年，给猪正名！小伙伴们想了很多方案，最终，一只躺着就能赢的小蜡猪 · 小蜡烛被大家的创意火花徐徐点燃：猪，从下面点火是食物，从上面点火那就是生命之光！</p>
-    <img src="img/img2.png" alt="" width="762">
+    <p><img src="img/img2.png" alt="" width="762"></p>
     <h3>Part-01</h3>
     <p>小蜡猪的整体包装是一个简约小木盒，盒子正面是小蜡猪抬起屁股露出尾巴，好像在说：来啊，快来点我啊～（啊喂，你个不正经猪，怎<br/>
       么穿着品如的衣服）</p>
-    <img src="img/pBanner.png" alt="" width="70%" style="max-width:1132px;min-width:980px;">
+    <div><img src="img/pBanner.png" alt="" width="980"></div>
     <h3>Part-02</h3>
     <p>打开盒子，一股樱花香扑面而来，小蜡猪安详地躺在草堆上，面对新的一年，仿佛有种必定会一夜暴富的有恃无恐，<br/>
         也是，有着本命年buff加持，哪只猪还怕躺赢不了呢？<br/>
         PS: 草堆下面有一个小托盘，点小蜡猪的时候可别忘了，天干物燥，小心火烛哦</p>
-    <img src="img/pdBanner.png" alt=""  width="100%">
+    <div> <img src="img/pdBanner.png" alt=""  width="1831"></div>
     <h3>Part-03</h3>
     <p>可可爱爱的小蜡猪有两种颜色：<br/>
         白色，猪年百事顺意，吃嘛嘛香；粉色，猪年爱情美满，桃花朵朵；<br/>
@@ -75,4 +75,20 @@
   <p class="seen-imp-copyright seen-imp-con-width">&copy; 2013-2019 SeenVision</p>
 </div>
 </body>
+<script src="js/jquery.min.js"></script>
+<script src="/wp-content/themes/pad/js/jquery.min.js"></script>
+<script>
+$(function(){
+  var articleWidth = $('.seen-imp-article').width();
+  var imgList = $('.seen-imp-article').find('img');
+
+  for(var i=0;i<imgList.length;i++){
+    var imgWidth = $(imgList[i]).width();
+    if(imgWidth > articleWidth){
+      var marginLeft = -(imgWidth - articleWidth)/2;
+      $(imgList[i]).css({'margin-left': marginLeft});
+    }
+  }
+});
+</script>
 </html>
