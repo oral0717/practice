@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slide.css">
+  <link rel="stylesheet" href="../../source/animate.css">
 </head>
 <body>
 <div class="seen-imp-container">
@@ -52,9 +53,9 @@
   </div>
 
   <div class="seen-imp-product seen-imp-product1 seen-imp-con-width seen-imp-clearfix">
-    <h2>COMMERCIAL WORKS</h2>
-    <h3>商业项目</h3>
-    <div class="seen-imp-text seen-imp-fl">
+    <h2 class="seen-imp-head1">COMMERCIAL WORKS</h2>
+    <h3 class="seen-imp-head1">商业项目</h3>
+    <div class="seen-imp-text seen-imp-text1 seen-imp-fl">
       <h4>最简单的色彩，最率真的 realme</h4>
       <h1>REALME C2 OFFICIAL VIDEO</h1>
       <h5>我们选择了简洁明快的几种原色作为主配色设计<br/>
@@ -62,17 +63,17 @@
           打造出鲜明清爽，硬朗时尚的风格</h5>
       <p class="seen-imp-more"><a href="#" target="_blank">MORE</a></p>
     </div>
-    <div class="seen-imp-cover seen-imp-fr">
-      <img class="seen-imp-shadow1" src="img/img1.png" alt="" width="100%">
+    <div class="seen-imp-cover seen-imp-shadow1 seen-imp-fr">
+      <img src="img/img1.png" alt="" width="100%">
     </div>
   </div>
   <div class="seen-imp-product seen-imp-product2 seen-imp-con-width seen-imp-clearfix">
-    <h3>原创项目</h3>
-    <h2>INDEPENDENT WORKS</h2>
-    <div class="seen-imp-cover seen-imp-fl">
-      <img class="seen-imp-shadow2" src="img/img2.png" alt="" width="100%">
+    <h3 class="seen-imp-head2">原创项目</h3>
+    <h2 class="seen-imp-head2">INDEPENDENT WORKS</h2>
+    <div class="seen-imp-cover seen-imp-shadow2 seen-imp-fl">
+      <img src="img/img2.png" alt="" width="100%">
     </div>
-    <div class="seen-imp-text seen-imp-fr">
+    <div class="seen-imp-text seen-imp-text2 seen-imp-fr">
       <h4>点亮躺赢的一整年</h4>
       <h1>PIGGY OF THE NEW YEAR</h1>
       <h5>2019的新年开工礼，<br/>
@@ -135,5 +136,49 @@
   <p class="seen-imp-copyright seen-imp-con-width">&copy; 2013-2019 SeenVision</p>
 </div>
 </body>
+<script src="js/jquery.min.js"></script>
 <script src="js/slide.js"></script>
+<script>
+    $(function(){
+      var isAnimated1 = false,
+          isAnimated2 = false,
+          isAnimated3 = false;
+      $(document).on('scroll', function(){
+        var that = this;
+        var scrollH = $(that).scrollTop();
+        console.log(scrollH);
+        if (scrollH >= 0 && scrollH <= 300 && !isAnimated1) {
+          testAnim('fadeOut', '.seen-imp-shadow1');
+          testAnim('fadeInLeft', '.seen-imp-text1');
+          testAnim('fadeInLeft', '.seen-imp-head1');
+          isAnimated1 = true;
+          $('.seen-imp-product').css({'opacity': 1});
+        }
+        if (scrollH >= 700 && scrollH <= 900 && !isAnimated2) {
+          testAnim('fadeOut', '.seen-imp-shadow2');
+          testAnim('fadeInRight', '.seen-imp-text2');
+          testAnim('fadeInLeft', '.seen-imp-head2');
+          isAnimated2 = true;
+          $('.seen-imp-product').css({'opacity': 1});
+        }
+        if (scrollH >= 2000 && scrollH <= 2200 && !isAnimated3) {
+          testAnim('fadeOut', '.seen-imp-list');
+          isAnimated3 = true;
+          $('.seen-imp-list').css({'opacity': 1});
+        }
+      });
+
+      $(document).on('mouseover','.seen-imp-list li img,.seen-imp-cover img',function(){
+        var that = this;
+        testAnim('pulse', that);
+      });
+
+      function testAnim(x, target) {
+        $(target).removeClass(x).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass(x);
+        });
+      };
+    });
+
+    </script>
 </html>

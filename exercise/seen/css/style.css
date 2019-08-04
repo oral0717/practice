@@ -93,6 +93,7 @@
 .seen-imp-banner{
   min-width:1280px;
 }
+.seen-imp-product{opacity:0;}
 .seen-imp-product h2{
   font-size:36px;
   color:#000;
@@ -162,7 +163,7 @@
   width:58.3%;
 }
 .seen-imp-product .seen-imp-cover img{
-  display: inline-block;
+  display: block;
   max-width: 746px;
   max-height:420px;
 }
@@ -301,6 +302,7 @@
 }
 .seen-imp-list{
   margin:0 auto 78px;
+  opacity:1;
 }
 .seen-imp-list li{
   width:25.6%;
