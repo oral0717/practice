@@ -7,6 +7,8 @@
   <title>PROJECTS</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../source/animate.css">
+
 </head>
 <body>
 <div class="seen-imp-container">
@@ -41,42 +43,42 @@
       <img src="img/pBanner.png" alt="" width="100%">
     </div>
     <ul class="seen-imp-list seen-imp-p-list seen-imp-clearfix">
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img4.png" alt="">
           <h3 class="seen-imp-nowrap">HUAWEI Y7 Pro Official Video</h3>
           <p class="seen-imp-nowrap">all华为这条“极简”广告，国际范儿十足</p>
         </a>
       </li>
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img5.png" alt="">
           <h3 class="seen-imp-nowrap">Meizu Note 9 Feature Video</h3>
           <p class="seen-imp-nowrap">他和她，星辰和大海</p>
         </a>
       </li>
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img6.png" alt="">
           <h3 class="seen-imp-nowrap">iQOO logo Artistry Video</h3>
           <p class="seen-imp-nowrap">这里有一支不怕热的冰淇淋</p>
         </a>
       </li>
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img4.png" alt="">
           <h3 class="seen-imp-nowrap">HUAWEI Y7 Pro Official Video</h3>
           <p class="seen-imp-nowrap">华为这条“极简”广告，国际范儿十足</p>
         </a>
       </li>
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img5.png" alt="">
           <h3 class="seen-imp-nowrap">Meizu Note 9 Feature Video</h3>
           <p class="seen-imp-nowrap">他和她，星辰和大海</p>
         </a>
       </li>
-      <li>
+      <li class="wow fadeIn">
         <a href="projectDetail.html" target="_blank">
           <img src="img/img6.png" alt="">
           <h3 class="seen-imp-nowrap">iQOO logo Artistry Video</h3>
@@ -89,7 +91,7 @@
     <div class="seen-imp-p-banner">
       <img src="img/pBanner.png" alt="" width="100%">
     </div>
-    <ul class="seen-imp-list seen-imp-p-list seen-imp-clearfix">
+    <ul class="seen-imp-list seen-imp-p-list seen-imp-clearfix wow fadeIn">
       <li>
         <a href="projectDetail.html" target="_blank">
           <img src="img/img4.png" alt="">
@@ -138,7 +140,7 @@
     <div class="seen-imp-p-banner">
       <img src="img/pBanner.png" alt="" width="100%">
     </div>
-    <ul class="seen-imp-list seen-imp-p-list seen-imp-clearfix">
+    <ul class="seen-imp-list seen-imp-p-list seen-imp-clearfix wow fadeIn">
       <li>
         <a href="projectDetail.html" target="_blank">
           <img src="img/img4.png" alt="">
@@ -208,6 +210,7 @@
 </div>
 </body>
 <script src="js/jquery.min.js"></script>
+<script src="../../source/wow.min.js"></script>
 <script type="text/javascript">
 window.onload = function(){
   var pNav = document.querySelector('.seen-imp-p-nav');
@@ -249,5 +252,23 @@ $(function(){
       });
   });
 });
+</script>
+<script>
+    // window.scrollReveal = new scrollReveal();
+
+    new WOW().init();
+    $(function(){
+
+      $(document).on('mouseover','.seen-imp-list img',function(){
+            var that = this;
+            testAnim('pulse', that);
+      });
+    
+      function testAnim(x, target) {
+        $(target).removeClass(x).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass(x);
+        });
+      };
+    });
 </script>
 </html>

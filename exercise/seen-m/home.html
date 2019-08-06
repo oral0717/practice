@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slide.css">
+  <link rel="stylesheet" type="text/css" href="../../source/animate.css">
 </head>
 <body class="seenm-imp-body">
 <div class="seenm-imp-container">
@@ -52,12 +53,12 @@
     </div>
   </div>
   <div class="seenm-imp-product seenm-imp-product1 seenm-imp-con-width seenm-imp-clearfix">
-    <h2>COMMERCIAL WORKS</h2>
-    <h3>商业项目</h3>
-    <div class="seenm-imp-cover">
+    <h2 class="wow fadeInLeft">COMMERCIAL WORKS</h2>
+    <h3 class="wow fadeInLeft">商业项目</h3>
+    <div class="seenm-imp-cover wow fadeIn">
       <img class="seenm-imp-shadow1" src="img/img1.png" alt="" width="100%">
     </div>
-    <div>
+    <div class="wow fadeInLeft">
       <h4>最简单的色彩，最率真的 realme</h4>
       <h1>REALME C2 OFFICIAL VIDEO</h1>
       <h5>我们选择了简洁明快的几种原色作为主配色设计<br/>
@@ -67,12 +68,12 @@
     </div>
   </div>
   <div class="seenm-imp-product seenm-imp-product2 seenm-imp-con-width seenm-imp-clearfix">
-    <h3>原创项目</h3>
-    <h2>INDEPENDENT WORKS</h2>
-    <div class="seenm-imp-cover">
+    <h3 class="wow fadeInLeft">原创项目</h3>
+    <h2 class="wow fadeInLeft">INDEPENDENT WORKS</h2>
+    <div class="seenm-imp-cover wow fadeIn">
       <img class="seenm-imp-shadow2" src="img/img2.png" alt="" width="100%">
     </div>
-    <div>
+    <div class="wow fadeInLeft">
       <h4>点亮躺赢的一整年</h4>
       <h1>PIGGY OF THE NEW YEAR</h1>
       <h5>2019的新年开工礼，<br/>
@@ -87,21 +88,21 @@
     </div>
   </div>
   <ul class="seenm-imp-list seenm-imp-con-width seenm-imp-clearfix">
-    <li>
+    <li class="wow fadeIn">
       <a href="projectDetail.html">
         <img src="img/img4.png" alt="">
         <h3 class="seenm-imp-nowrap">HUAWEI Y7 Pro Official Video</h3>
         <p class="seenm-imp-nowrap">华为这条“极简”广告，国际范儿十足</p>
       </a>
     </li>
-    <li>
+    <li class="wow fadeIn">
       <a href="projectDetail.html">
         <img src="img/img5.png" alt="">
         <h3 class="seenm-imp-nowrap">Meizu Note 9 Feature Video</h3>
         <p class="seenm-imp-nowrap">他和她，星辰和大海</p>
       </a>
     </li>
-    <li>
+    <li class="wow fadeIn">
       <a href="projectDetail.html">
         <img src="img/img6.png" alt="">
         <h3 class="seenm-imp-nowrap">iQOO logo Artistry Video</h3>
@@ -119,8 +120,10 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/touchMoveDirection.js"></script>
 <script src="js/slide.js"></script>
+<script src="../../source/wow.min.js"></script>
 <script type="text/javascript">
-(function(){
+  new WOW().init();
+$(function(){
   $('#seenMImpMenuBtn').on('click', function(){
     $(this).toggleClass('seenm-imp-close');
     if($(this).hasClass('seenm-imp-close')){
@@ -129,6 +132,7 @@
       $('#seenMImpMenu').slideUp(300);
     }
   });
-})();
+
+});
 </script>
 </html>

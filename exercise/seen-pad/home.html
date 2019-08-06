@@ -51,9 +51,9 @@
     </div>
   </div>
   <div class="seenpad-imp-product seenpad-imp-product1 seenpad-imp-con-width seenpad-imp-clearfix">
-    <h2 class="seenpad-imp-head1">COMMERCIAL WORKS</h2>
-    <h3 class="seenpad-imp-head1">商业项目</h3>
-    <div class="seenpad-imp-text seenpad-imp-text1 seenpad-imp-fl">
+    <h2 class="wow fadeInLeft">COMMERCIAL WORKS</h2>
+    <h3 class="wow fadeInLeft">商业项目</h3>
+    <div class="seenpad-imp-text seenpad-imp-text1 seenpad-imp-fl wow fadeInLeft">
       <h4>最简单的色彩，最率真的 realme</h4>
       <h1>REALME C2 OFFICIAL VIDEO</h1>
       <h5>我们选择了简洁明快的几种原色作为主配色设计<br/>
@@ -61,17 +61,17 @@
           打造出鲜明清爽，硬朗时尚的风格</h5>
       <p class="seenpad-imp-more"><a href="#">MORE</a></p>
     </div>
-    <div class="seenpad-imp-cover seenpad-imp-fr">
+    <div class="seenpad-imp-cover seenpad-imp-fr wow fadeIn">
       <img class="seenpad-imp-shadow1" src="img/img1.png" alt="" width="100%">
     </div>
   </div>
   <div class="seenpad-imp-product seenpad-imp-product2 seenpad-imp-con-width seenpad-imp-clearfix">
-    <h3 class="seenpad-imp-head2">原创项目</h3>
-    <h2 class="seenpad-imp-head2">INDEPENDENT WORKS</h2>
-    <div class="seenpad-imp-cover seenpad-imp-fl">
+    <h3 class="wow fadeInLeft">原创项目</h3>
+    <h2 class="wow fadeInLeft">INDEPENDENT WORKS</h2>
+    <div class="seenpad-imp-cover seenpad-imp-fl wow fadeIn">
       <img class="seenpad-imp-shadow2" src="img/img2.png" alt="" width="100%">
     </div>
-    <div class="seenpad-imp-text seenpad-imp-text2 seenpad-imp-fr">
+    <div class="seenpad-imp-text seenpad-imp-text2 seenpad-imp-fr wow fadeInRight">
       <h4>点亮躺赢的一整年</h4>
       <h1>PIGGY OF THE NEW YEAR</h1>
       <h5>2019的新年开工礼，<br/>
@@ -89,7 +89,7 @@
     </div>
   </div>
   <div class="seenpad-imp-con-width seenpad-imp-list-box">
-    <ul class="seenpad-imp-list seenpad-imp-clearfix">
+    <ul class="seenpad-imp-list seenpad-imp-clearfix wow fadeIn">
       <li>
         <a href="projectDetail.html">
           <img src="img/img4.png" alt="">
@@ -139,38 +139,9 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/touchMoveDirection.js"></script>
+<script src="../../source/wow.min.js"></script>
 <script>
-$(function(){
-  var isAnimated1 = false,
-      isAnimated2 = false,
-      isAnimated3 = false;
-  $(document).on('scroll', function(){
-    var that = this;
-    var scrollH = $(that).scrollTop();
-    if (scrollH >= 30 && scrollH <= 100 && !isAnimated1) {
-      testAnim('fadeOut', '.seenpad-imp-shadow1');
-      testAnim('fadeInLeft', '.seenpad-imp-text1');
-      testAnim('fadeInLeft', '.seenpad-imp-head1');
-      isAnimated1 = true;
-    }
-    if (scrollH >= 400 && scrollH <= 500 && !isAnimated2) {
-      testAnim('fadeOut', '.seenpad-imp-shadow2');
-      testAnim('fadeInRight', '.seenpad-imp-text2');
-      testAnim('fadeInLeft', '.seenpad-imp-head2');
-      isAnimated2 = true;
-    }
-    if (scrollH >= 1000 && scrollH <= 1300 && !isAnimated3) {
-      testAnim('fadeOut', '.seenpad-imp-list');
-      isAnimated3 = true;
-    }
-  });
-
-  function testAnim(x, target) {
-    $(target).removeClass(x).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass(x);
-    });
-  };
-});
+new WOW().init();
 
 </script>
 </html>
