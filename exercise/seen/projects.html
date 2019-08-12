@@ -263,7 +263,16 @@ $(function(){
             var that = this;
             testAnim('pulse', that);
       });
-    
+      $(document).on('mouseover','.seen-imp-p-nav li', function(){
+        var that = this;
+        console.log(that);
+        if(!$(that).hasClass('seen-imp-on')){
+          $(that).css({'animation-duration':'600ms'});
+          testAnim('flipInX', that);
+
+        }
+      });
+
       function testAnim(x, target) {
         $(target).removeClass(x).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           $(this).removeClass(x);

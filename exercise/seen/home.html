@@ -189,11 +189,21 @@
 // window.scrollReveal = new scrollReveal();
 new WOW().init();
 $(function(){
+
+testAnim('flipInX','.pc_menu a[aria-current]');
   $(document).on('mouseover','.seen-imp-list li img,.seen-imp-cover img',function(){
         var that = this;
         testAnim('pulse', that);
   });
+  $(document).on('mouseover','.pc_menu a', function(){
+    var that = this;
+    console.log(this.getAttribute('aria-current'))
+    if(!this.getAttribute('aria-current')){
+      $(that).css({'animation-duration':'600ms'});
+      testAnim('flipInX', that);
 
+    }
+  });
   function testAnim(x, target) {
     $(target).removeClass(x).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass(x);

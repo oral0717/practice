@@ -62,8 +62,8 @@
   height:100%;
   line-height:5rem;
 }
-.seenpad-imp-nav .current-menu-item a,
-.seenpad-imp-nav li a:active{
+.seenpad-imp-nav .current-menu-item a
+/* ,.seenpad-imp-nav li a:active */{
   background:url("../img/seen-navbg.png") repeat-x 0 2.5rem;
 
 }
@@ -359,7 +359,7 @@
   margin-right:2.5rem;
   display:inline-block;
 }
-.seenpad-imp-p-nav li.seenpad-imp-on, .seenpad-imp-p-nav li:active{
+.seenpad-imp-p-nav li.seenpad-imp-on/*, .seenpad-imp-p-nav li:active*/{
   cursor: pointer;
   color:#fff;
   background-color:#333;

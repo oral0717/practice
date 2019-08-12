@@ -41,10 +41,9 @@
   height:100%;
   line-height:50px;
 }
-.seen-imp-nav .current-menu-item a,
-.seen-imp-nav li a:hover{
+.seen-imp-nav .current-menu-item a{
   background:url("../img/seen-navbg.png") repeat-x 0 25px;
-
+  cursor: default;
 }
 
 
@@ -350,9 +349,10 @@
   padding:7px 36px;
   margin-right:25px;
   display:inline-block;
-}
-.seen-imp-p-nav li.seen-imp-on, .seen-imp-p-nav li:hover{
   cursor: pointer;
+}
+.seen-imp-p-nav li.seen-imp-on{
+  cursor: default;
   color:#fff;
   background-color:#333;
 }
