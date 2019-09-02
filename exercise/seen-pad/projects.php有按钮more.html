@@ -1,0 +1,280 @@
+<ul class="seenpad-imp-p-nav seenpad-imp-con-width">
+    <li type_id="0" class="seenpad-imp-on" data-index="0" data-moretext="MORE" data-ismoreable="1" id="seenPadImpProduct0" data-total="<?php echo wp_count_posts()->publish;?>">ALL</li>
+
+
+    <?php $types = get_categories(['parent' => 4]);
+
+    $posts_all = get_posts('numberposts=12');
+    $posts = [];
+
+    foreach ($types as $key => &$type) {
+        $posts[$type->term_id] = get_posts('numberposts=-1&category=' . $type->term_id);
+        echo '<li data-moretext="MORE" data-ismoreable="1" id="seenPadImpProduct'.$type->term_id.'" data-total="'. count(get_posts( 'numberposts=-1&category='.$type->term_id)).'" type_id="'.$type->term_id.'" data-index="' . ($key + 1) . '">' . $type->name . '</li>';
+
+        if ($posts[$type->term_id]) {
+            foreach ($posts[$type->term_id] as &$post) {
+                $post->img = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full');
+            }
+        }
+    }
+
+    foreach ($posts_all as &$item) {
+        $item->img = wp_get_attachment_image_src(get_post_thumbnail_id( $item->ID ), 'full');
+        //echo $array_image_url[0];
+    }
+
+
+    /*$cat_query=new WP_Query(array(
+        //'cat' => get_query_var('cat'),
+        //'posts_per_page'=>12,
+    　　//'paged'=>get_query_var('paged')
+
+        ));*/
+
+
+    ?><!--
+
+    <li data-index="1">COMMERCIAL</li>
+    <li data-index="2">INDEPENDENT</li>-->
+</ul>
+<div class="seenpad-imp-list-wrap" style="display:block;">
+    <div class="seenpad-imp-p-banner">
+        <a href="<?php echo get_field('banner_href', 'category_4');?>"><img src="<?php echo get_field('banner', 'category_4');?>" alt="" width="100%"></a>
+    </div>
+    <ul type_id="0" class="seenpad-imp-list seenpad-imp-p-list seenpad-imp-clearfix seenpad-imp-con-width" id="seenPadImpList0" >
+        <?php foreach ($posts_all as &$item) {?>
+        <li class="wow fadeIn">
+            <a href="<?php the_permalink($item->ID);?>">
+                <img src="<?php echo (isset($item->img[0]) ? $item->img[0] : '');?>" alt="">
+                <h3 class="seenpad-imp-nowrap"><?php echo $item->post_title; ?></h3>
+                <p class="seenpad-imp-nowrap"><?php echo $item->post_excerpt; ?></p>
+            </a>
+        </li>
+        <?php } ?>
+
+    </ul>
+</div>
+<?php foreach ($types as &$type) { ?>
+<div class="seenpad-imp-list-wrap seenpad-imp-con-width">
+    <!--<div class="seenpad-imp-p-banner">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pBanner.png" alt="" width="100%">
+    </div>-->
+    <ul type_id="<?php echo $type->term_id;?>" class="seenpad-imp-list seenpad-imp-p-list seenpad-imp-clearfix"  id="seenPadImpList<?php echo $type->term_id;?>">
+        <?php foreach ($posts[$type->term_id] as &$item) { ?>
+
+        <li class="wow fadeIn">
+            <a href="<?php the_permalink($item->ID); ?>">
+                <img src="<?php echo (isset($item->img[0]) ? $item->img[0] : '');?>" alt="">
+                <h3 class="seenpad-imp-nowrap"><?php echo $item->post_title; ?></h3>
+                <p class="seenpad-imp-nowrap"><?php echo $item->post_excerpt; ?></p>
+            </a>
+        </li>
+        <?php } ?>
+
+    </ul>
+</div>
+
+<?php } ?>
+<p class="seen-imp-list-tip" id="listTip">xxx</p>
+<div class="seenpad-imp-btn-more" id="seenPadBtnMore">MORE</div>
+<script src="/wp-content/themes/pad/js/jquery.min.js"></script>
+<script src="/wp-content/uploads/2019/08/wow.min_.js"></script>
+<script>
+      new WOW().init();
+</script>
+<script type="text/javascript">
+    window.onload = function(){
+        var pNavLi = document.querySelectorAll('.seenpad-imp-p-nav li');
+        var pList = document.querySelectorAll('.seenpad-imp-list-wrap');
+        var index = 0;
+
+        for(var i=0; i<pNavLi.length; i++){
+            pNavLi[i].onclick = function(e){
+                pNavLi[index].className = "";
+                pList[index].setAttribute("style", "display:none;");
+                var curLi = e.target;
+                index = parseInt(curLi.dataset.index);
+                pNavLi[index].className = "seenpad-imp-on";
+                pList[index].setAttribute("style", "display:block;");
+
+
+
+		/*//切换标签more按钮状态变化
+		var pageLimit = 12;
+		var curLiTotal = curLi.dataset.total;
+		// isMoreAble 为0或1表示more按钮是否可点击
+		var isMoreAble = parseInt(curLi.dataset.ismoreable);
+		var moreText = curLi.dataset.moretext;
+
+		$('.seenpad-imp-btn-more').text(moreText);
+		if(!!isMoreAble){
+			$('.seenpad-imp-btn-more').attr('id','seenPadBtnMore');
+		}else{
+			$('.seenpad-imp-btn-more').attr('id','');
+		}
+		if (curLiTotal<=pageLimit){
+			$('.seenpad-imp-btn-more').hide();
+		} else {
+			$('.seenpad-imp-btn-more').show();
+		}
+            }
+        }*/
+
+
+		
+    }
+</script>
+<script type="text/javascript">
+$(function(){
+	var pageLimit = 12;
+	var page = 2;
+	var allProductTotal = $('#seenPadImpProduct0').data('total');
+	
+    // 列表总数小于12条按钮隐藏
+	//if(allProductTotal > pageLimit){
+	//	$('#seenPadBtnMore').show();
+	//}
+
+  /*
+  $(document).on('touchend','#seenPadBtnMore',function(){
+	var that = this;
+	var productsType = $('.seenpad-imp-on').attr('type_id');
+	var productsDom='';
+	var productItem='';
+    $.ajax({
+        type: "POST",
+        url: '/',
+		data:{
+			type:'pad',
+			type_id:productsType,
+			page:page,
+			limit:pageLimit
+		},
+		timeout:10000,
+        dataType: "json",
+        beforeSend: function(){
+          	$(that).text('MORE...');
+			$(that).attr('id', '');
+			changeDataAttr(productsType, 'data-moretext', 'MORE');
+			changeDataAttr(productsType, 'data-ismoreable', 1);
+        },
+		success: function (data) {
+			var productsList = data.data;
+			productsTotal = data.total;
+			if (productsList.length>0){
+				for(var i=0; i<productsList.length; i++){
+					productItem = '<li class="wow fadeIn"><a href="'+ productsList[i].link_url 
+								+'"><img src="'+ productsList[i].img 
+								+'" alt=""><h3 class="seenpad-imp-nowrap">'+ productsList[i].post_name
+								+'</h3><p class="seenpad-imp-nowrap">'+ productsList[i].post_excerpt +'</p></a></li>';
+					productsDom = productsDom + productItem;
+				}
+				$('#seenPadImpList'+productsType).append(productsDom);
+				page = page + 1;
+				$(that).text('MORE');
+				$(that).attr('id', 'seenPadBtnMore');
+				changeDataAttr(productsType, 'data-moretext', 'MORE');
+				changeDataAttr(productsType, 'data-ismoreable', 1);
+			}else{
+				$(that).text('NO MORE');
+				$(that).attr('id', '');
+				changeDataAttr(productsType, 'data-moretext', 'NO MORE');
+				changeDataAttr(productsType, 'data-ismoreable', 0);
+			}
+			
+        },
+		timeout: function(){ // 回调
+          	$(that).text('请稍后再试');
+			setTimeout(function(){
+				$(that).text('MORE');
+				$(that).attr('id', 'seenPadBtnMore');
+			}, 3000);
+			changeDataAttr(productsType, 'data-moretext', 'MORE');
+			changeDataAttr(productsType, 'data-ismoreable', 1);
+        },
+        error: function() { // 错误时的处理
+          $(that).text('请稍后再试');
+			setTimeout(function(){
+				$(that).text('MORE');
+				$(that).attr('id', 'seenPadBtnMore');
+			}, 3000);
+			changeDataAttr(productsType, 'data-moretext', 'MORE');
+			changeDataAttr(productsType, 'data-ismoreable', 1);
+        }
+      });
+  });
+function changeDataAttr(productsType,dataName,dataValue){
+	$('#seenPadImpProduct'+productsType).attr(dataName,dataValue);
+}
+*/
+
+var isTipShow = false;
+function tipShow(text, time){
+	$('#listTip').text(text);
+	$('#listTip').show();
+	isTipShow = true;
+	setTimeout(function(){
+		$('#listTip').hide();
+		isTipShow = false;
+	}, time);
+}
+$(document).on('scroll', function(){
+	if(document.documentElement.scrollTop + window.screen.height > document.documentElement.scrollHeight && !isTipShow){
+		if(allProductTotal <= pageLimit){
+			tipShow('没有更多案例了', 3000);
+		} else {
+			var productsType = $('.seenpad-imp-on').attr('type_id');
+			requestMore('pad',productsType,12,2)
+		}
+	}
+	
+});
+function requestMore(clientType, productsType, pageLimit, page){
+	var productsDom='';
+	var productItem='';
+    $.ajax({
+        type: "POST",
+        url: '/',
+		data:{
+			type:clientType,
+			type_id:productsType,
+			page:page,
+			limit:pageLimit
+		},
+		timeout:10000,
+        dataType: "json",
+        beforeSend: function(){
+          	tipShow('more...', 3000);
+        },
+		success: function (data) {
+			var productsList = data.data;
+			var productsTotal = data.total;
+			if (productsList.length>0){
+				for(var i=0; i<productsList.length; i++){
+					productItem = '<li class="wow fadeIn"><a href="'+ productsList[i].link_url 
+								+'"><img src="'+ productsList[i].img 
+								+'" alt=""><h3 class="seenpad-imp-nowrap">'+ productsList[i].post_name
+								+'</h3><p class="seenpad-imp-nowrap">'+ productsList[i].post_excerpt +'</p></a></li>';
+					productsDom = productsDom + productItem;
+				}
+				$('#seenPadImpList'+productsType).append(productsDom);
+				page = page + 1;
+				if(productsTotal == (pageLimit * (page - 1) + productsList.length)){
+					tipShow('没有更多案例了', 3000);
+				}
+			}else{
+				tipShow('没有更多案例了', 3000);
+			}
+			
+        },
+		timeout: function(){ // 回调
+          	tipShow('请稍后再试', 3000);
+        },
+        error: function() { // 错误时的处理
+          tipShow('请稍后再试', 3000);
+        }
+      });
+}
+
+});
+</script>

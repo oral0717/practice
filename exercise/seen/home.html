@@ -297,11 +297,19 @@ var productItem='';
         productsDom = productsDom + productItem;
       }
       $('#seenImpList'+productsType).append(productsDom);
-      page = page + 1;
-      $(that).text('MORE');
-      $(that).attr('id', 'seenBtnMore');
-      changeDataAttr(productsType, 'data-moretext', 'MORE');
-      changeDataAttr(productsType, 'data-ismoreable', 1);
+      
+      if(productsTotal == (pageLimit * (page - 1) + productsList.length)){
+        $(that).text('NO MORE');
+        $(that).attr('id', '');
+        changeDataAttr(productsType, 'data-moretext', 'NO MORE');
+        changeDataAttr(productsType, 'data-ismoreable', 0);
+      } else {
+        page = page + 1;
+        $(that).text('MORE');
+        $(that).attr('id', 'seenBtnMore');
+        changeDataAttr(productsType, 'data-moretext', 'MORE');
+        changeDataAttr(productsType, 'data-ismoreable', 1);
+      }
     }else{
       $(that).text('NO MORE');
       $(that).attr('id', '');
