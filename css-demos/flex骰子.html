@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>flex demo</title>
+  <style>
+    *{box-sizing: border-box;}
+body{background:#000;display:flex;flex-wrap:wrap;}
+.box{display:flex;margin:16px;padding:4px;width:104px;height:104px;background:#f0f0f0;border-radius:10%;}
+.item{display:block;width:24px;height:24px;margin:4px;background:#000;border-radius:50%;}
+
+.box1{display:flex;justify-content:flex-start;}
+.box2{display:flex;justify-content:center;}
+.box3{display:flex;justify-content:flex-end;}
+.box4{display:flex;align-items:center;}
+.box5{display:flex;justify-content:center;align-items:center;}
+.box6{display:flex;justify-content:center;align-items:flex-end;}
+.box7{display:flex;justify-content:flex-end;align-items:flex-end;}
+
+.box8{display:flex;justify-content:space-between;}
+.box9{display:flex;flex-direction:column;justify-content:space-between;}
+.box10{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}
+.box11{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;}
+.box12{display:flex;flex-direction:column;}
+.box12 .item:nth-child(2){align-self:center;}
+.box13{display:flex;justify-content:space-between;}
+.box13 .item:nth-child(2){align-self:flex-end;}
+
+.box14{display:flex;}
+.box14 .item:nth-child(2){align-self:center;}
+.box14 .item:nth-child(3){align-self:flex-end;}
+
+.box15{display:flex;flex-wrap:wrap;justify-content:flex-end;align-content:space-between;}
+.box16{display:flex;flex-wrap:wrap;align-content:space-between;}
+.box16 .column{display:flex;flex-basis: 100%;justify-content:space-between;}
+
+.box17{display:flex;flex-wrap:wrap;align-content:space-between;}
+.box17 .column{display:flex;flex-basis:100%;justify-content:space-between;}
+.box18{display:flex;flex-direction:column;flex-wrap:wrap;align-content:space-between;}
+.box18 .column{display:flex;flex-direction:column;flex-basis:100%;justify-content:space-between;}
+
+.box19{display:flex;flex-wrap:wrap;}
+.box19 .row{display:flex;flex-basis: 100%;}
+.box19 .row:nth-child(2){justify-content: center;}
+.box19 .row:nth-child(3){justify-content:space-between;}
+
+.box20{display:flex;flex-wrap:wrap;}
+  </style>
+</head>
+<body>
+  <div class="box box1">
+    <span class="item"></span>
+  </div>
+  <div class="box box2">
+    <span class="item"></span>
+  </div>
+  <div class="box box3">
+    <span class="item"></span>
+  </div>
+  <div class="box box4">
+    <span class="item"></span>
+  </div>
+  <div class="box box5">
+    <span class="item"></span>
+  </div>
+  <div class="box box6">
+    <span class="item"></span>
+  </div>
+  <div class="box box7">
+    <span class="item"></span>
+  </div>
+  <div class="box box8">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box9">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box10">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box11">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box12">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box13">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box14">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box15">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <div class="box box16">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+
+  <div class="box box17">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+  <div class="box box18">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+
+  <div class="box box19">
+    <div class="row">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="row">
+      <span class="item"></span>
+    </div>
+    <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+  </div>
+  <div class="box box20">
+      <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div class="row">
+          <span class="item"></span>
+          <span class="item"></span>
+          <span class="item"></span>
+      </div>
+    </div>
+</body>
+</html>

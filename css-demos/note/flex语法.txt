@@ -1,0 +1,38 @@
+flex语法
+浏览器支持：ie10+,chrome21+,opera12.1+,ff22+,safari6.1+
+
+display:flex;
+display:inline-flex;
+
+webkit内核的要加-webkit
+.box{display:-webkit-flex;
+display:flex;}
+flex布局的子元素的float，clear,vertical-align失效
+
+flex container
+主轴main axis,   main start,  main end
+交叉轴cross axis,  cross start,  cross end
+容器属性：   flex-direction决定主轴main axis方向，即flex-item排列方向：
+row|row-reverse|column|column-reverse
+flex-wrap定义flex-item如果一条轴线排不下，如何换行
+no-wrap|wrap|wrap-reverse
+flex-flow是flex-direction与flex-wrap简写形式，默认值row nowrap
+justify-content定义flex-item在main axis上对齐方式
+flex-start|flex-end|center|space-between|space-around
+align-items定义flex-item在cross axis上对齐方式
+flex-start|flex-end|center|baseline|stretch
+align-content定义多根轴线的对齐方式，如果只有一根轴线，本属性无作用
+flex-start|flex-end|center|space-between|space-around|stretch
+
+
+flex item
+main size ,   cross size
+项目属性：   order	定义项目排列顺序，默认0，数值越小排列越靠前
+flex-grow定义项目的放大比例，默认0，即如果存在剩余空间，也不放大;为1时，等分剩余空间
+flex-shrink定义项目缩小比例，默认1，即如果空间不足，该项目将缩小；如果为0，空间不足不缩小
+flex-basis:<length>|auto;定义分配多于空间之前，项目占据的主轴空间，浏览器根据这个属性计算主轴是否还有多余空间，默认auto,即项目的本来大小,设为width或height属性一样的值，则项目将占据固定空间
+flex是flex-grow,flex-shrink,flex-basis的缩写，默认0 1 auto，后两个可选，快捷值auto(1 1 auto),none(0 0 auto)
+align-self:auto|flex-start|flex-end|center|baseline|stretch;允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性，默认auto,继承父元素的align-items属性，如果没有父元素，则等同于stretch
+
+
+
