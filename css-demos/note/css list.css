@@ -1,0 +1,16 @@
+img{object-fit:contain;}
+/*fill/contain/cover/none/scale-down,css3属性，功能与background-size类似,
+只对替换元素有效：img,video,textarea,input,audio,canvas */
+
+/* min-height:100vh;
+css3自适应布局单位：IE11+，ios8+,android4.4+,wechat x5内核+，chrome49+
+1.vw：1vw等于视口宽度的1%。
+2.vh：1vh等于视口高度的1%。
+3.vmin：选取vw和vh中最小的那个。
+4.vmax：选取vw和vh中最大的那个。
+vh and vw：相对于视口的高度和宽度，而不是父元素的（CSS百分比是相对于包含它的最近的父元素的高度和宽度）。
+1vh 等于1/100的视口高度，1vw 等于1/100的视口宽度
+*/
+
+/* em em用来自适应用户所使用的字体，1em相当于当前的字体尺寸（font-size属性），2em相当于当前字体尺寸的2倍。
+可见em用作特定字体的相对大小。*/

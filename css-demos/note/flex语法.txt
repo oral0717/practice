@@ -21,7 +21,7 @@ justify-content定义flex-item在main axis上对齐方式
 flex-start|flex-end|center|space-between|space-around
 align-items定义flex-item在cross axis上对齐方式
 flex-start|flex-end|center|baseline|stretch
-align-content定义多根轴线的对齐方式，如果只有一根轴线，本属性无作用
+align-content定义多根轴线的对齐方式，如果只有一根轴线，本属性无作用,默认stretch
 flex-start|flex-end|center|space-between|space-around|stretch
 
 
