@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+<loading hidden="{{hiddenLoading}}">数据加载中</loading>
+
+<view class="wrapper">
+  <view class="group" wx:for="{{articleList}}" wx:key="{{group.date}}" wx:for-item="group">
+    <view class="group-bar">
+      <view class="group-title on">{{group.date}}</view>
+    </view>
+    <view bindtap="showDetail" data-item="{{article}}" class="group-content" wx:for="{{group.articles}}" wx:key="{{article.contentId}}" wx:for-item="article">
+      <view class="group-content-item">
+        <view class="group-content-item-desc ellipsis-multi-line ellipsis-line-3">{{article.title}}</view>
+        <image class="group-content-item-img" mode="aspectFill"  src="{{article.cover}}"/>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="group">
+    <view class="group-bar">
+      <view class="group-title">06月27日</view>
+    </view>
+    <view class="group-content">
+      <view class="group-content-item">
+        <view class="group-content-item-desc ellipsis-multi-line ellipsis-line-3">为什么聪明人总能保持冷静？</view>
+        <image class="group-content-item-img" mode="aspectFill"  src="https://n1image.hjfile.cn/mh/2017/06/26/9ffa8c56cfd76cf5159011f4017f022e.jpg"/>
+      </view>
+    </view>
+  </view> -->
+  <view class="no-more" hidden="{{hasMore}}">暂时没有更多内容</view>
+</view>
