@@ -23,10 +23,17 @@ page{
   border-radius: 8rpx;
 }
 .text{
-  height:400rpx;
+  height:300rpx;
+  padding:30rpx;
   border-radius: 8rpx;
   background-color:rgba(255,255,255,.2);
 }
 .btn-transfer{
   width:60%;
+  background-color:rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.6);
+  color:#fff;
+}
+.btn-transfer:active{
+  opacity: 0.8;
 }

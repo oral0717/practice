@@ -3,9 +3,9 @@
     "mypages/flex/flex"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#09ba07",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "OOOOOral",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "金额大写转换器",
     "backgroundColor": "#fbf9fe",
     "backgroundTextStyle": "light"
   },

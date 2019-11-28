@@ -2,5 +2,5 @@
 <view class="container">
   <input class="flex-item number" value="{{inputValue}}" type="digit" placeholder="请输入金额" confirm-type="done" maxlength="12" bindinput="inputNumber"/>
   <text class="flex-item text">{{textValue}}</text>
-  <button bindtap="transfer" class="flex-item btn-transfer" type="default">变</button> 
+  <button bindtap="transfer" class="flex-item btn-transfer">变</button> 
 </view>
