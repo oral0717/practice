@@ -1,7 +1,6 @@
 {
   "pages": [
-    "mypages/flex/flex",
-    "mypages/list/list"
+    "mypages/flex/flex"
   ],
   "window": {
     "navigationBarBackgroundColor": "#09ba07",
@@ -10,18 +9,5 @@
     "backgroundColor": "#fbf9fe",
     "backgroundTextStyle": "light"
   },
-  "tabBar":{
-    "list": [{
-      "pagePath":"mypages/flex/flex",
-      "text":"布局"
-    },{
-      "pagePath":"mypages/list/list",
-      "text":"列表"
-    }],
-    "color":"#999",
-    "selectedColor":"#fbe",
-    "borderStyle":"black",
-    "backgroundColor":"#ffe",
-    "position":"top"
-  }
+  "sitemapLocation": "sitemap.json"
 }

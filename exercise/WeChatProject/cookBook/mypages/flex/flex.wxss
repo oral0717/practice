@@ -1,24 +1,32 @@
-/* mypages/flex/flex.wxss */
-.section_title{
-  color:#555;
-  padding:20rpx;
+
+page{
+  height:100%;
+  background:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574847166230&di=11c98733e948e103f2d94b3b7193894f&imgtype=0&src=http%3A%2F%2Fwww.juimg.com%2Ftuku%2Fyulantu%2F130822%2F328463-130R220544813.jpg') no-repeat;
+  background-size: auto 100%;
+
 }
-.flex-wrp{
-  display: flex;
-}
-.flex-row{
-  flex-flow:row nowrap;
-}
-.flex-col{
-  flex-flow:column nowrap;
-}
-.flex-item{
+.container{
+  box-sizing:border-box;
+  height:100%;
+  font-size:48rpx;
   color:#fff;
-  width:200rpx;
-  height:200rpx;
-  text-align:center;
-  line-height:200rpx;
+  padding:180rpx 30rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.bc_green{background:green;}
-.bc_blue{background:blue;}
-.bc_red{background:red;}
+
+.number{
+  padding:30rpx;
+  height:70rpx;
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius: 8rpx;
+}
+.text{
+  height:400rpx;
+  border-radius: 8rpx;
+  background-color:rgba(255,255,255,.2);
+}
+.btn-transfer{
+  width:60%;
+}
