@@ -235,13 +235,13 @@ function requestMore(clientType, productsType, pageLimit, page){
     $.ajax({
         type: "POST",
         url: '/',
-		data:{
-			type:clientType,
-			type_id:productsType,
-			page:page,
-			limit:pageLimit
-		},
-		timeout:10000,
+				data:{
+					type:clientType,
+					type_id:productsType,
+					page:page,
+					limit:pageLimit
+				},
+				timeout:10000,
         dataType: "json",
         beforeSend: function(){
           	tipShow('more...', 3000);

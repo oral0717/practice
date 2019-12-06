@@ -68,7 +68,10 @@ var EventUtil = {
             }
         }
     },
-    getCharCode: function(event){  //字符编码 charCode   keypress事件时才包含值，ie9，ff,chrome,safari的event下支持charCode,此时的keyCode常等于0 或键码，IE8及低版本和Opera在keyCode中保存字符编码，取得字符编码以后，可以得到字符：String.fromCharCode(charCode);
+    getCharCode: function(event){
+        //字符编码 charCode   keypress事件时才包含值，
+        // ie9，ff,chrome,safari的event下支持charCode,此时的keyCode常等于0 或键码，
+        // IE8及低版本和Opera在keyCode中保存字符编码，取得字符编码以后，可以得到字符：String.fromCharCode(charCode);
         if (typeof event.charCode == "number"){
             return event.charCode;
         } else {
