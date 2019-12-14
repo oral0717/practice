@@ -68,6 +68,13 @@ var EventUtil = {
             }
         }
     },
+    getWheelDelta:function(event){ //获取表示鼠标滚轮滚动方向的数值
+        if(event.wheelDelta){
+           return event.wheelDelta;
+        }else{
+           return -event.detail*40;
+        }
+    },
     getCharCode: function(event){
         //字符编码 charCode   keypress事件时才包含值，
         // ie9，ff,chrome,safari的event下支持charCode,此时的keyCode常等于0 或键码，
