@@ -1,13 +1,27 @@
 {
   "pages": [
-    "mypages/flex/flex"
+    "mypages/flex/flex",
+    "mypages/list/list"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "金额大写转换器",
+    "navigationBarBackgroundColor": "#09ba07",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "OOOOOral",
     "backgroundColor": "#fbf9fe",
     "backgroundTextStyle": "light"
   },
-  "sitemapLocation": "sitemap.json"
+  "tabBar":{
+    "list": [{
+      "pagePath":"mypages/flex/flex",
+      "text":"布局"
+    },{
+      "pagePath":"mypages/list/list",
+      "text":"列表"
+    }],
+    "color":"#999",
+    "selectedColor":"#fbe",
+    "borderStyle":"black",
+    "backgroundColor":"#ffe",
+    "position":"top"
+  }
 }
